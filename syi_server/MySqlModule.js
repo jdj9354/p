@@ -1,0 +1,280 @@
+var mysql = require('mysql');
+
+var totalCount = 0;
+
+var connection = mysql.createConnection({
+    host    :'localhost',
+    port : 3306,
+    user : 'root',
+    password : '1234qwer',
+    database:'syi'
+});
+
+connection.connect(function(err) {
+    if (err) {
+        console.error('mysql connection error');
+        console.error(err);
+        throw err;
+    }
+	var query = connection.query('select COUNT(*) as totalCount from profile',function(err,rows){
+		totalCount = rows[0].totalCount;
+		console.log("MySQL Module - total user count : " + totalCount);
+	});
+});
+
+exports.AddUserAsync = function (jsonProfileInfo,jsonLoginInfo,socket){
+
+    var query = connection.query('insert into profile set ?',jsonProfileInfo,function(err,result){
+        if (err) {
+            console.error(err);
+			jsonProfileInfo.success = false;
+			socket.emit('res',jsonProfileInfo);
+            throw err;
+        }
+		var secondQuery = connection.query('insert into logininfo set ?',jsonLoginInfo,function(err,result){
+			if (err) {
+				connection.query('delete from profile where uuid='+jsonProfileInfo.uuid,function(err,result){
+					;
+				});
+				console.error(err);
+				jsonProfileInfo.success = false;
+				socket.emit('res',jsonProfileInfo);
+				throw err;
+			}
+			var thirdQuery = connection.query('insert into cost values ("'+jsonProfileInfo.uuid+'",50)',function(err,result){
+				console.log('insert into cost values ("'+jsonProfileInfo.uuid+'",50)');
+				if(err){
+					connection.query('delete from profile where uuid='+jsonProfileInfo.uuid,function(err,result){
+						;
+					});
+					connection.query('delete from logininfo where uuid='+jsonProfileInfo.uuid,function(err,result){
+						;
+					});
+				}
+				jsonProfileInfo.success = true;
+				totalCount++;
+				
+				socket.emit('res',jsonProfileInfo);
+			});
+		});
+        
+    });	
+}
+
+exports.ChangeUserInfoAsync = function (jsonProfileInfo,jsonLoginInfo,socket){
+	var query = connection.query('select uuid from logininfo where snstype="'+jsonLoginInfo.snstype+'" and snsid="'+jsonLoginInfo.snsid+'"',function(err,rows){
+		if(rows.length == 0){
+			jsonProfileInfo.success = false;
+			socket.emit('res',jsonProfileInfo);
+			return;
+		}
+		var uuid = rows[0].uuid;
+		jsonProfileInfo.uuid = uuid;
+		var secondQuery = connection.query('update profile set ? where uuid =?',[jsonProfileInfo,uuid],function(err,result){
+			if (err) {
+				console.error(err);
+				jsonProfileInfo.success = false;
+				socket.emit('res',jsonProfileInfo);
+				throw err;
+			}
+			jsonProfileInfo.success = true;			
+			socket.emit('res',jsonProfileInfo);     
+		});	 
+    });  
+    
+}
+
+exports.GetUserInfo = function (SnsType,SnsId,socket){
+	var ret={};
+	var query = connection.query('select uuid from logininfo where snstype="'+SnsType+'" and snsid="'+SnsId+'"',function(err,rows){
+		if(rows.length == 0){
+			ret = {isEmpty : true};
+			socket.emit('res',ret);
+			return;
+		}
+		var uuid = rows[0].uuid;
+		var secondQuery = connection.query('select * from profile where uuid="'+uuid+'"' ,function(err,rows){		
+			ret.profile = rows[0];
+			var thirdQuery = connection.query('select value from cost where uuid="'+uuid+'"' ,function(err,rows){		
+				ret.costVal = rows[0].value;
+				socket.emit('res',ret);
+			});  			
+		});     
+    });   
+}
+
+exports.GetUserInfoByUUID = function (uuid,socket){
+	var query = connection.query('select * from profile where uuid="'+uuid+'"' ,function(err,rows){			
+		socket.emit('res',rows[0]);
+	});     
+
+}
+
+exports.searchRandomUser = function(SnsType,SnsId,socket){
+	var query = connection.query('select uuid from logininfo where snstype="'+SnsType+'" and snsid="'+SnsId+'"',function(err,rows){
+		if(rows.length == 0){
+			socket.emit('res',{isEmpty : true});
+			return;
+		}
+		var uuid = rows[0].uuid;
+		var secondQuery = connection.query('select id,sex from profile where uuid="'+uuid+'"' ,function(err,rows){			
+			var randomId = Math.floor((Math.random() * totalCount) + 1);
+			var curUserId = rows[0].id;
+			var curUserSex = rows[0].sex;
+			
+			while(randomId == curUserId){
+				randomId = Math.floor((Math.random() * totalCount) + 1);
+			}
+			//cost 값 확인하여 서버단에서 체크 필요
+			var thirdQueryCallBack = function(err,rows){
+				if(rows[0].sex != curUserSex){
+					var socektReplyInfo = rows[0];					
+					var fourthQuery = connection.query('update cost set value = value-1 where uuid="'+uuid+'"' , function(err,rows){
+						console.log('update cost set value = value-1 where uuid="'+uuid+'"');
+						socket.emit('res',socektReplyInfo);	
+					});   			
+				}
+				else{
+					while(randomId == curUserId){
+						randomId = Math.floor((Math.random() * totalCount) + 1);
+					}
+					connection.query('select * from profile where id='+randomId+'' , thirdQueryCallBack);   				
+				}
+			};
+			
+			var thirdQuery = connection.query('select * from profile where id='+randomId+'' , thirdQueryCallBack); 
+		});     
+    });   
+}
+
+exports.AddMatchingInfoAsync = function (matchingInfo,socket){
+
+    var query = connection.query('insert into matchinginfo set ?',matchingInfo,function(err,result){
+        if (err) {
+            console.error(err);
+			matchingInfo.success = false;
+			socket.emit('res',matchingInfo);
+            throw err;
+        }
+		
+		matchingInfo.success = true;			
+		socket.emit('res',matchingInfo);        
+    });	
+}
+
+exports.ToggleMatchingInfoAsync = function (matchingInfo,socket){	
+    var query = connection.query('update matchinginfo set pending = 0 where suuid = "'+ matchingInfo.suuid + '" and ruuid = "' + matchingInfo.ruuid+'";',	function(err,result){
+        if (err) {
+            console.error(err);
+			matchingInfo.success = false;
+			socket.emit('res',matchingInfo);
+            throw err;
+        }
+		console.log(matchingInfo);
+		matchingInfo.success = true;			
+		socket.emit('res',matchingInfo);        
+    });	
+}
+
+exports.GetAllMatchingInfoAsync = function(ruuid,socket){
+	
+	var resultInfo = {	isSuccess : true,
+					data : []};
+	
+	var query = connection.query('select * from matchinginfo where ruuid = "' + ruuid + '" and pending = 1;',function(err,result){
+		
+        if (err) {
+            console.error(err);		
+			resultInfo.isSuccess = false;
+			socket.emit('matchingInfoData',resultInfo);
+            throw err;
+			return;
+        }
+		
+		if(result.length == 0){
+			socket.emit('matchingInfoData',resultInfo);  
+			return;
+		}
+		
+		var count = 0;
+
+		var loopFunction = function(loopCount,iterateArray,resultInfo){
+			
+			var innerQuery = connection.query('select * from profile where uuid = "'+iterateArray[loopCount].suuid+'"', function(err,result){
+				if(err){
+					console.error(err);			
+					resultInfo.isSuccess = false;
+					resultInfo.data = [];
+					socket.emit('matchingInfoData',resultInfo);
+					throw err;
+					return;					
+				}
+				
+				resultInfo.data.push({matchingInfo : iterateArray[loopCount],
+										sprofile : result[loopCount]});
+										console.log(resultInfo.data);
+										
+				loopCount++;
+				if(loopCount == iterateArray.length){
+					socket.emit('matchingInfoData',resultInfo);   
+					return;
+				}
+				else{
+					loopFunction(loopCount,iterateArray,resultInfo);
+				}
+			});			
+		};
+		loopFunction(count,result,resultInfo);
+    });	
+}
+
+exports.GetAllMatchedInfoAsync = function(uuid,socket){
+	
+	var resultInfo = {	isSuccess : true,
+					data : []};	
+	var query = connection.query('select * from matchinginfo where (ruuid = "' + uuid +'" or suuid = "'+uuid+'") and pending = 0;',function(err,result){
+			
+        if (err) {
+            console.error(err);		
+			resultInfo.isSuccess = false;
+			socket.emit('matchedInfoData',resultInfo);
+            throw err;
+			return;
+        }
+		
+		if(result.length == 0){			
+			socket.emit('matchedInfoData',resultInfo);  
+			return;
+		}
+		
+		var count = 0;
+
+		var loopFunction = function(loopCount,iterateArray,resultInfo){
+			var searchingUUID = iterateArray[loopCount].suuid == uuid ? iterateArray[loopCount].suuid : iterateArray[loopCount].ruuid;
+			var innerQuery = connection.query('select * from profile where uuid = "'+searchingUUID+'"', function(err,result){
+				if(err){
+					console.error(err);			
+					resultInfo.isSuccess = false;
+					resultInfo.data = [];
+					socket.emit('matchedInfoData',resultInfo);
+					throw err;
+					return;					
+				}
+				
+				resultInfo.data.push({matchingInfo : iterateArray[loopCount],
+										sprofile : result[loopCount]});
+										console.log(resultInfo.data);
+										
+				loopCount++;
+				if(loopCount == iterateArray.length){
+					socket.emit('matchedInfoData',resultInfo);   
+					return;
+				}
+				else{
+					loopFunction(loopCount,iterateArray,resultInfo);
+				}
+			});			
+		};
+		loopFunction(count,result,resultInfo);
+    });	
+}
