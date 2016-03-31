@@ -1,0 +1,216 @@
+<html><head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="js/uuid_js/uuid.js"></script>
+        <script src="https://cdn.socket.io/socket.io-1.4.3.js"></script>
+		<script src="js/constant.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="css/profile.css" rel="stylesheet" type="text/css">
+    </head><body>
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img id="mainprofileImage" src="res/user_placeholder.png" class="img-responsive" style="max-width:585;max-height:300;">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="col-md-6" style="width:auto;">
+                            <h1 id="txt_nickname">nick name</h1>
+                            <h3 id="txt_name">name</h3>
+                            <h3 id="txt_age">age</h3>
+                            <h3 id="txt_sex">sex</h3>
+                            <h3 id="txt_height">height</h3>
+                            <h3 id="txt_region">region</h3>
+                            <h3 id="txt_contacts">Contacts</h3>
+                            <h3 id="txt_religion">religion</h3>
+                            <h3 id="txt_bloodgroups">blood groups</h3>
+                        </div>
+                        <div class="col-md-6">
+                            <h1 id="et_nickname" style="border:1px solid #FFFFFF;"></h1>
+                            <h3 id="et_name" style="border:1px solid #FFFFFF;"></h3>
+                            <h3 id="et_age" style="border:1px solid #FFFFFF;"></h3>
+                            <select name="sex" style="background-color : #ff851b;">
+                                <option style="background-color : #ff851b;" value="male">male</option>
+                                <option style="background-color : #ff851b;" value="female">female</option>
+                            </select>
+                            <h3 id="et_height" style="border:1px solid #FFFFFF;"></h3>
+                            <h3 id="et_region" style="border:1px solid #FFFFFF;"></h3>
+                            <h3 id="et_contacts" style="border:1px solid #FFFFFF;"></h3>
+                            <h3 id="et_religion" style="border:1px solid #FFFFFF;"></h3>
+                            <h3 id="et_bloodgroups" style="border:1px solid #FFFFFF;"></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img id="subprofileImage1" src="res/user_placeholder.png" class="img-responsive" style="width:262.5;height:262.5;max-width:262.5;max-height:262.5;">
+                    </div>
+                    <div class="col-md-3">
+                        <img id="subprofileImage2" src="res/user_placeholder.png" class="img-responsive" style="width:262.5;height:262.5;max-width:262.5;max-height:262.5;">
+                    </div>
+                    <div class="col-md-3">
+                        <img id="subprofileImage3" src="res/user_placeholder.png" class="img-responsive" style="width:262.5;height:262.5;max-width:262.5;max-height:262.5;">
+                    </div>
+                    <div class="col-md-3">
+                        <img id="subprofileImage4" src="res/user_placeholder.png" class="img-responsive" style="width:262.5;height:262.5;max-width:262.5;max-height:262.5;">
+                    </div>
+                </div>
+            </div>
+        </div>
+		<div class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<a class="btn btn-primary" id="action_button"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+        <script>
+            var totalSubImgCount = 0;
+			var userIdVal;
+            
+			var parameters = location.search.substring(1).split("&");
+
+			var temp = parameters[0].split("=");
+			var uuid = unescape(temp[1]);
+			temp = parameters[1].split("=");
+			var from = unescape(temp[1]);
+			
+			var buttonObj = document.getElementById("action_button");
+			
+			
+							
+			switch(from){
+			case "ao" :
+				buttonObj.innerHTML = "Reply OK";
+				buttonObj.onclick = function (){
+					var socket = io.connect(SOCKET_IO_ADDR);
+					socket.on('res', function (data) {
+					});
+					var sendData ={suuid : uuid,
+									ruuid : sessionStorage.currentUserId
+					};
+					socket.emit('replyok',sendData);
+				};			
+				break;
+			case "s" : 
+				buttonObj.innerHTML = "Send OK";
+				buttonObj.onclick = function (){
+					var socket = io.connect(SOCKET_IO_ADDR);
+					socket.on('res', function (data) {
+					});
+					var sendData ={suuid : sessionStorage.currentUserId,
+									ruuid : uuid,
+									inittime : (new Date()).getTime(),
+									pending : 1
+					};
+					socket.emit('sendok',sendData);
+				};				
+				break;
+			case "c" :
+				break;
+			}
+			
+            			
+			initUserInfo();	
+			function initUserInfo(){
+				var socket = io.connect(SOCKET_IO_ADDR);								
+				var sendData={ uuid : uuid						
+							 };
+				socket.on('res', function (data) {
+					if(data.isEmpty){
+						location.assign("index.html");   
+					}
+					else{						
+						document.getElementById('et_name').innerHTML = data.name;
+						document.getElementById('et_nickname').innerHTML = data.nickname;
+						document.getElementById('et_age').innerHTML = data.age;
+						document.getElementById('et_height').innerHTML = data.height;
+						document.getElementById('et_region').innerHTML = data.region;
+						document.getElementById('et_religion').innerHTML = data.religion;
+						document.getElementById('et_bloodgroups').innerHTML = data.bloodgroups;
+						userIdVal = data.uuid;
+						
+						/*if(data.keyword1 != ""){
+							keywordMapInfo[data.keyword1] = true;
+							document.getElementById(data.keyword1).style.opacity = "1.0";
+							keywordCount++;
+						}
+						if(data.keyword2 != ""){
+							keywordMapInfo[data.keyword2] = true;
+							document.getElementById(data.keyword2).style.opacity = "1.0";
+							keywordCount++;
+						}
+						if(data.keyword3 != ""){
+							keywordMapInfo[data.keyword3] = true;
+							document.getElementById(data.keyword3).style.opacity = "1.0";
+							keywordCount++;
+						}*/
+						
+						var mainprofileImage = document.getElementById('mainprofileImage');
+						mainprofileImage.style.maxWidth = "585px";
+						mainprofileImage.style.maxHeight = "300px";
+						
+						setImgSrcAndAdjust(mainprofileImage,PROFILE_IMAGE_ADDR+userIdVal+"/1",parseInt(mainprofileImage.style.maxWidth,10),parseInt(mainprofileImage.style.maxHeight,10));			
+						
+
+						
+						for (var i=1; i<=4; i++){
+							var curSubprofileImage = document.getElementById('subprofileImage'+i);							
+							curSubprofileImage.srcChanged = false;								
+						}
+						
+						var loadImagesRecursively = function(){
+							var img = new Image();
+							img.onload = function(){
+								totalSubImgCount++;
+								
+								var curSubprofileImage = document.getElementById('subprofileImage'+totalSubImgCount);
+								curSubprofileImage.style.maxWidth = "262.5px";
+								curSubprofileImage.style.maxHeight = "262.5px";
+								setImgSrcAndAdjust(curSubprofileImage,PROFILE_IMAGE_ADDR+userIdVal+"/"+(totalSubImgCount+1),parseInt(curSubprofileImage.style.maxWidth,10),parseInt(curSubprofileImage.style.maxHeight,10));											
+								
+									
+								loadImagesRecursively();
+							};
+							img.onerror = function(){
+								return;
+							};
+							img.src = PROFILE_IMAGE_ADDR+userIdVal+"/"+(totalSubImgCount+2);							
+						};
+						loadImagesRecursively();
+					}
+				});								
+				socket.emit('reqInfoU', sendData);	
+			}
+			
+			function setImgSrcAndAdjust(imgObj,srcURL,maxWidth,maxHeight){
+				imgObj.src = srcURL;
+				
+				imgObj.onload = function(){
+					var nh = imgObj.naturalHeight;
+					var nw = imgObj.naturalWidth;
+					
+					var resultWidth = (maxHeight*nw/nh);
+					var resultHeight = maxHeight;
+					
+					if(resultWidth > maxWidth){
+						resultWidth = maxWidth;
+						resultHeight = (maxWidth*nh/nw);
+					}
+				
+					imgObj.style.width = resultWidth+"px";
+					imgObj.style.height = resultHeight+'px';
+					imgObj.parentElement.style.height = (resultHeight+10)+'px';											
+				}
+			}
+        </script>		
+	</body>
+</html>

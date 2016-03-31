@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="css/profile.css" rel="stylesheet" type="text/css">
+        <script src="https://cdn.socket.io/socket.io-1.4.3.js"></script>
+		<script src="js/constant.js"></script>
+        <script src="js/uuid_js/uuid.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>        
+    </head><body>
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="page-header text-center">
+                            <h1>Paradice</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img id="mainprofileImage" src="res/user_placeholder.png" class="img-responsive" style="max-width:585;max-height:300;">
+                        <form onmousedown="stopPropagationFunc(event);" onmousemove="stopPropagationFunc(event);" ontouchstart="stopPropagationFunc(event);" ontouchmove="stopPropagationFunc(event);" id="imageFileUploadForm" method="post" enctype="multipart/form-data" onsubmit="on_fileupload(this)" target="dummyFrame" style="display:none">
+                            <div id="changableFileInput">
+                                <input type="file" name="mainimageFile" onchange="handleFiles(this)">
+                            </div>
+                            <input type="submit" id="btn_upload">
+                            <iframe name="dummyFrame" style="display:none"></iframe>
+                        </form>
+                    </div>
+                    <div class="col-md-6">
+						<div class="col-md-6" style="width:auto;">
+							<h1 id="txt_nickname">nick name</h1>
+							<h3 id="txt_name">name</h3>
+							<h3 id="txt_age">age</h3>
+							<h3 id="txt_sex">sex</h3>
+							<h3 id="txt_height">height</h3>
+							<h3 id="txt_region">region</h3>
+							<h3 id="txt_contacts">Contacts</h3>
+							<h3 id="txt_religion">religion</h3>
+							<h3 id="txt_bloodgroups">blood groups</h3>
+						</div>
+						<div class="col-md-6">
+							<h1 id="et_nickname" contenteditable="true" style="border:1px solid #FFFFFF;"></h1>
+							<h3 id="et_name" contenteditable="true" style="border:1px solid #FFFFFF;"></h3>
+							<h3 id="et_age" contenteditable="true" style="border:1px solid #FFFFFF;"></h3>
+							<select name="sex" style="background-color : #ff851b;">
+								<option style="background-color : #ff851b;" value="male">male</option>
+								<option style="background-color : #ff851b;" value="female">female</option>										
+							</select>								
+							<h3 id="et_height" contenteditable="true" style="border:1px solid #FFFFFF;"></h3>
+							<h3 id="et_region" contenteditable="true" style="border:1px solid #FFFFFF;"></h3>
+							<h3 id="et_contacts" contenteditable="true" style="border:1px solid #FFFFFF;"></h3>
+							<h3 id="et_religion" contenteditable="true" style="border:1px solid #FFFFFF;"></h3>
+							<h3 id="et_bloodgroups" contenteditable="true" style="border:1px solid #FFFFFF;"></h3>
+						</div>					                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img id="subprofileImage1" src="res/user_placeholder.png" class="img-responsive" style="width:262.5;height:262.5;max-width:262.5;max-height:262.5;">
+                        <form onmousedown="stopPropagationFunc(event);" onmousemove="stopPropagationFunc(event);" ontouchstart="stopPropagationFunc(event);" ontouchmove="stopPropagationFunc(event);" id="imageFileUploadForm" method="post" enctype="multipart/form-data" onsubmit="on_fileupload(this)" target="dummyFrame" style="display:none">
+                            <div id="changableFileInput">
+                                <input type="file" name="subimageFile1" onchange="handleFiles(this)">
+                            </div>
+                            <input type="submit" id="btn_upload">
+                            <iframe name="dummyFrame" style="display:none"></iframe>
+                        </form>
+                    </div>
+                    <div class="col-md-3">
+                        <img id="subprofileImage2" src="res/user_placeholder.png" class="img-responsive" style="width:262.5;height:262.5;max-width:262.5;max-height:262.5;">
+                        <form onmousedown="stopPropagationFunc(event);" onmousemove="stopPropagationFunc(event);" ontouchstart="stopPropagationFunc(event);" ontouchmove="stopPropagationFunc(event);" id="imageFileUploadForm" method="post" enctype="multipart/form-data" onsubmit="on_fileupload(this)" target="dummyFrame" style="display:none">
+                            <div id="changableFileInput">
+                                <input type="file" name="subimageFile2" onchange="handleFiles(this)">
+                            </div>
+                            <input type="submit" id="btn_upload">
+                            <iframe name="dummyFrame" style="display:none"></iframe>
+                        </form>
+                    </div>
+                    <div class="col-md-3">
+                        <img id="subprofileImage3" src="res/user_placeholder.png" class="img-responsive" style="width:262.5;height:262.5;max-width:262.5;max-height:262.5;">
+                        <form onmousedown="stopPropagationFunc(event);" onmousemove="stopPropagationFunc(event);" ontouchstart="stopPropagationFunc(event);" ontouchmove="stopPropagationFunc(event);" id="imageFileUploadForm" method="post" enctype="multipart/form-data" onsubmit="on_fileupload(this)" target="dummyFrame" style="display:none">
+                            <div id="changableFileInput">
+                                <input type="file" name="subimageFile3" onchange="handleFiles(this)">
+                            </div>
+                            <input type="submit" id="btn_upload">
+                            <iframe name="dummyFrame" style="display:none"></iframe>
+                        </form>
+                    </div>
+                    <div class="col-md-3">
+                        <img id="subprofileImage4" src="res/user_placeholder.png" class="img-responsive" style="width:262.5;height:262.5;max-width:262.5;max-height:262.5;">
+                        <form onmousedown="stopPropagationFunc(event);" onmousemove="stopPropagationFunc(event);" ontouchstart="stopPropagationFunc(event);" ontouchmove="stopPropagationFunc(event);" id="imageFileUploadForm" method="post" enctype="multipart/form-data" onsubmit="on_fileupload(this)" target="dummyFrame" style="display:none">
+                            <div id="changableFileInput">
+                                <input type="file" name="subimageFile4" onchange="handleFiles(this)">
+                            </div>
+                            <input type="submit" id="btn_upload">
+                            <iframe name="dummyFrame" style="display:none"></iframe>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<!--
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="text-center">Keywords</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="smart" class="col-md-4" onclick="toggleKeyword(this);" style="opacity:0.5">
+                        <img src="res/keywordcard/smart.png" class="img-circle img-responsive">
+                    </div>
+                    <div id="cutty" class="col-md-4" onclick="toggleKeyword(this);" style="opacity:0.5">
+                        <img src="res/keywordcard/cutty.png" class="img-circle img-responsive">
+                    </div>
+                    <div id="healthy" class="col-md-4" onclick="toggleKeyword(this);" style="opacity:0.5">
+                        <img src="res/keywordcard/healthy.png" class="img-circle img-responsive">
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="sexy" class="col-md-4" onclick="toggleKeyword(this);" style="opacity:0.5">
+                        <img src="res/keywordcard/sexy.png" class="img-circle img-responsive">
+                    </div>
+                    <div id="handsome" class="col-md-4" onclick="toggleKeyword(this);" style="opacity:0.5">
+                        <img src="res/keywordcard/handsome.png" class="img-circle img-responsive">
+                    </div>
+                    <div id="stylish" class="col-md-4" onclick="toggleKeyword(this);" style="opacity:0.5">
+                        <img src="res/keywordcard/stylish.png" class="img-circle img-responsive">
+                    </div>
+                </div>
+                <div class="career">
+                    <div id="smart" class="col-md-4" onclick="toggleKeyword(this);" style="opacity:0.5">
+                        <img src="res/keywordcard/career.png" class="img-circle img-responsive">
+                    </div>
+                    <div id="charisma" class="col-md-4" onclick="toggleKeyword(this);" style="opacity:0.5">
+                        <img src="res/keywordcard/charisma.png" class="img-circle img-responsive">
+                    </div>
+                    <div id="witty" class="col-md-4" onclick="toggleKeyword(this);" style="opacity:0.5">
+                        <img src="res/keywordcard/witty.png" class="img-circle img-responsive">
+                    </div>
+                </div>
+            </div>
+        </div>
+		-->
+		<div class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<a class="btn btn-primary" onclick="reqChangeUserInfo()">Change</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+        <script>
+            var addedSubImgInfo = [];
+            			var totalSubImgCount = 0;
+            			var userIdVal;
+            			
+            			var keywordMapInfo = { smart: false,
+            					   cutty : false,
+            					   heatly : false,
+            					   sexy : false,
+            					   handsome : false,
+            					   stylish : false,
+            					   career : false,
+            					   charisma : false,
+            					   witty : false
+            					 }; 
+            			var keywordCount = 0;
+            			
+            			initUserInfo();		
+            
+            			
+                        function reqChangeUserInfo(){
+            				/*if(keywordCount == 0){
+            					alert("1개 이상의 키워드를 입력해야 합니다");
+            					return;
+            				}*/
+            				
+            				var keywordInfoArray = [];
+            				
+            				for (var key in keywordMapInfo){
+            					if(keywordMapInfo[key]){
+            						keywordInfoArray.push(key);
+            					}
+            				}				
+            	
+            				for(var i=keywordInfoArray.length; i<3; i++){
+            					keywordInfoArray.push("");
+            				}
+            				
+            				var socket = io.connect(SOCKET_IO_ADDR);			
+            				var sendData={ 	name : document.getElementById('et_name').innerHTML,
+            								nickname : document.getElementById('et_nickname').innerHTML,
+            								age : document.getElementById('et_age').innerHTML,
+            								height : document.getElementById('et_height').innerHTML,
+            								region : document.getElementById('et_region').innerHTML,
+            								religion : document.getElementById('et_religion').innerHTML,
+            								bloodgroups : document.getElementById('et_bloodgroups').innerHTML,
+            								snstype : sessionStorage.logintype,
+            								snsid : sessionStorage.loginid,
+            								keyword1 : keywordInfoArray[0],
+            								keyword2 : keywordInfoArray[1],
+            								keyword3 : keywordInfoArray[2]						
+            							 };
+            				/*socket.on('res', function (data) {
+            					alert("수정되었습니다");
+            					location.assign("main.html");
+            				});*/		
+            
+            				socket.on('res', function (data) {
+            					
+            
+            					var curImageIdx = 0;
+            					var subImageUploadCount = 0;
+            					var callback = function () {
+            										if(curImageIdx  == totalSubImgCount){
+            											var addedSubImgCount = 0;
+            											var innerCallBack = function(){
+            												if(addedSubImgCount == addedSubImgInfo.length){
+            													alert("수정되었습니다");
+            													location.assign("main.html");
+            													return;
+            												}
+            												else{		
+            													var curSubImageElement = document.getElementById(addedSubImgInfo[addedSubImgCount].elementId);
+            													fileUploadHandler([curSubImageElement.file],addedSubImgInfo[addedSubImgCount].filename,innerCallBack,[]);
+            													addedSubImgCount++;													
+            												}
+            											}
+            											innerCallBack();
+            										}
+            										else{
+            											curImageIdx++;										
+            											var curSubImageElement = document.getElementById('subprofileImage'+(curImageIdx));
+            											if(curSubImageElement.srcChanged){
+            												subImageUploadCount++;
+            												fileUploadHandler([curSubImageElement.file],subImageUploadCount+1,callback,[]);
+            											}
+            											else
+            												callback();
+            										}
+            									};
+            					//callback();
+            					if(mainprofileImage.srcChanged)
+            						fileUploadHandler([mainprofileImage.file],1,callback,[]);
+            					else
+            						callback();
+            				});			
+            				
+            				socket.emit('changeInfo', sendData);
+            				/*var profileImageObj = document.getElementById('profileImage');
+            				fileUploadHandler([profileImageObj.file]);*/
+            			}
+            			function initUserInfo(){
+            				var socket = io.connect(SOCKET_IO_ADDR);								
+            				var sendData={ snstype : sessionStorage.logintype,
+            								snsid : sessionStorage.loginid
+            							 };
+            				socket.on('res', function (data) {
+            					if(data.isEmpty){
+            						location.assign("index.html");   
+            					}
+            					else{						
+            						document.getElementById('et_name').innerHTML = data.name;
+            						document.getElementById('et_nickname').innerHTML = data.nickname;
+            						document.getElementById('et_age').innerHTML = data.age;
+            						document.getElementById('et_height').innerHTML = data.height;
+            						document.getElementById('et_region').innerHTML = data.region;
+            						document.getElementById('et_religion').innerHTML = data.religion;
+            						document.getElementById('et_bloodgroups').innerHTML = data.bloodgroups;
+            						userIdVal = data.uuid;
+            						
+            						/*if(data.keyword1 != ""){
+            							keywordMapInfo[data.keyword1] = true;
+            							document.getElementById(data.keyword1).style.opacity = "1.0";
+            							keywordCount++;
+            						}
+            						if(data.keyword2 != ""){
+            							keywordMapInfo[data.keyword2] = true;
+            							document.getElementById(data.keyword2).style.opacity = "1.0";
+            							keywordCount++;
+            						}
+            						if(data.keyword3 != ""){
+            							keywordMapInfo[data.keyword3] = true;
+            							document.getElementById(data.keyword3).style.opacity = "1.0";
+            							keywordCount++;
+            						}*/
+            						
+            						var mainprofileImage = document.getElementById('mainprofileImage');
+									mainprofileImage.style.maxWidth = "585px";
+									mainprofileImage.style.maxHeight = "300px";
+									
+            						setImgSrcAndAdjust(mainprofileImage,PROFILE_IMAGE_ADDR+userIdVal+"/1",parseInt(mainprofileImage.style.maxWidth,10),parseInt(mainprofileImage.style.maxHeight,10));											
+            					
+            						mainprofileImage.srcChanged = false;
+            						mainprofileImage.onclick = function () { 
+            							/*var event = new Event('click');				
+            							var fileInputBtn = document.getElementsByName('mainimageFile');				
+            							fileInputBtn[0].dispatchEvent(event);
+            							*/
+										$("input[name="+this.nextElementSibling.children[0].children[0].name+"]").trigger("click");
+										return false; 
+            						};
+            						
+            						mainprofileImage.ontouch = function () { this.className = 'hover'; return false; };
+            						mainprofileImage.ondragover = function () { this.className = 'hover'; return false; };
+            						mainprofileImage.ondragend = function () { this.className = ''; return false; };
+            						mainprofileImage.ondrop = function (event) {
+            							if(event.dataTransfer.files.length != 0){
+            								var files = event.dataTransfer.files;
+            								this.file = files[0];
+            								this.srcChanged = true;
+            							setImgSrcAndAdjust(this,window.URL.createObjectURL(files[0]),parseInt(this.style.maxWidth,10),parseInt(this.style.maxHeight,10));											
+            							}						
+            							event.preventDefault && event.preventDefault();
+            							
+            							return false;
+            						};
+            						
+            						for (var i=1; i<=4; i++){
+            							var curSubprofileImage = document.getElementById('subprofileImage'+i);							
+            							curSubprofileImage.srcChanged = false;								
+            							curSubprofileImage.onclick = function () { 
+            								/*var event = new Event('click');								
+            								this.nextElementSibling.children[0].children[0].dispatchEvent(event);*/
+											$("input[name="+this.nextElementSibling.children[0].children[0].name+"]").trigger("click");
+            								return false; 
+            							};
+            							
+            							curSubprofileImage.ontouch = function () { this.className = 'hover'; return false; };
+            							curSubprofileImage.ondragover = function () { this.className = 'hover'; return false; };
+            							curSubprofileImage.ondragend = function () { this.className = ''; return false; };
+            							curSubprofileImage.ondrop = function (event) {
+            								if(event.dataTransfer.files.length != 0){
+            									var files = event.dataTransfer.files;
+            									this.file = files[0];
+            									this.srcChanged = true;
+            									if(this.src == ""){
+            										var newAddedSubImgInfo = {elementId : this.id,filename : (totalSubImgCount+1)+(addedSubImgInfo.length+1)};
+            										addedSubImgInfo.push(newAddedSubImgInfo);
+            									}
+            									setImgSrcAndAdjust(this,window.URL.createObjectURL(files[0]),parseInt(this.style.maxWidth,10),parseInt(this.style.maxHeight,10));												
+            								}            				
+            								event.preventDefault && event.preventDefault();
+            								
+            								return false;
+            							};
+            						}
+            						
+            						var loadImagesRecursively = function(){
+            							var img = new Image();
+            							img.onload = function(){
+            								totalSubImgCount++;
+            								
+            								var curSubprofileImage = document.getElementById('subprofileImage'+totalSubImgCount);
+											curSubprofileImage.style.maxWidth = "262.5px";
+											curSubprofileImage.style.maxHeight = "262.5px";
+            								setImgSrcAndAdjust(curSubprofileImage,PROFILE_IMAGE_ADDR+userIdVal+"/"+(totalSubImgCount+1),parseInt(curSubprofileImage.style.maxWidth,10),parseInt(curSubprofileImage.style.maxHeight,10));											
+            								
+            									
+            								loadImagesRecursively();
+            							};
+            							img.onerror = function(){
+            								return;
+            							};
+            							img.src = PROFILE_IMAGE_ADDR+userIdVal+"/"+(totalSubImgCount+2);							
+            						};
+            						loadImagesRecursively();
+            					}
+            				});								
+            				socket.emit('reqInfo', sendData);	
+            			}
+            			var stopPropagationFunc = function(event){event.stopPropagation();};	
+            			
+            			function handleFiles(target){	
+            				var connectedImageObj = target.parentElement.parentElement.previousElementSibling;			
+            				connectedImageObj.file = target.files[0];
+            				connectedImageObj.srcChanged = true;
+            				if(connectedImageObj.src == ""){
+            					var newAddedSubImgInfo = {elementId : connectedImageObj.id, filename : (totalSubImgCount+1)+(addedSubImgInfo.length+1)};
+            					addedSubImgInfo.push(newAddedSubImgInfo);
+            				}
+            				setImgSrcAndAdjust(connectedImageObj,window.URL.createObjectURL(target.files[0]),parseInt(connectedImageObj.style.maxWidth,10),parseInt(connectedImageObj.style.maxHeight,10))			
+            				//fileUploadHandler(files);				
+            				event.preventDefault && event.preventDefault();
+            				return false;				
+            			}
+            
+            			function setImgSrcAndAdjust(imgObj,srcURL,maxWidth,maxHeight){
+            				imgObj.src = srcURL;
+            				
+            				imgObj.onload = function(){
+            					var nh = imgObj.naturalHeight;
+            					var nw = imgObj.naturalWidth;
+            					
+            					var resultWidth = (maxHeight*nw/nh);
+            					var resultHeight = maxHeight;
+            					
+            					if(resultWidth > maxWidth){
+            						resultWidth = maxWidth;
+            						resultHeight = (maxWidth*nh/nw);
+            					}
+            				
+            					imgObj.style.width = resultWidth+"px";
+            					imgObj.style.height = resultHeight+'px';
+            					imgObj.parentElement.style.height = (resultHeight+10)+'px';											
+            				}
+            			}
+            			function fileUploadHandler(files,imageIdx,callback,cbArgumentsArray){						
+            				var formData = new FormData();
+            				for (var i = 0; i < files.length; i++) {
+            					formData.append('file', files[i]);
+            				}
+            				
+            				formData.append('id', userIdVal);				
+            				formData.append('imageidx', imageIdx);
+            				
+            				var xhr = new XMLHttpRequest();
+            				xhr.open('POST', SOCKET_IO_ADDR+"upload",true);				
+            				xhr.upload.onprogress = function (event) {
+            					;
+            				};
+            
+            				xhr.onload = function () {
+            					
+            					if (xhr.status === 200) {										
+            						callback.apply(null,cbArgumentsArray);
+            					} else {
+            						console.log('Something went terribly wrong...');
+            					}
+            				};
+            				xhr.send(formData);
+            			}
+            			function toggleKeyword(target){				
+            				var curOpa = target.style.opacity;
+            					
+            				if(curOpa == "0.5"){
+            					if(keywordCount == 3)
+            						return;
+            					target.style.opacity = "1.0";		
+            					keywordCount++;
+            				}
+            				else{
+            					target.style.opacity = "0.5";
+            					keywordCount--;
+            				}
+            				
+            				var idval = target.id;
+            				keywordMapInfo[idval] = !keywordMapInfo[idval];
+            			}
+        </script>
+    
+
+</body></html>

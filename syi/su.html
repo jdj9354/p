@@ -1,0 +1,105 @@
+<html><head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="js/uuid_js/uuid.js"></script>
+        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="css/profile.css" rel="stylesheet" type="text/css">
+    </head><body>
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="page-header text-center">
+                            <h1>Search Your Idiot</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="http://elandstyle.cafe24.com/wp/wp-content/uploads/2014/02/roem06-500x261.jpg" class="img-responsive">
+                    </div>
+                    <div class="col-md-6">
+                        <h1 id="et_nickname" contenteditable="true" id="nickname">nick name</h1>
+                        <h3 id="et_name" contenteditable="true" id="age">name</h3>
+                        <h3 id="et_age" contenteditable="true" id="age">age</h3>
+                        <h3 id="et_height" contenteditable="true" id="height">height</h3>
+                        <h3 id="et_region" contenteditable="true" id="region">region</h3>
+                        <h3 id="et_religion" contenteditable="true" id="religion">religion</h3>
+                        <h3 id="et_bloodgroups" contenteditable="true" id="bloodgroups">blood groups</h3>
+                        <a class="btn btn-primary" onclick="reqAddUser()">Sign Up!</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="text-center">Keywords</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="res\keywordcard\smart.png" class="img-circle img-responsive">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="res\keywordcard\cutty.png" class="img-circle img-responsive">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="res\keywordcard\sexy.png" class="img-circle img-responsive">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="text-center">Team</h1>
+                        <p class="text-center">We are a group of skilled individuals.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="center-block img-circle img-responsive">
+                        <h3 class="text-center">John Doe</h3>
+                        <p class="text-center">Developer</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="center-block img-circle img-responsive">
+                        <h3 class="text-center">John Doe</h3>
+                        <p class="text-center">Developer</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="center-block img-circle img-responsive">
+                        <h3 class="text-center">John Doe</h3>
+                        <p class="text-center">Developer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function reqAddUser(){
+            				var formData = new FormData();
+            				formData.append('id', document.getElementById(UUID.genV4().hexString).innerHTML);
+            				formData.append('name', document.getElementById('et_name').innerHTML);
+							formData.append('nickname', document.getElementById('et_nickname').innerHTML);
+            				formData.append('age', document.getElementById('et_age').innerHTML);
+							formData.append('height', document.getElementById('et_height').innerHTML);
+            				formData.append('region', document.getElementById('et_region').innerHTML);
+							formData.append('religion', document.getElementById('et_religion').innerHTML);
+            				formData.append('bloodgroups', document.getElementById('et_bloodgroups').innerHTML);
+							formData.append('snstype', document.getElementById('et_').innerHTML);
+            				formData.append('snsid', document.getElementById('et_name').innerHTML);
+            			}
+        </script>
+    
+
+</body></html>

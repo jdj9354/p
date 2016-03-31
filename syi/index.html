@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://cdn.socket.io/socket.io-1.4.3.js"></script>
+		<script src="js/constant.js"></script>
+        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="css/style_index.css" rel="stylesheet" type="text/css">
+    </head><body>
+		<script>
+			window.fbAsyncInit = function() {
+				FB.init({
+					appId      : '509306929247910',
+					xfbml      : true,
+					version    : 'v2.5'
+				});				
+			};
+
+			(function(d, s, id){
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) {return;}
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+		</script>
+        
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="page-header text-center">
+                            <h1>Paradice</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><div class="section">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-xs-3 text-center">
+                        <a><i class="fa fa-5x fa-fw fa-instagram"></i></a>
+                    </div>
+                    <div class="col-xs-3">
+                        <a><i class="fa fa-5x fa-fw fa-twitter"></i></a>
+                    </div>
+                    <div class="col-xs-3">
+                        <a style="cursor:pointer" onclick="loginViaFacebook()"><i class="fa fa-5x fa-fw fa-facebook"></i></a>
+                    </div>
+                    <div class="col-xs-3 text-center">
+                        <a><i class="fa fa-5x fa-fw fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<script>
+			function loginViaFacebook(){						
+				FB.getLoginStatus(function(response) {
+					statusChangeCallback(response);
+				});
+				function statusChangeCallback(response){
+					var sta = response.status;
+					if(sta == "connected"){
+						FB.api("/me?fields=id,name,email,permissions", function(response)
+						{				
+							sessionStorage.logintype = "facebook";
+							sessionStorage.loginid = response.id;
+							
+							checkRegiStatusAndNavigate(sessionStorage.logintype, sessionStorage.loginid);
+						}, {scope: 'public_profile,email'});
+					}								
+					else{
+						FB.login(function(response) {
+							FB.api("/me?fields=id,name,email,permissions", function(response)
+							{		
+								sessionStorage.logintype = "facebook";
+								sessionStorage.loginid = response.id;
+								
+								checkRegiStatusAndNavigate(sessionStorage.logintype, sessionStorage.loginid);
+							});
+						}, {scope: 'public_profile'});
+								
+								
+						
+					}
+				}
+			}
+			
+			function checkRegiStatusAndNavigate(a_snstype,a_snsid){
+				var socket = io.connect(SOCKET_IO_ADDR);								
+				var sendData={ snstype : a_snstype,
+								snsid : a_snsid
+							 };
+				socket.on('res', function (data) {
+					if(data.isEmpty){
+						location.assign("regi.html");   
+					}
+					else{
+						sessionStorage.currentUserId = data.profile.uuid;
+						
+						sendData = {uuid : sessionStorage.currentUserId
+										};
+						socket.emit('renewLogin',sendData);
+						socket.on('renewLoginResult', function(data){
+							if(data.reward){
+								alert("you have been rewarded ("+data.reward+") for daily reward");
+							}
+							location.assign("main.html");   
+						});
+						
+					}
+				});								
+				socket.emit('reqInfo', sendData);	
+			}
+			
+		</script>
+
+</body></html>

@@ -25,6 +25,12 @@ io.on('connection', function (socket) {
 		console.log(uuid);
 		DBModule.GetUserInfoByUUID(uuid,socket);
 	});
+	socket.on('renewLogin', function (data) {
+		var uuid = data.uuid; 		
+		var timestamp = (new Date()).getTime();
+		console.log(uuid);
+		DBModule.RenewLoginInfo(uuid,timestamp,socket);
+	});
 	socket.on('saveInfo', function (data) {		
 		var jsonProfileInfo = {uuid : data.id,
 						name : data.name,

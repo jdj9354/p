@@ -110,6 +110,41 @@ exports.GetUserInfoByUUID = function (uuid,socket){
 
 }
 
+exports.RenewLoginInfo = function(uuid,timestamp,socket){
+	var query = connection.query('select * from logininfo where uuid="'+uuid+'"' ,function(err,rows){			
+		if(err){
+			return;			
+		}		
+		console.log(rows);
+		var prevTimeStamp = rows[0].lastlogin;
+		
+		var minutes = 1000 * 60;
+		var hours = minutes * 60;
+		var days = hours * 24;
+		var years = days * 365;
+		
+		var prevDay = Math.round(prevTimeStamp / days);
+		var curDay = Math.round(timestamp / days);
+		
+		console.log("prevDay : " + prevDay);
+		console.log("curDay : " + curDay);
+
+		var secondQuery = connection.query('update logininfo set lastlogin =' + timestamp + ' where uuid="'+uuid+'"',function(err,rows){
+			var result = {};
+			if((curDay - prevDay) > 0){			
+				var thirdQuery = connection.query('update cost set value = value+50 where uuid="'+uuid+'"' ,function(err,rows){
+					if(err){
+						return;
+					}
+					socket.emit('renewLoginResult',result);
+				});
+			}
+			else
+				socket.emit('renewLoginResult',result);
+		});					
+	});  	
+}
+
 exports.searchRandomUser = function(SnsType,SnsId,socket){
 	var query = connection.query('select uuid from logininfo where snstype="'+SnsType+'" and snsid="'+SnsId+'"',function(err,rows){
 		if(rows.length == 0){
@@ -129,9 +164,13 @@ exports.searchRandomUser = function(SnsType,SnsId,socket){
 			var thirdQueryCallBack = function(err,rows){
 				if(rows[0].sex != curUserSex){
 					var socektReplyInfo = rows[0];					
-					var fourthQuery = connection.query('update cost set value = value-1 where uuid="'+uuid+'"' , function(err,rows){
-						console.log('update cost set value = value-1 where uuid="'+uuid+'"');
-						socket.emit('res',socektReplyInfo);	
+					var fourthQuery = connection.query('update cost set value = value-1 where uuid="'+uuid+'" and value > 0' , function(err,rows){
+						if(rows.changedRows == 0){
+							socket.emit('res',{isEmpty : true, reason : "c0"});
+						}
+						else{
+							socket.emit('res',socektReplyInfo);	
+						}
 					});   			
 				}
 				else{

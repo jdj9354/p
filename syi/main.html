@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">  
+		<script src="https://cdn.socket.io/socket.io-1.4.3.js"></script>		
+		<script src="js/constant.js"></script>
+		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+    </head><body>
+        <script>
+            window.fbAsyncInit = function() {
+            		FB.init({
+            		  appId      : '509306929247910',
+            		  xfbml      : true,
+            		  version    : 'v2.5'
+            		});		
+            		FB.getLoginStatus(function(response) {
+            			statusChangeCallback(response);
+            		});
+            		function statusChangeCallback(response){
+            			var sta = response.status;
+            			if(sta == "connected"){
+            				FB.api("/me?fields=id,picture,name,email,permissions", function(response)
+            				{
+            
+            					document.getElementById("profileImage").src = response.picture.data.url;
+								document.getElementById("welcomeMessage").innerHTML = "Welcome! " + response.name;
+								
+								sessionStorage.logintype = "facebook";
+								sessionStorage.loginid = response.id;
+									
+								initUserInfo();
+            				});
+            			}
+            			else{
+            				FB.login(function(response) {
+            				// handle the response
+            				}, {scope: 'public_profile,email'});
+            			}
+            		}
+            	  };
+            
+            	  (function(d, s, id){
+            		 var js, fjs = d.getElementsByTagName(s)[0];
+            		 if (d.getElementById(id)) {return;}
+            		 js = d.createElement(s); js.id = id;
+            		 js.src = "//connect.facebook.net/en_US/sdk.js";
+            		 fjs.parentNode.insertBefore(js, fjs);
+            	   }(document, 'script', 'facebook-jssdk'));
+        </script>
+
+        <div class="section">
+			<div style="position:absolute; right:0">
+				<img id="profileImage">
+				<a class="btn btn-primary" onclick="navToProfilePage()">My Profile</a>
+				<br>
+				<div id="welcomeMessage"></div>
+				<br>
+				<div class="fb-like" data-href="{YOUR URL}" data-send="false" data-layout="button_count"  data-show-faces="false"></div>
+			</div>
+		</div>
+		<div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="page-header text-center">
+                            <h1>Paradice</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+						<div class="section">							
+							<div class="row">
+								<img id="search_img_mainphoto" style="cursor: pointer;" onclick="getDetails()" src="res/user_placeholder.png" class="img-circle img-responsive">
+							</div>
+							<div class="row">		
+								<div class="col-md-7">
+									<a class="btn btn-lg btn-warning" onclick="searchNext();">Search Next (10 H Cost)</a>
+								</div>
+								<div class="col-md-7">
+									<a class="btn btn-lg btn-warning" onclick="sendOK();">Send OK (No H Cost)</a>
+								</div>
+							</div>						
+							<div class="row">
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" style="width: 90%;">Remaining Search H</div>
+								</div>
+							</div>
+							<p id="txt_remaing_cost">Remaing Cost : </p>							
+						</div>
+                    </div>
+                    <div class="col-md-5">
+							<h1 id="search_et_nickname">nick name</h1>
+							<h3 id="search_et_name">name</h3>
+							<h3 id="search_et_age">age</h3>							
+							<h3 id="search_et_height">height</h3>
+							<h3 id="search_et_region">region</h3>
+							<h3 id="search_et_religion">religion</h3>
+							<h3 id="search_et_bloodgroups">blood groups</h3>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="text-center">Arrived Reply</p>
+                    </div>
+                </div>
+               <div class="row">
+                    <div id="recentReply1" class="col-md-4">
+                        <img id="reply_maingProfile" src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="center-block img-circle img-responsive" style="cursor: pointer;">
+                        <h3 id="reply_nickname" class="text-center"></h3>
+                        <p id="reply_name" class="text-center"></p>
+                    </div>
+                    <div id="recentReply2" class="col-md-4">
+                        <img id="reply_maingProfile" src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="center-block img-circle img-responsive" style="cursor: pointer;">
+                        <h3 id="reply_nickname" class="text-center"></h3>
+                        <p id="reply_name" class="text-center"></p>
+                    </div>
+                    <div id="recentReply3" class="col-md-4">
+                        <img id="reply_maingProfile" src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="center-block img-circle img-responsive" style="cursor: pointer;">
+                        <h3 id="reply_nickname" class="text-center"></h3>
+                        <p id="reply_name" class="text-center"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="text-center">Arrived Ok</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="recentArrived1" class="col-md-4">
+                        <img id="ok_maingProfile" src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="center-block img-circle img-responsive" style="cursor: pointer;">
+                        <h3 id="ok_nickname" class="text-center"></h3>
+                        <p id="ok_name" class="text-center"></p>
+                    </div>
+                    <div id="recentArrived2" class="col-md-4">
+                        <img id="ok_maingProfile" src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="center-block img-circle img-responsive" style="cursor: pointer;">
+                        <h3 id="ok_nickname" class="text-center"></h3>
+                        <p id="ok_name" class="text-center"></p>
+                    </div>
+                    <div id="recentArrived3" class="col-md-4">
+                        <img id="ok_maingProfile" src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="center-block img-circle img-responsive" style="cursor: pointer;">
+                        <h3 id="ok_nickname" class="text-center"></h3>
+                        <p id="ok_name" class="text-center"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 text-right"></div>
+        <script>
+		
+			var currentSearchedUUID;
+			var currentUserUUID;
+			var currentCostVal;
+		
+			function initUserInfo(){
+				var socket = io.connect(SOCKET_IO_ADDR);								
+				var sendData={ snstype : sessionStorage.logintype,
+								snsid : sessionStorage.loginid
+							 };
+				socket.on('res', function (data) {
+					if(data.isEmpty){
+						location.assign("index.html");   
+					}
+					else{	
+						currentUserUUID = data.profile.uuid;	
+						currentCostVal = data.costVal
+						document.getElementById('txt_remaing_cost').innerHTML = "Remaing Cost : " + currentCostVal;
+						
+						var matchingInfoData = { ruuid : currentUserUUID
+										};
+												
+						socket.on('matchingInfoData', function (data) {
+							if(!data.isSuccess){
+								location.assign("index.html");   
+							}
+							else{	
+								var recvOKArray = data.data;
+								for(var i=0; i<recvOKArray.length; i++){
+									if(i == 3)
+										break;
+									var divid = "recentArrived" + (i+1);
+									var groupDiv = document.getElementById(divid);									
+									var okMainProfileObj = $('#recentArrived'+(i+1)+' > #ok_maingProfile')[0];
+									okMainProfileObj.uuid = recvOKArray[i].sprofile.uuid;
+									var okNickNameObj = $('#recentArrived'+(i+1)+' > #ok_nickname')[0];
+									var okNameObj = $('#recentArrived'+(i+1)+' > #ok_name')[0];
+									//groupDiv.getElementById('ok_maingProfile');
+									
+									setImgSrcAndAdjust(okMainProfileObj,PROFILE_IMAGE_ADDR+okMainProfileObj.uuid+"/1",parseInt(okMainProfileObj.style.maxWidth,10),parseInt(okMainProfileObj.style.maxHeight,10));
+									okNickNameObj.innerHTML = recvOKArray[i].sprofile.name;
+									okNameObj.innerHTML = recvOKArray[i].sprofile.nickname;
+									okMainProfileObj.onclick = function(ev){
+										sessionStorage.reqDetailUUID = ev.target.uuid;
+										window.location = "detail.html?uuid="+ev.target.uuid+"&from=ao";
+									};
+								}
+							}
+						});								
+						socket.emit('getMatchingAll', matchingInfoData);				
+						
+						var matchingInfoData = { uuid : currentUserUUID
+										};
+						
+						socket.on('matchedInfoData', function (data) {
+							if(!data.isSuccess){
+								location.assign("index.html");   
+							}
+							else{	
+								var recvOKArray = data.data;
+								for(var i=0; i<recvOKArray.length; i++){
+									if(i == 3)
+										break;
+									var divid = "recentReply" + (i+1);
+									var groupDiv = document.getElementById(divid);									
+									var okMainProfileObj = $('#recentReply'+(i+1)+' > #reply_maingProfile')[0];
+									okMainProfileObj.uuid = recvOKArray[i].sprofile.uuid;
+									var okNickNameObj = $('#recentReply'+(i+1)+' > #reply_nickname')[0];
+									var okNameObj = $('#recentReply'+(i+1)+' > #reply_name')[0];
+									//groupDiv.getElementById('ok_maingProfile');
+									
+									setImgSrcAndAdjust(okMainProfileObj,PROFILE_IMAGE_ADDR+okMainProfileObj.uuid+"/1",parseInt(okMainProfileObj.style.maxWidth,10),parseInt(okMainProfileObj.style.maxHeight,10));
+									okNickNameObj.innerHTML = recvOKArray[i].sprofile.name;
+									okNameObj.innerHTML = recvOKArray[i].sprofile.nickname;
+									okMainProfileObj.onclick = function(ev){
+										sessionStorage.reqDetailUUID = ev.target.uuid;
+										window.location = "detail.html?uuid="+ev.target.uuid+"&from=ao";
+									};
+								}
+							}
+						});								
+						socket.emit('getMatchedAll', matchingInfoData);			
+					}
+				});								
+				socket.emit('reqInfo', sendData);										
+			}
+		
+			
+            function getDetails(){
+				sessionStorage.reqDetailUUID = currentSearchedUUID;
+				window.location = "detail.html?uuid="+currentSearchedUUID+"&from=s";
+			}
+			function navToProfilePage(){				
+				window.location = "myprofile.html";
+			}
+			function searchNext(){
+				var socket = io.connect(SOCKET_IO_ADDR);
+				socket.on('res', function (data) {
+					if(data.isEmpty){
+						switch(data.reason){
+						case "c0" :
+							alert("cost가 부족합니다");
+							break;
+						}						
+						return;
+					}					
+					currentSearchedUUID = data.uuid;
+				
+					document.getElementById('search_et_name').innerHTML = data.name;
+					document.getElementById('search_et_nickname').innerHTML = data.nickname;
+					document.getElementById('search_et_age').innerHTML = data.age;
+					document.getElementById('search_et_height').innerHTML = data.height;
+					document.getElementById('search_et_region').innerHTML = data.region;
+					document.getElementById('search_et_religion').innerHTML = data.religion;
+					document.getElementById('search_et_bloodgroups').innerHTML = data.bloodgroups;
+					
+					var mainprofileImage = document.getElementById('search_img_mainphoto');
+					mainprofileImage.style.maxWidth = "585px";
+					mainprofileImage.style.maxHeight = "300px";
+					
+					setImgSrcAndAdjust(mainprofileImage,PROFILE_IMAGE_ADDR+data.uuid+"/1",parseInt(mainprofileImage.style.maxWidth,10),parseInt(mainprofileImage.style.maxHeight,10));	
+					currentCostVal--;
+					document.getElementById('txt_remaing_cost').innerHTML = "Remaing Cost : " + currentCostVal;
+				});	
+				var sendData={ 
+					snstype : sessionStorage.logintype,
+					snsid : sessionStorage.loginid
+				};				
+				socket.emit('search', sendData);	
+			}
+			function sendOK(){
+				var socket = io.connect(SOCKET_IO_ADDR);
+				socket.on('res', function (data) {
+				});
+				var sendData ={suuid : currentUserUUID,
+								ruuid : currentSearchedUUID,
+								inittime : (new Date()).getTime(),
+								pending : 1
+				};
+				socket.emit('sendok',sendData);
+			}
+			
+			function setImgSrcAndAdjust(imgObj,srcURL,maxWidth,maxHeight){
+				imgObj.src = srcURL;
+				
+				imgObj.onload = function(){
+					var nh = imgObj.naturalHeight;
+					var nw = imgObj.naturalWidth;
+					
+					var resultWidth = (maxHeight*nw/nh);
+					var resultHeight = maxHeight;
+					
+					if(resultWidth > maxWidth){
+						resultWidth = maxWidth;
+						resultHeight = (maxWidth*nh/nw);
+					}
+				
+					imgObj.style.width = resultWidth+"px";
+					imgObj.style.height = resultHeight+'px';
+					imgObj.parentElement.style.height = (resultHeight+10)+'px';											
+				}
+			}
+        </script>
+    
+
+</body></html>

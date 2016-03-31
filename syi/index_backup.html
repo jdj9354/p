@@ -1,0 +1,40 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '509306929247910',
+      xfbml      : true,
+      version    : 'v2.5'
+    });
+	FB.getLoginStatus(function(response) {
+		statusChangeCallback(response);
+	});
+	function statusChangeCallback(response){
+		var sta = response.status;
+		if(sta == "connected"){
+			location.replace("main.html");   
+		}
+		else{
+			FB.login(function(response) {
+				location.replace("main.html");   
+			}, {scope: 'public_profile,email'});
+		}
+	}
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+<script>
+	
+</script>
+</body>
+</html>
