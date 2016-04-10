@@ -310,7 +310,7 @@
             				socket.emit('sendok',sendData);
             			}
 						function navigateRecharge(){
-            				window.location = "recharge.html";
+            				window.open("recharge.html");
             			}
             			
             			function setImgSrcAndAdjust(imgObj,srcURL,maxWidth,maxHeight){

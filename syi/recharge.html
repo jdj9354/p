@@ -1,4 +1,5 @@
-<html><head>
+<html>
+	<head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="js/uuid_js/uuid.js"></script>
@@ -7,70 +8,71 @@
         <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
         <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
         <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-		<link href="css/profile.css" rel="stylesheet" type="text/css">
-       
-    </head><body>
-		
-		
-		<div class="section">
-			<div class="container">
-				<div class="row"><div class="col-md-12 text-center"><img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" class="center-block img-responsive"></div></div><div class="row">
-					<div class="col-md-4">
-						<img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" class="img-responsive"><form action="https://www.paypal.com/cgi-bin/webscr" method="post" class="text-center">
-							<!-- Saved buttons use the "secure click" command -->
-							<!--<input type="hidden" name="cmd" value="_s-xclick">-->
-							<input type="hidden" name="cmd" value="_xclick">
-							<!-- Saved buttons are identified by their button IDs -->
-							<input type="hidden" name="hosted_button_id" value="221">
-							<input type="hidden" name="business" value="jdj9354@naver.com">
-							<input type="hidden" name="item_name" value="50 recharge">
-							<input type="hidden" name="item_number" value="123">
-							<input type="hidden" name="amount" value="3.0">
-							<input type="hidden" name="currency_type" value="USD" size="50">
-							<input type="hidden" name="charset" value="UTF-8" size="50">
-							<!-- Saved buttons display an appropriate button image. -->
-							<input type="image" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" alt="PayPal - The safer, easier way to pay online">
-							<img alt="" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
-						</form>
-					</div>
-					<div class="col-md-4">
-						<img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" class="img-responsive"><form action="https://www.paypal.com/cgi-bin/webscr" method="post" class="text-center">
-							<!-- Saved buttons use the "secure click" command -->
-							<!--<input type="hidden" name="cmd" value="_s-xclick">-->
-							<input type="hidden" name="cmd" value="_xclick">
-							<!-- Saved buttons are identified by their button IDs -->
-							<input type="hidden" name="hosted_button_id" value="221">
-							<input type="hidden" name="business" value="jdj9354@naver.com">
-							<input type="hidden" name="item_name" value="100 recharge">
-							<input type="hidden" name="item_number" value="123">
-							<input type="hidden" name="amount" value="5.7">
-							<input type="hidden" name="currency_type" value="USD" size="50">
-							<input type="hidden" name="charset" value="UTF-8" size="50">
-							<!-- Saved buttons display an appropriate button image. -->
-							<input type="image" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" alt="PayPal - The safer, easier way to pay online">
-							<img alt="" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
-						</form>
-					</div>
-					<div class="col-md-4">
-						<img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" class="img-responsive"><form action="https://www.paypal.com/cgi-bin/webscr" method="post" class="text-center">
-							<!-- Saved buttons use the "secure click" command -->
-							<!--<input type="hidden" name="cmd" value="_s-xclick">-->
-							<input type="hidden" name="cmd" value="_xclick">
-							<!-- Saved buttons are identified by their button IDs -->
-							<input type="hidden" name="hosted_button_id" value="221">
-							<input type="hidden" name="business" value="jdj9354@naver.com">
-							<input type="hidden" name="item_name" value="200 recharge">
-							<input type="hidden" name="item_number" value="123">
-							<input type="hidden" name="amount" value="11.0">
-							<input type="hidden" name="currency_type" value="USD" size="50">
-							<input type="hidden" name="charset" value="UTF-8" size="50">
-							<!-- Saved buttons display an appropriate button image. -->
-							<input type="image" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" alt="PayPal - The safer, easier way to pay online">
-							<img alt="" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>	
-	
-</body></html>
+        <link href="css/profile.css" rel="stylesheet" type="text/css">
+    </head>
+	<body>
+        <div class="section">
+            <div class="container">
+                <div class="row">
+					<div class="col-md-6" style="display:flex;">			
+						<div>
+							<h3 id="txt_amount" style="width:250px">Number of Dices</h3>
+							<h3 id="et_amount" class="numbersOnly" contenteditable="true" style="  position: relative;  top: 50%; width: 250px; border: 1px solid rgb(255, 255, 255);"></h3>													
+						</div>
+						<div class="col-md-4">
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" class="text-center">
+                            <!-- Saved buttons use the "secure click" command -->
+                            <!--<input type="hidden" name="cmd" value="_s-xclick">-->
+                            <input type="hidden" name="cmd" value="_xclick">
+                            <!-- Saved buttons are identified by their button IDs -->
+                            <input type="hidden" name="hosted_button_id" value="221">
+                            <input type="hidden" name="business" value="jdj9354@naver.com">
+                            <input type="hidden" name="item_name" value="Dice recharge">
+                            <input type="hidden" name="item_number" value="123">
+                            <input type="hidden" id="input_amount" name="amount">
+                            <input type="hidden" name="currency_type" value="USD" size="50">
+                            <input type="hidden" name="charset" value="UTF-8" size="50">
+                            <!-- Saved buttons display an appropriate button image. -->
+                            <input onclick="setPrice();" type="image" name="submit" src="res/DiceRecharge.png" class="img-responsive">
+                            <img alt="" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+                        </form>
+                    </div>
+					</div>					
+				</div>				                                
+            </div>
+        </div>
+		<script>
+			function setPrice(){			
+				var numDice = Number(document.getElementById("et_amount").innerHTML);
+				var ratio = 3/50;
+				
+				var discountPhase = 10;
+				var discountRatio = 0.9;
+				
+				var initialPrice = numDice * ratio;
+				var resultPirce = (initialPrice * Math.pow(discountRatio,initialPrice/10)).toFixed(2);
+				
+				
+				document.getElementById("input_amount").value = resultPirce;
+				var a = 3;
+			}
+			$(".numbersOnly").keypress(function(event) {
+				// Backspace, tab, enter, end, home, left, right
+				// We don't support the del key in Opera because del == . == 46.
+				var controlKeys = [8, 9, 13, 35, 36, 37, 39];
+				// IE doesn't support indexOf
+				var isControlKey = controlKeys.join(",").match(new RegExp(event.which));
+				// Some browsers just don't raise events for control keys. Easy.
+				// e.g. Safari backspace.
+				if (!event.which || // Control keys in most browsers. e.g. Firefox tab is 0
+				(48 <= event.which && event.which <= 57) || // Always 1 through 9
+				(48 == event.which && $(this).attr("value")) || // No 0 first digit
+					isControlKey) { // Opera assigns values for control keys.
+					return;
+				} else {
+					event.preventDefault();
+				}
+			});
+		</script>
+	</body>
+</html>
