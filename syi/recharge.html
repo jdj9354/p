@@ -20,7 +20,7 @@
 							<h3 id="et_amount" class="numbersOnly" contenteditable="true" style="  position: relative;  top: 50%; width: 250px; border: 1px solid rgb(255, 255, 255);"></h3>													
 						</div>
 						<div class="col-md-4">
-                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" class="text-center">
+                        <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" class="text-center">
                             <!-- Saved buttons use the "secure click" command -->
                             <!--<input type="hidden" name="cmd" value="_s-xclick">-->
                             <input type="hidden" name="cmd" value="_xclick">
@@ -32,6 +32,7 @@
                             <input type="hidden" id="input_amount" name="amount">
                             <input type="hidden" name="currency_type" value="USD" size="50">
                             <input type="hidden" name="charset" value="UTF-8" size="50">
+							<input type="hidden" name="notify_url" value="ipn_receiver.php" size="50" />
                             <!-- Saved buttons display an appropriate button image. -->
                             <input onclick="setPrice();" type="image" name="submit" src="res/DiceRecharge.png" class="img-responsive">
                             <img alt="" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">

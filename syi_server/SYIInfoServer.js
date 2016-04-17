@@ -89,6 +89,9 @@ io.on('connection', function (socket) {
 		var uuid = data.uuid; 		
 		DBModule.GetAllMatchedInfoAsync(uuid,socket);		
 	});
+	socket.on('ipn_result', function (data) {	
+		console.log(data);
+	});
 });
 
 
