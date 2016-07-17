@@ -99,6 +99,33 @@ io.on('connection', function (socket) {
 app.use(express.static(__dirname));
 app.use(express.bodyParser());
 app.use(cors(corsOptions));
+app.use('/ipnRecv', function(request,response,next){
+	var isSuccess = request.param('isSuccess');
+	var itemName = request.param('item_name');
+	var itemNumber = request.param('item_number');
+	var paymentStatus = request.param('payment_status');
+	var paymentAmount = request.param('mc_gross');
+	var paymentCurrency = request.param('mc_currency');
+	var txnId = request.param('txn_id');
+	var receiverEmail = request.param('receiver_email');
+	var payerEmail = request.param('payer_email');
+	var undefined_quantity = request.param('undefined_quantity');
+	
+	var jsonPaymentInfo = { isSuccess : isSuccess,
+							itemName : itemName,
+							itemNumber : itemNumber,
+							paymentStatus : paymentStatus,
+							paymentAmount : paymentAmount,
+							paymentCurrency : paymentCurrency,
+							txnId : txnId,
+							receiverEmail : receiverEmail,
+							payerEmail : payerEmail,
+							undefined_quantity : undefined_quantity
+							};
+							
+	console.log(jsonPaymentInfo);
+	
+});
 app.use('/reqInfo',function(request, response,next) {		
 	var SnsType = request.param("snstype");
 	var SnsId = request.param("snsid");
