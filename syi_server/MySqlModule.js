@@ -317,3 +317,10 @@ exports.GetAllMatchedInfoAsync = function(uuid,socket){
 		loopFunction(count,result,resultInfo);
     });	
 }
+
+exports.InitPaymentInfo = function(data,socket){
+}
+
+
+exports.FinalizePaymentInfo = function(data,socket){
+}

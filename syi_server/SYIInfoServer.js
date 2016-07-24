@@ -89,9 +89,14 @@ io.on('connection', function (socket) {
 		var uuid = data.uuid; 		
 		DBModule.GetAllMatchedInfoAsync(uuid,socket);		
 	});
+	
+	socket.on('send_payment_info', function(data){	
+		DBModule.InitPaymentInfo(data,socket);
+	});
+	
 	socket.on('ipn_result', function (data) {	
 		console.log(data);
-	});
+	});	
 });
 
 
@@ -109,8 +114,7 @@ app.use('/ipnRecv', function(request,response,next){
 	var txnId = request.param('txn_id');
 	var receiverEmail = request.param('receiver_email');
 	var payerEmail = request.param('payer_email');
-	var undefined_quantity = request.param('undefined_quantity');
-	
+		
 	var jsonPaymentInfo = { isSuccess : isSuccess,
 							itemName : itemName,
 							itemNumber : itemNumber,
@@ -119,11 +123,10 @@ app.use('/ipnRecv', function(request,response,next){
 							paymentCurrency : paymentCurrency,
 							txnId : txnId,
 							receiverEmail : receiverEmail,
-							payerEmail : payerEmail,
-							undefined_quantity : undefined_quantity
+							payerEmail : payerEmail							
 							};
 							
-	console.log(jsonPaymentInfo);
+	DBModule.FinalizePaymentInfo(data,socket);
 	
 });
 app.use('/reqInfo',function(request, response,next) {		
