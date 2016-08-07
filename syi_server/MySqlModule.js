@@ -319,8 +319,64 @@ exports.GetAllMatchedInfoAsync = function(uuid,socket){
 }
 
 exports.InitPaymentInfo = function(data,socket){
+
+	var resultInfo = {};			
+	var query = connection.query('select * from logininfo where (snstype = "' + data.login_type +'" and snsid = "'+data.login_id+'");',function(err,result){			
+        if (err) {			
+            console.error(err);		
+			resultInfo.isSuccess = false;
+			socket.emit('res',resultInfo);
+            throw err;
+			return;
+        }
+		var payer_uuid = result[0].uuid;
+		
+		var newPaymentInfo = {puuid : data.puuid,
+								payer_uuid : payer_uuid,
+								item_name : "N/A",
+								item_number : 0,
+								payment_status : "pending",
+								payment_amount : 0,
+								payment_currency : "N/A",
+								txn_id : "N/A",
+								receiver_email : "N/A",
+								payer_email : "N/A"};
+								
+		var secondQuery = connection.query('insert into payment set ?',newPaymentInfo,function(err,result){			
+			if (err) {				
+				console.error(err);		
+				resultInfo.isSuccess = false;
+				socket.emit('res',resultInfo);
+				throw err;
+				return;
+			}
+			resultInfo.isSuccess = true;
+			resultInfo.puuid = data.puuid;
+			
+			socket.emit('res',resultInfo);			
+			return;
+		});
+	});
 }
 
 
-exports.FinalizePaymentInfo = function(data,socket){
+exports.FinalizePaymentInfo = function(data){
+
+	var query = connection.query('update payment set'+' item_name =' + '"'+data.itemName +'"'
+													+', item_number =' + data.itemNumber
+													+', payment_status =' + '"'+data.paymentStatus +'"'
+													+', payment_amount =' + data.paymentAmount
+													+', payment_currency =' + '"'+data.paymentCurrency +'"'
+													+', txn_id =' + '"'+data.txnId +'"'
+													+', receiver_email =' + '"'+data.receiverEmail +'"'
+													+', payer_email =' + '"'+data.payerEmail +'"'
+													+ ' where puuid="'+data.puuid+'"',function(err,rows){
+		if (err) {				
+			console.error(err);	
+			throw err;
+			return;
+		}		
+		return;
+	});		
+	
 }

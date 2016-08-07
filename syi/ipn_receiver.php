@@ -8,7 +8,7 @@ define("DEBUG", 1);
 // Set to 0 once you're ready to go live
 define("USE_SANDBOX", 1);
 define("LOG_FILE", "./ipn.log");
-error_log("aewasddsf", 3, LOG_FILE);
+error_log('get - ' . htmlspecialchars($_GET["test"]), 3, LOG_FILE);
 
 
 
@@ -122,27 +122,11 @@ if (strcmp ($res, "VERIFIED") == 0) {
 	//$txn_id = $_POST['txn_id'];
 	//$receiver_email = $_POST['receiver_email'];
 	//$payer_email = $_POST['payer_email'];
-	
-	error_log('<script>
-			var socket = io.connect(SOCKET_IO_ADDR);								
-			var sendData={  isSuccess : true,
-							item_name : "'.$_POST['item_name'].'",
-							item_number : "'.$_POST['item_number'].'",
-							payment_status : "'.$_POST['payment_status'].'",
-							payment_amount : "'.$_POST['mc_gross'].'",
-							payment_currency : "'.$_POST['mc_currency'].'",
-							txn_id : "'.$_POST['txn_id'].'",
-							receiver_email : "'.$_POST['receiver_email'].'",
-							payer_email : "'.$_POST['payer_email'].'"
-						 };			
-			socket.on(\'ipn_forward\', function (data) {
-				;
-			});				
-			socket.emit(\'ipn_result\', sendData);	
-		</script>', 3, LOG_FILE);
-	
+
+		
 	
 		$_POST['isSuccess'] = "true";
+		$_POST['puuid'] = htmlspecialchars($_GET["puuid"]);
 
 		$ch2 = curl_init("http://118.37.178.145:53333/ipnRecv");
 		//curl_setopt ($curlsession, CURLOPT_URL, $url); 

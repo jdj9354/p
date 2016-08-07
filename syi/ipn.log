@@ -2593,3 +2593,1435 @@ VERIFIED
 			});				
 			socket.emit('ipn_result', sendData);	
 		</script>[2016-07-17 20:57 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=0.83&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A31%3A06+Jul+17%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AiKZhEEPLJjSIccz.2M.tbyW5YFwAC95-D-BBjGbipdwbbJLQenxBVF6&payer_email=jdj9354-buyer%40naver.com&txn_id=4UF55553W32072149&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.83&shipping=0.00&ipn_track_id=e2a1790a5187d 
+get - dj.jang[2016-08-07 18:00 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1013
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=01%3A59%3A59+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=A-6xki9zSqhzaT35SN1MdGgLf6S-AhBs3wFrZYnFudikEDCOCUuc9ZRP&payer_email=jdj9354-buyer%40naver.com&txn_id=6H124748BC342682J&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=28c26dcd11222
+[2016-08-07 18:00 Asia/Seoul] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Sun, 07 Aug 2016 09:00:05 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=rH4zi93ylj1rUtrKoOl2mPkfT30UIEVEDiqwY5ju48uvWqTnTxNQ-5eWdS2ppLiYwpuqKAAw7VcMCxaFBlwQV3tivWiG1H0zmC8bTFKKVEeW9ala_zINhfwhZb39RFhRrdqeLkcHWRfojSBAZmi96HM0JyJerj5DAe3WpflXJmgE63T7w4n2i9l2CT4GdgqT-ZCkF56rSqx9RrCVDjzkrI9nlE60SEmPHqXs_LtddLbXYXmy6GtsRyMDO8mlQto8Gc5a3Q8T7PkaQJvAFzL_zsgjwqKCyHcZJ0rEEi7kTp-T-duj8FJTZgN4Rr-nK0OY51W_3bYF1wFVQ4XKdxVlO6E16gzbTeZN4jCt7rMzdPWI5facchqPc2pxKj1uPAxI4Ys5HUYSlL33Ouq-eVCgvk8dmnaav4O_7se3MM9jVIOGP6pA5yldjh5AfzK; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 05-Aug-2026 09:00:05 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 07-Aug-2018 09:00:05 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1470560405247312; path=/; expires=Tue, 31-Jul-46 09:00:05 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: 5f9ffb5e3847e
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D2516100695%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 07 Aug 2016 09:30:05 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+<script>
+			var socket = io.connect(SOCKET_IO_ADDR);								
+			var sendData={  isSuccess : true,
+							item_name : "Dice recharge",
+							item_number : "123",
+							payment_status : "Pending",
+							payment_amount : "0.18",
+							payment_currency : "USD",
+							txn_id : "6H124748BC342682J",
+							receiver_email : "jdj9354@naver.com",
+							payer_email : "jdj9354-buyer@naver.com"
+						 };			
+			socket.on('ipn_forward', function (data) {
+				;
+			});				
+			socket.emit('ipn_result', sendData);	
+		</script>[2016-08-07 18:00 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=01%3A59%3A59+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=A-6xki9zSqhzaT35SN1MdGgLf6S-AhBs3wFrZYnFudikEDCOCUuc9ZRP&payer_email=jdj9354-buyer%40naver.com&txn_id=6H124748BC342682J&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=28c26dcd11222 
+get - dj.jang[2016-08-07 18:25 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1013
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=02%3A25%3A51+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=A6Wl-dV.Rl9HlgUaUiaylqrnaEu-ApvrKTUdLz5Tnuc2wNhIk9wYScc9&payer_email=jdj9354-buyer%40naver.com&txn_id=3PV9444277045904F&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=dc08ffdd6a87b
+[2016-08-07 18:25 Asia/Seoul] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Sun, 07 Aug 2016 09:25:55 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=7uNAZGJTSgRVh70wo83YZykGLF4vqSECFwHEtJWM16AyBGNpQHgnkPzso_tsHY2_5orRRFYByGOWIr7I0G1bPAZvdqrKA3BHwwzOHRYKcWaL_NhPnGE681A2r9JSNSujACKlzuxXCcMjov0kA-ZWUh9PwVJ2-29i0DjwBkkc-7km2Dglwg_u7MtK0_hNrUv3I0ekvlp2Zg4wqDIujscLddagjEJevw0kx-E8PYxx9WZXLnaNTdwJN8JzEzXHR1OZr1OBNuybS_StgtFzzNuz9JEZfjVmeNqvO7lhAvzNgvCxLuj_7U8CRDg11vwSfge3-KrFtC1-B52uxDg12yldbd28YrQBEo5i0BjVKIkRKXFMGwl8HC4ao196o37ctmkwY488xhV31XUPqU663VwK-1R40RTvsrEgV--zba-IZPUL8XtQVPNdVot3Pmm; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 05-Aug-2026 09:25:56 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 07-Aug-2018 09:25:56 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1470561955755944; path=/; expires=Tue, 31-Jul-46 09:25:55 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: 2c2f2fd2b47af
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D2751374935%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 07 Aug 2016 09:55:56 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+<script>
+			var socket = io.connect(SOCKET_IO_ADDR);								
+			var sendData={  isSuccess : true,
+							item_name : "Dice recharge",
+							item_number : "123",
+							payment_status : "Pending",
+							payment_amount : "0.18",
+							payment_currency : "USD",
+							txn_id : "3PV9444277045904F",
+							receiver_email : "jdj9354@naver.com",
+							payer_email : "jdj9354-buyer@naver.com"
+						 };			
+			socket.on('ipn_forward', function (data) {
+				;
+			});				
+			socket.emit('ipn_result', sendData);	
+		</script>[2016-08-07 18:25 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=02%3A25%3A51+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=A6Wl-dV.Rl9HlgUaUiaylqrnaEu-ApvrKTUdLz5Tnuc2wNhIk9wYScc9&payer_email=jdj9354-buyer%40naver.com&txn_id=3PV9444277045904F&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=dc08ffdd6a87b 
+get - dj.jang[2016-08-07 18:46 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1013
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=02%3A36%3A23+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AQGmldskndJM-hb8IFX3tOln3fbsAYGVD2qJ-jiPVPRKIg-zNfdz-dRU&payer_email=jdj9354-buyer%40naver.com&txn_id=8XK59781KP289301V&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=8094bfd6de39e
+[2016-08-07 18:46 Asia/Seoul] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Sun, 07 Aug 2016 09:46:32 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=6W1TzCO5SiIUAJZarh5Is5yg8hwCZmVg1mYlOy2XLDIsfhLsr6u39zaT1J-9NecqDY3DWkuP_QotV1N6xxXi-DDIzb-mIm8wkK1Pa_Amqn-PIUSv3DipDRtvwaTljORkuogHKtOFWnk39JTTVhWCQwxKE1TDnq27Fx-Va7c_bEHgqxNq77ZGGiaOqDgVuuT79iyDBz0g2OG6iFiJL9Tl5glXshC17Ej8QYN_Cw40nTeMbymR8jALuU7A_bTwjSmu0ANqrt8etjx-eD37GmjiJ0q0G4Ay-VEVGQJVTZn0r7UvalIyuxletMrlILxqAS-iQj6IFmdjvqCTjxu_ue1nK24VL5yDSbcgHD0MLwD6y2lKrV0nbqwsZGqbMhk_YOyn1y4M7CjjXFzKdVmM4iaueOL9vaTmsWt02iN_rmH_S3EVhv6mPE5Qg_i20Mm; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 05-Aug-2026 09:46:32 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 07-Aug-2018 09:46:32 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1470563192467484; path=/; expires=Tue, 31-Jul-46 09:46:32 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: 7846efc16e05f
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D2013505367%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 07 Aug 2016 10:16:32 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+<script>
+			var socket = io.connect(SOCKET_IO_ADDR);								
+			var sendData={  isSuccess : true,
+							item_name : "Dice recharge",
+							item_number : "123",
+							payment_status : "Pending",
+							payment_amount : "0.18",
+							payment_currency : "USD",
+							txn_id : "8XK59781KP289301V",
+							receiver_email : "jdj9354@naver.com",
+							payer_email : "jdj9354-buyer@naver.com"
+						 };			
+			socket.on('ipn_forward', function (data) {
+				;
+			});				
+			socket.emit('ipn_result', sendData);	
+		</script>[2016-08-07 18:46 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=02%3A36%3A23+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AQGmldskndJM-hb8IFX3tOln3fbsAYGVD2qJ-jiPVPRKIg-zNfdz-dRU&payer_email=jdj9354-buyer%40naver.com&txn_id=8XK59781KP289301V&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=8094bfd6de39e 
+get - [2016-08-07 19:01 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1012
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=0.24&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=03%3A00%3A11+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=Acg.-6.06JQ1DRm0udhIhGEwh3jCA.tcqXPn3d6hKl9NCHbqs0XIV4t1&payer_email=jdj9354-buyer%40naver.com&txn_id=72N31439XL699101P&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.24&shipping=0.00&ipn_track_id=8cfd176cd237
+[2016-08-07 19:01 Asia/Seoul] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Sun, 07 Aug 2016 10:01:19 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=biXNwU2cJgMBE1pg4PtObATPE2wdcNyGh7JlbgduJ7-UxScehV9bgTFf1eGa26BouMAxI7wluGKKk4W8oBAB7fk9QzglMi5rHVyWhjC9Vpo-2mZRAVOwjjjXCt5d3CS8j9XKm5hhn61uNkf_DEuOy4tWzUZGwJwIye2YYHgnfCko7mhgSMYXeFEXX9iBIYaY56Z43re1lKz57-yxHr1DA8lOg1fOtBTP3ZkH8becyuOrH5OayH2Fyjf7_ulN2Pm89CtZDP9g7O0qeQ7i5neWY7wj-lvHCGQqveZ1SnmvHB2_VkCf_sbEGTa2SFDZhrDoR-iau3UjrJW_Ut543CW8nA9hRipJGDp_IzY2CFst1hgPOw_LkzF-IqAPBvKKeBOSqmaP99IDi9yuCsuEp45xg_Hty7NblyL3pl6in6NeXTx1E5nWEmq2K1BVveu; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 05-Aug-2026 10:01:20 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 07-Aug-2018 10:01:20 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1470564079832964; path=/; expires=Tue, 31-Jul-46 10:01:19 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: 2787e214c75d1
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D4010190679%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 07 Aug 2016 10:31:20 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+<script>
+			var socket = io.connect(SOCKET_IO_ADDR);								
+			var sendData={  isSuccess : true,
+							item_name : "Dice recharge",
+							item_number : "123",
+							payment_status : "Pending",
+							payment_amount : "0.24",
+							payment_currency : "USD",
+							txn_id : "72N31439XL699101P",
+							receiver_email : "jdj9354@naver.com",
+							payer_email : "jdj9354-buyer@naver.com"
+						 };			
+			socket.on('ipn_forward', function (data) {
+				;
+			});				
+			socket.emit('ipn_result', sendData);	
+		</script>[2016-08-07 19:01 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=0.24&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=03%3A00%3A11+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=Acg.-6.06JQ1DRm0udhIhGEwh3jCA.tcqXPn3d6hKl9NCHbqs0XIV4t1&payer_email=jdj9354-buyer%40naver.com&txn_id=72N31439XL699101P&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.24&shipping=0.00&ipn_track_id=8cfd176cd237 
+get - [2016-08-07 19:03 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1013
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=03%3A03%3A35+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=A3ZWtWLFNQtbyplsJuMYHIrYFVP7AqNrQRd1Kebr03hsn54oU4MIyd7u&payer_email=jdj9354-buyer%40naver.com&txn_id=7XM92963T6593654P&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=6155c04e13b0a
+[2016-08-07 19:03 Asia/Seoul] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Sun, 07 Aug 2016 10:03:40 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=ccADPBpB_wnq7KGx4gIbF51KWPnqTjDzYSJnaCvPoNZKd1w9MVgkHngmQoMuQrj6-7XkxjljAfTvHdq45bi0u9PQkSjP5foV2DGUxzLsIlzr9Hk6lfcgU5ejSSiaRiZ8MsZ4zwooiBv-_rryDK7Q3xohppaIDngdUW4xbWKS3q3Zd81JgvIeKpgSf_g6ZOw6iQYGTUI5UxyUXQ4apBMoBOoyyH5miuASmcEDpqQn8ur-uEyq8k2c7VfJ8TM_Fz2auJwScXMLwb2f4vWfG5pwYZMXiA7OCs2DOqoVzVIeg_j5sYZBiRmVLgiR_u_zK8sUu-KQWzV_p5u8SI3-hpwVAQcPXSpoUw1qkAt1Kt7KKIPfCLaHXiwFK90ehb58CbvsIMiqoVdXW8xNZAHoQl_NreDPsBAPthIGF8S6U9VeCFI5g0aOhU0j5V-2mAe; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 05-Aug-2026 10:03:41 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 07-Aug-2018 10:03:41 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1470564220946817; path=/; expires=Tue, 31-Jul-46 10:03:40 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: c35ad714e290f
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D2080876375%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 07 Aug 2016 10:33:41 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+<script>
+			var socket = io.connect(SOCKET_IO_ADDR);								
+			var sendData={  isSuccess : true,
+							item_name : "Dice recharge",
+							item_number : "123",
+							payment_status : "Pending",
+							payment_amount : "0.18",
+							payment_currency : "USD",
+							txn_id : "7XM92963T6593654P",
+							receiver_email : "jdj9354@naver.com",
+							payer_email : "jdj9354-buyer@naver.com"
+						 };			
+			socket.on('ipn_forward', function (data) {
+				;
+			});				
+			socket.emit('ipn_result', sendData);	
+		</script>[2016-08-07 19:03 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=03%3A03%3A35+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=A3ZWtWLFNQtbyplsJuMYHIrYFVP7AqNrQRd1Kebr03hsn54oU4MIyd7u&payer_email=jdj9354-buyer%40naver.com&txn_id=7XM92963T6593654P&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=6155c04e13b0a 
+get - [2016-08-07 19:06 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1013
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=03%3A04%3A43+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=A4PwLvIU4r2fw5-fD5o.WorsVeOpA0K1nUAKDNlJv39j71HjbVEQ1WcP&payer_email=jdj9354-buyer%40naver.com&txn_id=4RB804625L262764X&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=c3fb79c08d407
+[2016-08-07 19:06 Asia/Seoul] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Sun, 07 Aug 2016 10:06:48 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=6Rv86k_4Wdg4EyNyD_VfJ297gF5rn-jWujRx5qlsogMx0gK2hsvWNMouSYX8wVHUJd4Uyeqwfo7lYyGDsV-Q0ASXTuRF-j6qyAFtI9xmGqpOEheOxKgr26IbQEkPmaBnWkfrdohR-USNtvWxN9f5PYeITwhhWVpsIXXGDjuJMghKJWxE8wWY80N-KZc6uceOLrvFS-mKrMchgmf1sKbHPsgAMNWTo4fOJF9kM5QfkiJI1rPSw-qqhc2Oamqa9wzabpXoYMzGpuq_QY0hXSGBYFq1yeys_pyTHsF5w7VkNmaXSE05iz3EQd_Nlj9pAEKFPzSbXrs3WwlZmPs5zcMMmRtv0SLrNzOxAdK8q9rcKJcRJB6Km2qvRJ14tF5xgG-6wiSVjTHNz8Qa9PMDVDCHskmmkCyIhSDZflQaP0; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 05-Aug-2026 10:06:49 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 07-Aug-2018 10:06:49 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1470564408947963; path=/; expires=Tue, 31-Jul-46 10:06:48 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: c31167b6e2501
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D940091223%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 07 Aug 2016 10:36:49 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+<script>
+			var socket = io.connect(SOCKET_IO_ADDR);								
+			var sendData={  isSuccess : true,
+							item_name : "Dice recharge",
+							item_number : "123",
+							payment_status : "Pending",
+							payment_amount : "0.18",
+							payment_currency : "USD",
+							txn_id : "4RB804625L262764X",
+							receiver_email : "jdj9354@naver.com",
+							payer_email : "jdj9354-buyer@naver.com"
+						 };			
+			socket.on('ipn_forward', function (data) {
+				;
+			});				
+			socket.emit('ipn_result', sendData);	
+		</script>get - [2016-08-07 19:08 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=03%3A04%3A43+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=A4PwLvIU4r2fw5-fD5o.WorsVeOpA0K1nUAKDNlJv39j71HjbVEQ1WcP&payer_email=jdj9354-buyer%40naver.com&txn_id=4RB804625L262764X&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=c3fb79c08d407 
+[2016-08-07 19:08 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1013
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=03%3A04%3A43+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=A4PwLvIU4r2fw5-fD5o.WorsVeOpA0K1nUAKDNlJv39j71HjbVEQ1WcP&payer_email=jdj9354-buyer%40naver.com&txn_id=4RB804625L262764X&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=c3fb79c08d407
+[2016-08-07 19:08 Asia/Seoul] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Sun, 07 Aug 2016 10:08:50 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=WP3Z4hCfRa_pFlS_94tejZIpAoCASZ7PT9OHQf1vBzkBpXMjJkDozuRZOSb6s87B0EcMn6OEf7ZdXW7P5Qs4-h5wY-0k_mvrjmLKFA3hqP0T7UECOKg6ehnWItPHZeF0yOHwBbgh0jvhjto22J0eAMH3_VnTkGRMie3YTiDQSMI2o5fV4VlI4k9QkFmeJhCLO0IFpioS5RBuobGLECXCr3IywnNecuV0mnqFHz8NeA1cIqfgB2g6Ksak_ddtEC6dxLC4FZoI9VCgKN6tpw-QCTgoRc37WszO2T5B8dwtRRRJvgdPBYe0wf9iEoOGkggd-SBL9mip8gKZOTQav7rF9m6wIBzgNKC78kZ_0WwxVkO3EM-yYaUCZa6Z8vP0u-JsUSmhe-SzDwXbURz3VGayEDseB1CDbyqtShQK-5cs49qf8NyTsZaSYWQQOAa; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 05-Aug-2026 10:08:50 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 07-Aug-2018 10:08:50 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1470564530320012; path=/; expires=Tue, 31-Jul-46 10:08:50 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: 7e0585ed49475
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D2986911575%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 07 Aug 2016 10:38:50 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+<script>
+			var socket = io.connect(SOCKET_IO_ADDR);								
+			var sendData={  isSuccess : true,
+							item_name : "Dice recharge",
+							item_number : "123",
+							payment_status : "Pending",
+							payment_amount : "0.18",
+							payment_currency : "USD",
+							txn_id : "4RB804625L262764X",
+							receiver_email : "jdj9354@naver.com",
+							payer_email : "jdj9354-buyer@naver.com"
+						 };			
+			socket.on('ipn_forward', function (data) {
+				;
+			});				
+			socket.emit('ipn_result', sendData);	
+		</script>get - [2016-08-07 19:10 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=03%3A04%3A43+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=A4PwLvIU4r2fw5-fD5o.WorsVeOpA0K1nUAKDNlJv39j71HjbVEQ1WcP&payer_email=jdj9354-buyer%40naver.com&txn_id=4RB804625L262764X&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=c3fb79c08d407 
+[2016-08-07 19:11 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1013
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=03%3A04%3A43+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=A4PwLvIU4r2fw5-fD5o.WorsVeOpA0K1nUAKDNlJv39j71HjbVEQ1WcP&payer_email=jdj9354-buyer%40naver.com&txn_id=4RB804625L262764X&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=c3fb79c08d407
+[2016-08-07 19:11 Asia/Seoul] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Sun, 07 Aug 2016 10:11:46 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=l0IPhOHAHVOCePAmcpsfanqTxkm8RZzi6pZFlci51DJaoFbrIJz7EVyGP2tvMEZ6p503WwyKjxfY4lVfPK9GdvN9YShf3vwyFa6XkNgN_UQd-v5QePlU2OxT7zDPgZzGlLHhKpCaSv2OfbC_W5nEfWxXlv9TmCgFCcrUx2cQ8q_TCA6R6hmoOKcWqH_PohJooEALatevw1T5slHV5Y70Rq0vrELiy2FCwzlNOEwoKxEWjt1zOTL-d79A6FojoJLGAo_YA3mKVBn6ZwwXhuVl-CuYaww28zAS8S33wXK0FTZM3PJj0xsb98fXYLV1HukvsbPUZrx2JkSbBUAycwJ5gJeNBovh1c1oH8PGe4hrxKyHLMsN6eZZ2pdWdS6hVQLXTlnBbE-nt2n5JcbLlFIUNQHPVW2seegb3OFzdGGO3YSZ-cq7AQa2lJpE5mq; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 05-Aug-2026 10:11:46 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 07-Aug-2018 10:11:46 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1470564706033483; path=/; expires=Tue, 31-Jul-46 10:11:46 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: aa177d1d3622
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D1644799831%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 07 Aug 2016 10:41:46 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+<script>
+			var socket = io.connect(SOCKET_IO_ADDR);								
+			var sendData={  isSuccess : true,
+							item_name : "Dice recharge",
+							item_number : "123",
+							payment_status : "Pending",
+							payment_amount : "0.18",
+							payment_currency : "USD",
+							txn_id : "4RB804625L262764X",
+							receiver_email : "jdj9354@naver.com",
+							payer_email : "jdj9354-buyer@naver.com"
+						 };			
+			socket.on('ipn_forward', function (data) {
+				;
+			});				
+			socket.emit('ipn_result', sendData);	
+		</script>[2016-08-07 19:13 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=03%3A04%3A43+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=A4PwLvIU4r2fw5-fD5o.WorsVeOpA0K1nUAKDNlJv39j71HjbVEQ1WcP&payer_email=jdj9354-buyer%40naver.com&txn_id=4RB804625L262764X&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=c3fb79c08d407 
+get - [2016-08-07 19:16 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1013
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=03%3A04%3A43+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=A4PwLvIU4r2fw5-fD5o.WorsVeOpA0K1nUAKDNlJv39j71HjbVEQ1WcP&payer_email=jdj9354-buyer%40naver.com&txn_id=4RB804625L262764X&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=c3fb79c08d407
+[2016-08-07 19:16 Asia/Seoul] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Sun, 07 Aug 2016 10:16:35 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=SXnmUKaralhzQtuJDqC0v-ULV-bs6ZSVSqsJzVFyEKyHCQShzh2AcmM2ZVihqAtwkEjbhTqpS_CRIz1p4txkZRKeHYCwpn6Sm45yCodyrzls1Opg8xJkBDD_s3cpfxvjRLHiGuOTXxnxdsIYTjMmxkOL3JjyK2HjUjC5ZIodroExP_RqT1ff6KXG5OW57AWsL7050L40LeHNhIT7Uz6KljRRgVD_XUrYUNeHu4XdMnxp6-P9JkNBP7gcx6Gdp7dZbj4bzy0ayv1pdgaDu084PieJBtIZjYS5TLrX5ktt6_cD7Y344IkjgFgU53yxbfWXXNDvOCfGy5hyW7UyDOkkXTTBZ9EoyfLqiVVXOMPlGDqBXqlY_V_QSQYodbwjgktbSR7pWYSrepSnbtWQuGyrYZaW0WFm24bIxzIwZrbl5x8H157UWlw7ld1b7Sa; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 05-Aug-2026 10:16:36 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 07-Aug-2018 10:16:36 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1470564995916400; path=/; expires=Tue, 31-Jul-46 10:16:35 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: 3849a367da965
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D2198513495%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 07 Aug 2016 10:46:36 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+<script>
+			var socket = io.connect(SOCKET_IO_ADDR);								
+			var sendData={  isSuccess : true,
+							item_name : "Dice recharge",
+							item_number : "123",
+							payment_status : "Pending",
+							payment_amount : "0.18",
+							payment_currency : "USD",
+							txn_id : "4RB804625L262764X",
+							receiver_email : "jdj9354@naver.com",
+							payer_email : "jdj9354-buyer@naver.com"
+						 };			
+			socket.on('ipn_forward', function (data) {
+				;
+			});				
+			socket.emit('ipn_result', sendData);	
+		</script>[2016-08-07 19:18 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=03%3A04%3A43+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=A4PwLvIU4r2fw5-fD5o.WorsVeOpA0K1nUAKDNlJv39j71HjbVEQ1WcP&payer_email=jdj9354-buyer%40naver.com&txn_id=4RB804625L262764X&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=c3fb79c08d407 
+get - [2016-08-07 19:22 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1013
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=03%3A04%3A43+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=A4PwLvIU4r2fw5-fD5o.WorsVeOpA0K1nUAKDNlJv39j71HjbVEQ1WcP&payer_email=jdj9354-buyer%40naver.com&txn_id=4RB804625L262764X&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=c3fb79c08d407
+[2016-08-07 19:22 Asia/Seoul] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Sun, 07 Aug 2016 10:22:06 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=hB5fsbgCiGV5aPXhBlewf6gF7xf0SX21cswh8Lwd8Ww8gdh5p6wfbapU83QKF0SdkS3GBYDs2oIvyVyfThkjobNvuZDOOG8rcExKdhg5ltI2BO8QMWpoS2UmDJtefJeEWq1D-KUx20zV186nB-3RdTY1vGSdx9D-bE09-_zAxKPj0cLHBFdJ3-88rA8QW30CY2MytgTVU1ZGQn5rFSS6W8KApqrRtIhhRbHmLwMbipPGyYbx1ZexWa67U3zlAiBN5lcXVJ6sx-OUJiJ6wgVUaRhGRiTgFcS_lIzSvufuKm2A86C37hHXf838m-2Qj9eav0VBnJqmPfZoCfUN0ueGPieQqiWIe1FHOpzHMxtboNJb4xjE6g9myqfhlszJ0N1IEBZZ7nxI0rsKrZDHDUjfJtazraUMXg_fpxfz3JQvn7FJbthwdMBJPXJ5_yW; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 05-Aug-2026 10:22:07 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 07-Aug-2018 10:22:07 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1470565326787041; path=/; expires=Tue, 31-Jul-46 10:22:06 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: ccb48af3bc07b
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D3456870231%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 07 Aug 2016 10:52:07 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+<script>
+			var socket = io.connect(SOCKET_IO_ADDR);								
+			var sendData={  isSuccess : true,
+							item_name : "Dice recharge",
+							item_number : "123",
+							payment_status : "Pending",
+							payment_amount : "0.18",
+							payment_currency : "USD",
+							txn_id : "4RB804625L262764X",
+							receiver_email : "jdj9354@naver.com",
+							payer_email : "jdj9354-buyer@naver.com"
+						 };			
+			socket.on('ipn_forward', function (data) {
+				;
+			});				
+			socket.emit('ipn_result', sendData);	
+		</script>[2016-08-07 19:24 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=03%3A04%3A43+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=A4PwLvIU4r2fw5-fD5o.WorsVeOpA0K1nUAKDNlJv39j71HjbVEQ1WcP&payer_email=jdj9354-buyer%40naver.com&txn_id=4RB804625L262764X&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=c3fb79c08d407 
+get - [2016-08-07 19:28 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1013
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=03%3A04%3A43+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=A4PwLvIU4r2fw5-fD5o.WorsVeOpA0K1nUAKDNlJv39j71HjbVEQ1WcP&payer_email=jdj9354-buyer%40naver.com&txn_id=4RB804625L262764X&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=c3fb79c08d407
+[2016-08-07 19:28 Asia/Seoul] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Sun, 07 Aug 2016 10:28:23 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=YJm83FpAbAlk79pJdVLqZLABncgldJoRYDT-zR1Rn5ZcQxX4jVUfA9OURSO518VX5pKKc-2f1VmtDmgzpWuInu6VFEKKc69OpBCYSQIy5XigOjswzEYgvEMDtIJlaOLREx2xczmu8CgYWnbn5uD_QuNmNzL8HQ9TlPmpDm7B4gGMDMjcfLFOOpnnglxCDS0wvVIo__jMutR4vWSoepQoEqkvMbpM1okHEBtuRjg91LGT5Ij3BIV4ff9xVhpjODGA9KzhqT9HRwKCuwaywTeCyRfsnowhKHkt6S4FR9Fr6cOi5KykzmUbhAy92gyEyxRTlNzCmOj59mRsGJ8yBfAA0rHk_xwGPVlZi8-idkXlBvMeiF2LO8fxvJlXw2m36yg1LfV55Z7t9XhInrc6p465DdlIz2CnihRzV6kP43RUG_t7W6lLQ7P1dbnQwYO; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 05-Aug-2026 10:28:23 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 07-Aug-2018 10:28:23 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1470565703130293; path=/; expires=Tue, 31-Jul-46 10:28:23 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: 6d9b08251b85a
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D1192077143%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 07 Aug 2016 10:58:23 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+<script>
+			var socket = io.connect(SOCKET_IO_ADDR);								
+			var sendData={  isSuccess : true,
+							item_name : "Dice recharge",
+							item_number : "123",
+							payment_status : "Pending",
+							payment_amount : "0.18",
+							payment_currency : "USD",
+							txn_id : "4RB804625L262764X",
+							receiver_email : "jdj9354@naver.com",
+							payer_email : "jdj9354-buyer@naver.com"
+						 };			
+			socket.on('ipn_forward', function (data) {
+				;
+			});				
+			socket.emit('ipn_result', sendData);	
+		</script>[2016-08-07 19:30 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=03%3A04%3A43+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=A4PwLvIU4r2fw5-fD5o.WorsVeOpA0K1nUAKDNlJv39j71HjbVEQ1WcP&payer_email=jdj9354-buyer%40naver.com&txn_id=4RB804625L262764X&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=c3fb79c08d407 
+get - [2016-08-07 19:36 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1013
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=03%3A04%3A43+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=A4PwLvIU4r2fw5-fD5o.WorsVeOpA0K1nUAKDNlJv39j71HjbVEQ1WcP&payer_email=jdj9354-buyer%40naver.com&txn_id=4RB804625L262764X&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=c3fb79c08d407
+[2016-08-07 19:36 Asia/Seoul] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Sun, 07 Aug 2016 10:36:44 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=60h4gx5jLfs7dCpUEu8jXVy9S-YxwPaT6cQbuF_2tD9EZQrG8a2bPf6f2bmTcyf43vgYJSD-tbTAkpL1COThi5WzIKpQ4cWnqEOqe-3Tmn-Fu_9vr7hHQ-zz8FRDhEWD829VGnH1xLZsopaA3ffd9q0t624o2FGZndO4fj3dPEbEqbwt3-JU72xpqxyNGbPQqbxL5CXrfCDUYwhoexTuIb8JwLDXTiSzuVOO2vYY8KedtXDJNqr3vS6QDn7ChxiETI3YxeCBSruiHhTFpzC-W1oUo6m1YJZ4QzIOxZn6f2RnDrrKypGUSXY2o6iITByN5go0m4kMxyPpvRuoVFt7zRCFZriPXWbnoTptUBx5DeUpW_AvM-AjgfbqBnOBSZiZJ0ItO-NtpPlqIXfd54uLqw9sKMSdEElH8sxkF-OJ7hPBMo9t5HZPBYoE_jK; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 05-Aug-2026 10:36:44 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 07-Aug-2018 10:36:44 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1470566204598325; path=/; expires=Tue, 31-Jul-46 10:36:44 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: 59402fe38dd93
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D1007658839%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 07 Aug 2016 11:06:44 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+<script>
+			var socket = io.connect(SOCKET_IO_ADDR);								
+			var sendData={  isSuccess : true,
+							item_name : "Dice recharge",
+							item_number : "123",
+							payment_status : "Pending",
+							payment_amount : "0.18",
+							payment_currency : "USD",
+							txn_id : "4RB804625L262764X",
+							receiver_email : "jdj9354@naver.com",
+							payer_email : "jdj9354-buyer@naver.com"
+						 };			
+			socket.on('ipn_forward', function (data) {
+				;
+			});				
+			socket.emit('ipn_result', sendData);	
+		</script>[2016-08-07 19:38 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=03%3A04%3A43+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=A4PwLvIU4r2fw5-fD5o.WorsVeOpA0K1nUAKDNlJv39j71HjbVEQ1WcP&payer_email=jdj9354-buyer%40naver.com&txn_id=4RB804625L262764X&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=c3fb79c08d407 
+get - [2016-08-07 19:51 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1013
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=03%3A04%3A43+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=A4PwLvIU4r2fw5-fD5o.WorsVeOpA0K1nUAKDNlJv39j71HjbVEQ1WcP&payer_email=jdj9354-buyer%40naver.com&txn_id=4RB804625L262764X&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=c3fb79c08d407
+[2016-08-07 19:51 Asia/Seoul] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Sun, 07 Aug 2016 10:51:21 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=_kden6E1zk6no27uUxcTZqAsWgcXiEEmV7rozXdLXZo9BOh8vx2pqnn5xntAvv7eh-UpzUog0q2gKwUvxX-VpGP9-48vJYH8dNGKFbDZIGYqi-WgDsC2dVinJ1_bpaP6tZW63pputnkCsEGoRiePiBiChTAD8uKtMCdTfSr3hSgl7wrq52vNsnIQyuzw-Ux_SPJ4dDq7RIsHonnnHOo4WL1S8GOJhtSRf1Cyn3UzgXvmVJSL4JZtZzvA2UO_ZpPmZwxgRq4YDWUCveDYozWYB1bYkLmTVQz9VPXLjUt0P8VLThaZ8qLcAyZh1uvSmY7lglIiAvgElUHAngnFR7G8CVeS18isjiWffTFatH_wTSFmyJe8heYmvUyLe1DHhqC3S3bk2Qwg_i7R6B8y3O1AyAOxEDtbPNder1ceLLaaPyOpSIs7MwI_UiaQXGK; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 05-Aug-2026 10:51:21 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 07-Aug-2018 10:51:21 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1470567081134977; path=/; expires=Tue, 31-Jul-46 10:51:21 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: 3ce7f0da18ba0
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D2836571991%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 07 Aug 2016 11:21:21 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+<script>
+			var socket = io.connect(SOCKET_IO_ADDR);								
+			var sendData={  isSuccess : true,
+							item_name : "Dice recharge",
+							item_number : "123",
+							payment_status : "Pending",
+							payment_amount : "0.18",
+							payment_currency : "USD",
+							txn_id : "4RB804625L262764X",
+							receiver_email : "jdj9354@naver.com",
+							payer_email : "jdj9354-buyer@naver.com"
+						 };			
+			socket.on('ipn_forward', function (data) {
+				;
+			});				
+			socket.emit('ipn_result', sendData);	
+		</script>[2016-08-07 19:53 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=03%3A04%3A43+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=A4PwLvIU4r2fw5-fD5o.WorsVeOpA0K1nUAKDNlJv39j71HjbVEQ1WcP&payer_email=jdj9354-buyer%40naver.com&txn_id=4RB804625L262764X&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=c3fb79c08d407 
+get - [2016-08-07 20:15 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1013
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A13%3A32+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AFcWxV21C7fd0v3bYYYRCpSSRl31Ax4qgB51lcxNdab70-j6HM6twFwT&payer_email=jdj9354-buyer%40naver.com&txn_id=9J972244G81208908&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=2d9f31a52f52b
+[2016-08-07 20:15 Asia/Seoul] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Sun, 07 Aug 2016 11:15:37 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=jkcyNcvixe0F3gcWb9G68r31Amlie6Wib5crZBvznHkTu84N8EHn5EgAcl1d0JWwIXDS5vfcYz2xaHFrR-aeOQyixtiY2JzcPhdmD66gldyDFLV8ZcAMg0UJCkki4v4GGrCnP_PxpzUPn6coXhWee1a7QJlbVDPkmdQeB28gjPoLYLbFN4KPgQ0t8Os3-AbkJGht8p36wi-ZqED-WlS1dJLzqamhh9qTUaIQ4MUDOTamXqTWEuyHTl1nNHBc0Sc9PCHDZ2HfSfzt5Br6GUN_oJa7GLJsA_9olYhXaHeAMZSnC5h_uVSgoy1V6S3gbK243QPtZQY7BZDw7oxXqFDwnMbz6UgrL0o4AHSsMB1HzOuC8UghG-tU08v9QMWv-h6a33S3nJqxy3iMSkbIxyEQMb1BjGJ1oml11hNIGX2mJor_7VNKDr7PYL-E9Kq; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 05-Aug-2026 11:15:38 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 07-Aug-2018 11:15:38 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1470568537709520; path=/; expires=Tue, 31-Jul-46 11:15:37 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: b387f9b5a8442
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D1494787927%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 07 Aug 2016 11:45:38 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+<script>
+			var socket = io.connect(SOCKET_IO_ADDR);								
+			var sendData={  isSuccess : true,
+							item_name : "Dice recharge",
+							item_number : "123",
+							payment_status : "Pending",
+							payment_amount : "0.18",
+							payment_currency : "USD",
+							txn_id : "9J972244G81208908",
+							receiver_email : "jdj9354@naver.com",
+							payer_email : "jdj9354-buyer@naver.com"
+						 };			
+			socket.on('ipn_forward', function (data) {
+				;
+			});				
+			socket.emit('ipn_result', sendData);	
+		</script>dj.jang - fb3279a0-a9f7-4529-b3a4-f980189abebb[2016-08-07 20:17 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A13%3A32+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AFcWxV21C7fd0v3bYYYRCpSSRl31Ax4qgB51lcxNdab70-j6HM6twFwT&payer_email=jdj9354-buyer%40naver.com&txn_id=9J972244G81208908&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=2d9f31a52f52b 
+get - get - get - [2016-08-07 20:19 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1013
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A17%3A42+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AAJkxWTa08yQdU65u22wOv3pGMn6AUTkCYbvpwDnDy-fyL5.A6u-x941&payer_email=jdj9354-buyer%40naver.com&txn_id=2KK4165074751514B&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=8a3f964149551
+[2016-08-07 20:19 Asia/Seoul] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Sun, 07 Aug 2016 11:19:48 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=YPe4WeKeWQGGVS3VyRenjLQ5CNePtX3TrXxyMfWkyqy6LT4Mafw-58Bc5UIrjsSCKkV64JzyfX-oExz1AODsl0psT87mRw1_IpMfxOwqNZLAMi5XJehElb2ckXd1A72HvxEd8sBktdQNOQ8IEaJzwtsw6TwTFx-jZhcCldMIusMMXKxTdsmjbq9GxRldo5oi1as3BJEnZv5lDpHJyxGBYPiHu4FlTvADoV53IoY_TllewUoFtpSuq1buyuDIR_GPUJJM0xGbRtqDjFln4ZZpJkM68OVKlkFnyfxdy3fOu_DXg_Ot9ktfNhXWqT3QOu_GhJtvEhOm_eOBRou7Eopn9WpcxA17bx4tb9aXRAUk7n_ISf0PAaaAmZkJQaa4qjXwqmxNSJfSWJcwtGeDCEKflyuZI_owBZKMGjkv14pup5WTiKaqCxXfIpYHPfG; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 05-Aug-2026 11:19:48 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 07-Aug-2018 11:19:48 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1470568788522205; path=/; expires=Tue, 31-Jul-46 11:19:48 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: ec24ed807b722
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D1410967383%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 07 Aug 2016 11:49:48 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+<script>
+			var socket = io.connect(SOCKET_IO_ADDR);								
+			var sendData={  isSuccess : true,
+							item_name : "Dice recharge",
+							item_number : "123",
+							payment_status : "Pending",
+							payment_amount : "0.18",
+							payment_currency : "USD",
+							txn_id : "2KK4165074751514B",
+							receiver_email : "jdj9354@naver.com",
+							payer_email : "jdj9354-buyer@naver.com"
+						 };			
+			socket.on('ipn_forward', function (data) {
+				;
+			});				
+			socket.emit('ipn_result', sendData);	
+		</script>dj.jang - a5ed48f6-37c1-4dd7-9bcb-132a683c062c[2016-08-07 20:20 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1013
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A13%3A32+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AFcWxV21C7fd0v3bYYYRCpSSRl31Ax4qgB51lcxNdab70-j6HM6twFwT&payer_email=jdj9354-buyer%40naver.com&txn_id=9J972244G81208908&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=2d9f31a52f52b
+[2016-08-07 20:20 Asia/Seoul] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Sun, 07 Aug 2016 11:20:09 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=9fGT7MjX-NzzOwDfGfQ8XO2bw3fR2kwmjkscXcDi8fSwMkUQmZD2YAghkeqlgNKBnku-iCOtOddwHbw4a62323QqtWkO3t29cEgB1mHAAjyO9-5euwRJu13QKaYys_kljhLVZlFvEHBIXhpE9ayO8Y2k35FMvmdZNVm1PSpf5j5QKRWnuYO2bLxBpENRzdLJP0GA7jLZKGKscZXCeAgbmm128sNgguDM24RgvMXC7G5pAffDvD5MUDFWhUAyA9iM0ZA-wLaZLR6jCAJDk5bWyQM0roKX9XoifN43QS6MAtPluDkL0761l7fKllKAt_VA4MHzKbDkRoGgozlsCgS4uIAwHSZWgLYzGRTXqpAlaTX01n9AMoKdRtvuZufcr3TfAFZrmbptdfQlpteeuPNSIfj5lim6XgWbnucFaNPx8Vot-a3r3jQv0yTYj6O; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 05-Aug-2026 11:20:10 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 07-Aug-2018 11:20:10 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1470568809743880; path=/; expires=Tue, 31-Jul-46 11:20:09 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: b7156776b19c8
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D1763288919%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 07 Aug 2016 11:50:10 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+<script>
+			var socket = io.connect(SOCKET_IO_ADDR);								
+			var sendData={  isSuccess : true,
+							item_name : "Dice recharge",
+							item_number : "123",
+							payment_status : "Pending",
+							payment_amount : "0.18",
+							payment_currency : "USD",
+							txn_id : "9J972244G81208908",
+							receiver_email : "jdj9354@naver.com",
+							payer_email : "jdj9354-buyer@naver.com"
+						 };			
+			socket.on('ipn_forward', function (data) {
+				;
+			});				
+			socket.emit('ipn_result', sendData);	
+		</script>dj.jang - fb3279a0-a9f7-4529-b3a4-f980189abebb[2016-08-07 20:21 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1013
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A19%3A03+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AoMVZEC0B8KvZMhmkjGN3K2c-fiWASgNcwCAlD46qdx4Jcp9OqZSbAtS&payer_email=jdj9354-buyer%40naver.com&txn_id=4KG65743CS267953K&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=4058a48e25693
+[2016-08-07 20:21 Asia/Seoul] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Sun, 07 Aug 2016 11:21:09 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=FI7MIU6dZjDziR0J-Bd90H731xxwxj4o1I1jEs9YpiKUp_iDnUzQmMMIn6Jdmv1mlFF32_3plryuJjka2c-uPC_iK2kH4lD9dceKqBErd4og1i9wdQh7z3nyxBGHJMHaNv-HiZIg-POg-_uhWyv9X1n-TxzYA5BlR0LaoeUEC2_OMGM9A7Y_NEsE-kYxuVm8um44N4kPy_o95wd5qSgGz3yn6NZC5SUBjLRNy4N-1laIpdRJ6jrCTKulwZ1BLcLEtcBsoXyxTyeOlIo9pvX_2ntIxGXoGuk1peCtxLkXtDNbLVA-O0_482B51YdS4eDJN2fgtVUoKQW-YX45siCHXCoSbU-u1VbvZ_bzzhuCmuvVEneZ02qCum5v0PBYXOcZfGICpi8sLzVFBjKqoe2dzaw31P75JOawKOG5bGXybr6HVXWFq8VS6YyWTiy; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 05-Aug-2026 11:21:10 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 07-Aug-2018 11:21:10 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1470568869907528; path=/; expires=Tue, 31-Jul-46 11:21:09 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: 7618f8e5d9965
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D2769921879%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 07 Aug 2016 11:51:10 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+<script>
+			var socket = io.connect(SOCKET_IO_ADDR);								
+			var sendData={  isSuccess : true,
+							item_name : "Dice recharge",
+							item_number : "123",
+							payment_status : "Pending",
+							payment_amount : "0.18",
+							payment_currency : "USD",
+							txn_id : "4KG65743CS267953K",
+							receiver_email : "jdj9354@naver.com",
+							payer_email : "jdj9354-buyer@naver.com"
+						 };			
+			socket.on('ipn_forward', function (data) {
+				;
+			});				
+			socket.emit('ipn_result', sendData);	
+		</script>dj.jang - 3775b8ff-f3f3-4f80-9ae6-89cfa4002b09[2016-08-07 20:21 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A17%3A42+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AAJkxWTa08yQdU65u22wOv3pGMn6AUTkCYbvpwDnDy-fyL5.A6u-x941&payer_email=jdj9354-buyer%40naver.com&txn_id=2KK4165074751514B&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=8a3f964149551 
+[2016-08-07 20:22 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A13%3A32+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AFcWxV21C7fd0v3bYYYRCpSSRl31Ax4qgB51lcxNdab70-j6HM6twFwT&payer_email=jdj9354-buyer%40naver.com&txn_id=9J972244G81208908&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=2d9f31a52f52b 
+[2016-08-07 20:23 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A19%3A03+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AoMVZEC0B8KvZMhmkjGN3K2c-fiWASgNcwCAlD46qdx4Jcp9OqZSbAtS&payer_email=jdj9354-buyer%40naver.com&txn_id=4KG65743CS267953K&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=4058a48e25693 
+get - get - get - [2016-08-07 20:25 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1013
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A17%3A42+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AAJkxWTa08yQdU65u22wOv3pGMn6AUTkCYbvpwDnDy-fyL5.A6u-x941&payer_email=jdj9354-buyer%40naver.com&txn_id=2KK4165074751514B&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=8a3f964149551
+[2016-08-07 20:25 Asia/Seoul] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Sun, 07 Aug 2016 11:25:25 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=vEodvsFJLBUAwJDOLBVHM3Kt5WDo_08C8JkUe7RfsaHoVUBksKnZnGi-ajMzYmGHlzt_FCHxCJyicn-176uxyDmT6zn-R5Q2dlXNH_WjTNCDyh8XJQKOgijLrztaYUhzPzFItJBaCpKrr3N0xgSK-Qj7WIGbdYuTGF8I5Rid23-bAP3i5UV32Qjg83KXftpcimmWJhJOfirXGBgH5kLLDh-L5SG6SKS8v2slPvN4t1JqkQILy5OZzhJNdHo2LKt_NWJPlpcaI_HmTyOU4B4t-cp5Qr4BYuAXN857OPERlaGiG1_Hz6Mnq7CbNFZHE7wfCrXYiYC4z8C7VkuhlsCOE5wTehCPwuXpOvqmPPvAPe_MDwyxfdggHjt5Z0rzZlTGy2vaEqcX3x9J7HwiPNhdjJWfjz4pcuqgea915aYlW3n-XDqIwdA19BBEu1a; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 05-Aug-2026 11:25:25 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 07-Aug-2018 11:25:25 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1470569125458031; path=/; expires=Tue, 31-Jul-46 11:25:25 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: 6d2ad7216b454
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D2769987415%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 07 Aug 2016 11:55:25 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2016-08-07 20:26 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1013
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=03%3A04%3A43+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=A4PwLvIU4r2fw5-fD5o.WorsVeOpA0K1nUAKDNlJv39j71HjbVEQ1WcP&payer_email=jdj9354-buyer%40naver.com&txn_id=4RB804625L262764X&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=c3fb79c08d407
+[2016-08-07 20:26 Asia/Seoul] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Sun, 07 Aug 2016 11:26:02 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=s11NzpJPR6g3cYjUPSHpz4fn8BsbpPreGnUO43q0HwG-dbs5Mgq32Dv8RoIPvo0pJPG-u37O6ZZv1Tes9IbeY5G20NdOB9nffhW1kMuLJKdYimMig1px8KoO0hxk__JM_giWi77Xs0P7vfry1-tyYqiVVNuM_GOaQjFRVEjQC4WpZlVhuCjnqQVxGllnvJtzgjPgqH0KrJK77Oth0n7ExDwW_RFXIG55SeGR7ldnc3f5XLmkP-FawZEF_TlOpUk9N5KlMA9mXRtwuuuU5uJqouWxEJRpyNsQpkiqFcRl5zf9Dh-Uh1C51Oks6wSbLBmBgKXwdLDdNB3OQZ5oEmSbus-Df6VFI9A7gO086lTzQmeOT5EcRvOah_Wwb1RhA7S6f6-UIijvz6vSAGZ--LmqxQdn1q9KOjcaY95KH8OOiRw3w3ux6Ym6u3xwMna; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 05-Aug-2026 11:26:02 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 07-Aug-2018 11:26:02 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1470569162293408; path=/; expires=Tue, 31-Jul-46 11:26:02 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: a877a8394362c
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D3390744407%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 07 Aug 2016 11:56:02 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2016-08-07 20:27 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1013
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A13%3A32+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AFcWxV21C7fd0v3bYYYRCpSSRl31Ax4qgB51lcxNdab70-j6HM6twFwT&payer_email=jdj9354-buyer%40naver.com&txn_id=9J972244G81208908&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=2d9f31a52f52b
+[2016-08-07 20:27 Asia/Seoul] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Sun, 07 Aug 2016 11:27:07 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=rPApQG_Bgx7FICcZ3GejfGL0O4AutmH885_0NxVyCp6OgzYvZqdhgkJ-EUdmOQsmP40rDzWvjTEa_9rJoHXvQ7tK_2F3ZvEOOagD5mtcJLuuJpeoeBMSaB05PaxyrGL-gd-tXlt-YDvh6XREEBneJwy5T3tKlIq0QZ-uOxT7Gz72K-5R-40YgQz3Stk-CwJ1kLHme6Lnn29LJbbccM4lz-mceQuJ4flf07QCSQd1yLa1zAGT2aDacLNbPJVhBdK8NO2y_OIHF4LV0HP0Nga2qNVd0sft6dSzRGGSOifvxZ8HuDz4O52UHolV4nG5OZ81WhWpyZVy-wLS3beSJ7CWDvX3eI7FSuESJOr_CBvqlO_GBiqqoF0ujZQr4n4BSrDhqEoHZrwxgMk-MJDChO6vIlcKr7V_vrMKrxshN34g4WzgTjV2zui_OPPkeLW; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 05-Aug-2026 11:27:07 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 07-Aug-2018 11:27:07 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1470569227204039; path=/; expires=Tue, 31-Jul-46 11:27:07 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: 6847d24b2d43d
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D186361687%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 07 Aug 2016 11:57:07 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2016-08-07 20:27 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A17%3A42+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AAJkxWTa08yQdU65u22wOv3pGMn6AUTkCYbvpwDnDy-fyL5.A6u-x941&payer_email=jdj9354-buyer%40naver.com&txn_id=2KK4165074751514B&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=8a3f964149551 
+[2016-08-07 20:28 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=03%3A04%3A43+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=A4PwLvIU4r2fw5-fD5o.WorsVeOpA0K1nUAKDNlJv39j71HjbVEQ1WcP&payer_email=jdj9354-buyer%40naver.com&txn_id=4RB804625L262764X&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=c3fb79c08d407 
+get - [2016-08-07 20:29 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A13%3A32+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AFcWxV21C7fd0v3bYYYRCpSSRl31Ax4qgB51lcxNdab70-j6HM6twFwT&payer_email=jdj9354-buyer%40naver.com&txn_id=9J972244G81208908&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=2d9f31a52f52b 
+[2016-08-07 20:30 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1013
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A19%3A03+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AoMVZEC0B8KvZMhmkjGN3K2c-fiWASgNcwCAlD46qdx4Jcp9OqZSbAtS&payer_email=jdj9354-buyer%40naver.com&txn_id=4KG65743CS267953K&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=4058a48e25693
+[2016-08-07 20:30 Asia/Seoul] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Sun, 07 Aug 2016 11:30:33 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=hl_jZUhRCJEEyuA4sWi859ICQIfgwwqDLd4PFwv9YonLiJtz_a4tBaYE057y8U0sds082CfwHMpydKSgWgnDeaMjTI5CK-NzVJ4KShRbM25KWSpnxJbYGiK2TKbqB9XAi50ctgNPUkIbBLmS81xPSH-RJVayQvrs9Jzacac-LIQb1inS-M_dD5nfUZ-SXq5baTXYgABqiQyQZ--TxEqaKBsBYgKtDc1wP3oK9707jobmH7YXtFUnboZYRWu4DsC8yaUlwx3cWmRuo7oDgwEFcUgl5gXIEQeCkuQH2dTdMmcXIBf1-Zc6HxArmAo8S-gTZZ0UZwSEmytQmK-Cx1lS5kOCeiCz13l4BNuIBuld2j_c4REJ2js6fpk1CDoZvV3Rs7JtlXEyOY_MaVr_qQ3Mqi6bw0oRMepin1EWm0; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 05-Aug-2026 11:30:33 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 07-Aug-2018 11:30:33 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1470569433239559; path=/; expires=Tue, 31-Jul-46 11:30:33 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: 2cb31b33354b7
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D3642468183%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 07 Aug 2016 12:00:33 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+get - [2016-08-07 20:32 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A19%3A03+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AoMVZEC0B8KvZMhmkjGN3K2c-fiWASgNcwCAlD46qdx4Jcp9OqZSbAtS&payer_email=jdj9354-buyer%40naver.com&txn_id=4KG65743CS267953K&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=4058a48e25693 
+[2016-08-07 20:33 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1013
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A13%3A32+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AFcWxV21C7fd0v3bYYYRCpSSRl31Ax4qgB51lcxNdab70-j6HM6twFwT&payer_email=jdj9354-buyer%40naver.com&txn_id=9J972244G81208908&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=2d9f31a52f52b
+[2016-08-07 20:33 Asia/Seoul] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Sun, 07 Aug 2016 11:33:05 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=h8WC3RZZyGOTTJ5hf0eeCa7WkAtQJ8Zf1yqo-cmIazi7w8AlRyBt9-G68T4K9yJTNiWTGcj-FLZUvnZYxtTdByrXkzpScAYD8Trfv8sWUo530DzSHzgnDNUc_XckILVM3k3H5I77Bqy8dwlvtDxVbuEOkdmgo8miy-Ju3fLA9D2T3rropsTACxkAY72HRvrqBcEdn9WfUzEBoGjOFtB8gYeQMVsGKVreKUP_tOOSZT-gIhdbAfhBiWKV84UlfA2mMOZsj3eWgpxgX930LKPW4bbeP2DX7wY61NxJ7l2KaCOnMeC9TZwsJcKhYi8hbK-aSkValKR6uFXxf85SOXOJA_jZb0IVi9-qhnbDfk-uhUfYyG_IkgIQeThgZypRjQ8krzWzbs33h1ykqFHV7LndU7QBcabJcRbB6Zvj6qgioIs59JLANoHMGX82vxa; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 05-Aug-2026 11:33:05 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 07-Aug-2018 11:33:05 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1470569585693565; path=/; expires=Tue, 31-Jul-46 11:33:05 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: 1e5f275fa531c
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D1897703255%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 07 Aug 2016 12:03:06 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+get - get - [2016-08-07 20:35 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A13%3A32+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AFcWxV21C7fd0v3bYYYRCpSSRl31Ax4qgB51lcxNdab70-j6HM6twFwT&payer_email=jdj9354-buyer%40naver.com&txn_id=9J972244G81208908&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=2d9f31a52f52b 
+[2016-08-07 20:35 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1013
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A19%3A03+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AoMVZEC0B8KvZMhmkjGN3K2c-fiWASgNcwCAlD46qdx4Jcp9OqZSbAtS&payer_email=jdj9354-buyer%40naver.com&txn_id=4KG65743CS267953K&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=4058a48e25693
+[2016-08-07 20:35 Asia/Seoul] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Sun, 07 Aug 2016 11:35:15 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=f-QzvEJM_oxcQEaIExL5WiRxYeKwdaFbS_ZW_y5CYX9TD18-c6BU2HWIc87kqkR7kNGbmOPxK9A2Nl4TX-0z3rmSx5eEKNLi50cnx8spPUBz_FKpqM4p3CYTAf0BEyqGm2bU8pXohd_BxegXRoYnaDsqJ2eGKiwnlva30Z-oV7ww-7uKP_BaCe5kKQucseKy4KEyD_2NNstX8cuZ3_mguWdFo7qk8L4EkTNCLoibcr4jzkT28X-imv_nnYigZ-XAQlFVuUMlzrOStTfOItbFVULrEuHl7-KgSMylqedLRbGoBpvtpkfw795yRtWewn_NyTWYdpriSfUMrKZSTCDMi3LT_frOQvM9D_3MMVa4SucOT1mSKO-REalUSbiRRgi_1rYw0lOfbun4BM89jKNjze_YcdaKYseaMf1_NRyvTx8ReP8dJxitOVdpAnC; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 05-Aug-2026 11:35:15 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 07-Aug-2018 11:35:15 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1470569715330967; path=/; expires=Tue, 31-Jul-46 11:35:15 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: 57895d564cc29
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D4078741335%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 07 Aug 2016 12:05:15 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2016-08-07 20:36 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1013
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A17%3A42+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AAJkxWTa08yQdU65u22wOv3pGMn6AUTkCYbvpwDnDy-fyL5.A6u-x941&payer_email=jdj9354-buyer%40naver.com&txn_id=2KK4165074751514B&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=8a3f964149551
+[2016-08-07 20:36 Asia/Seoul] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Sun, 07 Aug 2016 11:36:17 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=6gbzxL-OVB_H9zX93CZZR7HiKYP56ZvGTCwDorvV5MgLVDotAnQmS8_-gxnp-ibOUWdi541tspG8375S4pe6cSjCm9svjGH8zAobGSwBmMvyYGNFddvRTkcIjFeNebIHW3xe1PAWOXkXqnzmT64Gq5kBtDHRmoxOJUeh9sH16Kwh-wWWydizxDSnPA0I2mAUa2Nen6ZUInLSgJnwoOTJb95F8wjeBwfnTaXNVQ5N-OZRydDNH630__Q0pgQm8ybtCUxsdayYl3cOOqqjzUC-ytf6_WYax1L7EQYCUjze5LVlhVjkwHEu11Ux359deBnO_bg5wSnGGUnPLXsZN88j8hl87wnL_9ohG-mbYi1VPm7F7SlurpE1f392CpFz7fjeP2Ul1BMGHNQen6T_6n_Ghk1rgzHX6MN0pAY0an8hgPYVWSL4oHqxkBHDc7C; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 05-Aug-2026 11:36:17 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 07-Aug-2018 11:36:17 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1470569777043852; path=/; expires=Tue, 31-Jul-46 11:36:17 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: aeaf72605c94
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D824026967%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 07 Aug 2016 12:06:17 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2016-08-07 20:37 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A19%3A03+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AoMVZEC0B8KvZMhmkjGN3K2c-fiWASgNcwCAlD46qdx4Jcp9OqZSbAtS&payer_email=jdj9354-buyer%40naver.com&txn_id=4KG65743CS267953K&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=4058a48e25693 
+[2016-08-07 20:38 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A17%3A42+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AAJkxWTa08yQdU65u22wOv3pGMn6AUTkCYbvpwDnDy-fyL5.A6u-x941&payer_email=jdj9354-buyer%40naver.com&txn_id=2KK4165074751514B&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=8a3f964149551 
+get - [2016-08-07 20:41 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1013
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A19%3A03+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AoMVZEC0B8KvZMhmkjGN3K2c-fiWASgNcwCAlD46qdx4Jcp9OqZSbAtS&payer_email=jdj9354-buyer%40naver.com&txn_id=4KG65743CS267953K&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=4058a48e25693
+[2016-08-07 20:41 Asia/Seoul] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Sun, 07 Aug 2016 11:41:11 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=XAYdrg8cMN8gOGqi8-v3rIQMXxc8PgXJfAJzOsuGh7oKcATmyZwrgkRNOLW-mrCwBArLmkVM1ZtVD57sXNZhTdXQrYF2V3UAvcg9hWukUy5Hk2FgcBbtA7LTD6WtyMGzr1IGTTIzt_F4lFErNfGqHTd42nBOoEZfQbdQ3J38e7aUoWGQ9dBuHMFzRk1oV0YFYckm1XvutfXxyMlWdUFotkwQtfdzObMd7SlCmMnVI07fO_u3nWLAFWDwyvFLL7AlC6mdP_aGUitdo2MOPi781QWfxhEFiSge2ytKgLihO36soDcS9Y9rbQlmPhocbXtqN7LoFGoL0II6eW107jo6CXPPV8Se5UfbH-o6Y0fkMdKFh8GSEp2GYv4zqUkCBpTugTjz5UvX_u9wcRKlAzUGJRZxoXz0kKmu_7Elki0bvrn7kuydaDa2TMPB3aq; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 05-Aug-2026 11:41:12 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 07-Aug-2018 11:41:12 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1470570071978153; path=/; expires=Tue, 31-Jul-46 11:41:11 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: 8c75df19ea41c
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D1461626711%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 07 Aug 2016 12:11:12 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2016-08-07 20:43 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A19%3A03+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AoMVZEC0B8KvZMhmkjGN3K2c-fiWASgNcwCAlD46qdx4Jcp9OqZSbAtS&payer_email=jdj9354-buyer%40naver.com&txn_id=4KG65743CS267953K&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=4058a48e25693 
+get - get - [2016-08-07 20:48 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1013
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A13%3A32+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AFcWxV21C7fd0v3bYYYRCpSSRl31Ax4qgB51lcxNdab70-j6HM6twFwT&payer_email=jdj9354-buyer%40naver.com&txn_id=9J972244G81208908&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=2d9f31a52f52b
+[2016-08-07 20:48 Asia/Seoul] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Sun, 07 Aug 2016 11:48:20 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=a0UIidhldphlBaCqwx57mpUFG5fwVHWljFJpHC-Q7PAyPMwXnXMLHtXVjb12AjW3KVLTyYmWHjwhusCS-wfD-xO87qFLRnvtI5DDjUTxzveEavML6yuqeA_-BI3RPqeMUo1sXDTtLIiJjpWGScQzONGnAPKG_IsJJxkGAyTGV-XxW_GmX6nuzYb4VxHZVMTUdZXg6n36qBzZdz01kaCBKhZnulcbZSX0y6RTvpzbCa7hMlr3FRf3AGws2tjiePIncRQj60mVc8ds_inVyc5FSfZBVPxxsmVWmJTVWNNS44xbq1XYfNJvyV1M29lzNf7o7J6qoskQ64r4CalPzDeChrQA3nk9AAr63de5NgdqfcdTDuq1ybxn3uOL8qPfXdsv3mneME135Fq4SDmoMgmKJ1tz9IMc6Ku6QzIfULjgzQGjGzYIklyokpy3RnK; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 05-Aug-2026 11:48:20 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 07-Aug-2018 11:48:20 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1470570500149855; path=/; expires=Tue, 31-Jul-46 11:48:20 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: d30d578420329
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D69248855%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 07 Aug 2016 12:18:20 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2016-08-07 20:48 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1013
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A17%3A42+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AAJkxWTa08yQdU65u22wOv3pGMn6AUTkCYbvpwDnDy-fyL5.A6u-x941&payer_email=jdj9354-buyer%40naver.com&txn_id=2KK4165074751514B&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=8a3f964149551
+[2016-08-07 20:48 Asia/Seoul] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Sun, 07 Aug 2016 11:48:32 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=RpduoiUsZrI2fbhttMLzK9Z7x-cob5qwKVIg6G2B9joJMDy_gmywDTdjQaquNe_tk5F7XSLWk3NP9vAXZZAnDNeILL2kZs1eJh6DjsooGtmhgoexzr6THw5WLZN8tDYiHpIGVwIzEwFltBPbzZ61N5AK9bluHL35lcoJ2Wb-3YaeCBuxb4vnUSJwSf-mHXEhPjRj3AjFuL_kMVKuc6cGtM-CDvIfWqedv3yjXUI4M2aucgxRwYF4-f2yXLBpNswgiyWAYoH7bzUYdccD90WTGGIW0UiBWeaUibhKAmxmAQuZTpqc0pbKu3oceSxIx8CJBm8K8v2jWtpsEhqCfpxiVn-k4X_2GC3hdDPLn4D8InpCfZ_Y81hpTB5Dm9xHW08UuKVpihh9zZiDaZG84_jEQ7IqdWkTvArJvhc1zRmlbuV9MCoIjY3Qu0CBTyy; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 05-Aug-2026 11:48:33 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 07-Aug-2018 11:48:33 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1470570512863196; path=/; expires=Tue, 31-Jul-46 11:48:32 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: 97e8a76cce870
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D270575447%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 07 Aug 2016 12:18:33 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2016-08-07 20:50 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A13%3A32+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AFcWxV21C7fd0v3bYYYRCpSSRl31Ax4qgB51lcxNdab70-j6HM6twFwT&payer_email=jdj9354-buyer%40naver.com&txn_id=9J972244G81208908&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=2d9f31a52f52b 
+[2016-08-07 20:50 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A17%3A42+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AAJkxWTa08yQdU65u22wOv3pGMn6AUTkCYbvpwDnDy-fyL5.A6u-x941&payer_email=jdj9354-buyer%40naver.com&txn_id=2KK4165074751514B&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=8a3f964149551 
+get - [2016-08-07 20:54 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1013
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A19%3A03+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AoMVZEC0B8KvZMhmkjGN3K2c-fiWASgNcwCAlD46qdx4Jcp9OqZSbAtS&payer_email=jdj9354-buyer%40naver.com&txn_id=4KG65743CS267953K&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=4058a48e25693
+[2016-08-07 20:54 Asia/Seoul] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Sun, 07 Aug 2016 11:54:39 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=vpipcD963vGxV7s-hOy5tSTv09AhX23S7j1GZaIIuG6dpqBHvMj0IMpw9K3h7KtfWk5o_PjyHDKDLMdLmv6VYxMCJEJKRtwtFJuVhzSCJTuxcC5eRgW84oOAKytUrk1HbZaLpX7_7jag7qI2lCV34uysOIkT4HItSUMfM1nRZEnSd21-Cnhujk8fTU_zWGyiq3XUtUmPHgyGq840i5Ez8TZS9_UL8oZMTEsnVMFnIZKIAslTtny_iCndeTlute9uopdK1beW05V3KhjY1EGGIrFVdJiuUlvfCjM7A60Y5QOyvtABtxaJkSNEt6nwbJgqWXHJvY5bzk2YVSrn8u8jJbcIIW_R6ac94TKrbZZHEmse3Eu3ks64E0Jthq_-tp-RbUvFaYnIhI_NMLMmGi-LdYEVJeqq6Ktr2vK1lG; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 05-Aug-2026 11:54:40 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 07-Aug-2018 11:54:40 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1470570879923620; path=/; expires=Tue, 31-Jul-46 11:54:39 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: b3e4e1f3dc8a5
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D2132911959%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 07 Aug 2016 12:24:40 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+get - get - [2016-08-07 20:56 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A19%3A03+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AoMVZEC0B8KvZMhmkjGN3K2c-fiWASgNcwCAlD46qdx4Jcp9OqZSbAtS&payer_email=jdj9354-buyer%40naver.com&txn_id=4KG65743CS267953K&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=4058a48e25693 
+[2016-08-07 20:57 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1013
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A17%3A42+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AAJkxWTa08yQdU65u22wOv3pGMn6AUTkCYbvpwDnDy-fyL5.A6u-x941&payer_email=jdj9354-buyer%40naver.com&txn_id=2KK4165074751514B&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=8a3f964149551
+[2016-08-07 20:57 Asia/Seoul] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Sun, 07 Aug 2016 11:57:48 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=APfVwWMeaYcqRjuMJ9uKec2_UTqP5jC04Z1N6iHtgvzkO1HWPTqsFqGwKwEy8W6jiwYxiB0e3iVzdkFuiLc7hu8rsyPyI7jrp0iFdWvxejASWZxVWLdTeGGr_CNaZxc3N0INBWIE472yF5MMWknUTv_2JjermTZJ-htVArw2F88pYhO2QgDg8QCUOIrRXwus3ALNofVGQZHxN2ghvmYVOj-b9gfLFCsmteifFyEvhfemBUZO2kXn4uDjY-pK83UHbg4xkeV7tAXEQRoLdLw4KMwMbivq80tkAyfeEnUO7J69H32En7tB9run086_i_6K5clflqFUOt99u7G25NqCMSsPVEI1WKuxlmTXjyAc3eXsYbXZWUgj2ej7aS8q4by87NOWZoYyMDJPD13LggSAxDn5nODeKf9HkCF8omilNChW87PBbcn7leXFQRS; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 05-Aug-2026 11:57:48 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 07-Aug-2018 11:57:48 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1470571068053996; path=/; expires=Tue, 31-Jul-46 11:57:48 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: 43c8fab391fc
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D1008904023%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 07 Aug 2016 12:27:48 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2016-08-07 20:57 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1013
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A13%3A32+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AFcWxV21C7fd0v3bYYYRCpSSRl31Ax4qgB51lcxNdab70-j6HM6twFwT&payer_email=jdj9354-buyer%40naver.com&txn_id=9J972244G81208908&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=2d9f31a52f52b
+[2016-08-07 20:57 Asia/Seoul] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Sun, 07 Aug 2016 11:57:49 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=HRuAULlDondDkilAMiWsEp5Ujun_TV8pT7yShNJMU9p3qu5J8BeWX_dvPxHYDkHwFE1uKrKGE_iiHQyAso4yf7iANk4EYVsGvHB3SUF9UJJPAn7s8gErMEdydz8GAMp6OMkn6SrgtiFimY5qTE7AmPA_byIkcEyZU7KH7TqnPvloRjRouSbgXnXsVoJN40Pt6Y_74V72LBG9ZiTaR0V-6GtYejwu2WgGOqD2H7tmOYCXc_i0GvdcEuQcTD_8_Z8b8bNGxAhG0rXSzWRR3QIzL7OBFdOhuqZnaKtd9MfPVmpFwsvEDZ8y6sd4p7MSwpiFBHfpRSZ0JOSC622yQv_1FYewYiFeB2neKitaNNRdOkoylclfhEd1NSJD8naMNPrDcd92Y4iYZosFeYij0ZeMY-2ayiXJTGppCgwvieEbV7u4LZyfRIM7qFCb1Eq; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 05-Aug-2026 11:57:50 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 07-Aug-2018 11:57:50 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1470571069878547; path=/; expires=Tue, 31-Jul-46 11:57:49 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: d0db931bd033e
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D1025681239%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 07 Aug 2016 12:27:50 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2016-08-07 20:59 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A17%3A42+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AAJkxWTa08yQdU65u22wOv3pGMn6AUTkCYbvpwDnDy-fyL5.A6u-x941&payer_email=jdj9354-buyer%40naver.com&txn_id=2KK4165074751514B&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=8a3f964149551 
+[2016-08-07 20:59 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A13%3A32+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AFcWxV21C7fd0v3bYYYRCpSSRl31Ax4qgB51lcxNdab70-j6HM6twFwT&payer_email=jdj9354-buyer%40naver.com&txn_id=9J972244G81208908&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=2d9f31a52f52b 
+get - get - get - [2016-08-07 21:11 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1013
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A17%3A42+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AAJkxWTa08yQdU65u22wOv3pGMn6AUTkCYbvpwDnDy-fyL5.A6u-x941&payer_email=jdj9354-buyer%40naver.com&txn_id=2KK4165074751514B&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=8a3f964149551
+[2016-08-07 21:11 Asia/Seoul] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Sun, 07 Aug 2016 12:11:02 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=IRSzt8IB4dRg17s1Qdcpl0q1FaLeaUFmKd31bLlYiFqs3g9X5P3Vu-ByjXt64fExnFnXeywVgDR9NCAgB-63QtDNlYJSxM_dlMpkTQZ9neV0E9pjnXvjTCC7f01-0V3fvjcUT5_2cneZqzttNT_vds9R_rIHSfvn7yFlcwGTpqVns1Fks1HKYVova0h2Wnay7eVl4fBuaQAXMJ5UTOcbtLsUkhcMVi0L-vOtzDxCn1vucgi40-t4DLZ0BGcCZnvQzbITqRpv3E6GBX2AtcunIrxRSOjpPwYY3WyIQyBVYfmO0li-S_llxDl0vjP_13P38q7X-MqUy1wJMPxhA5Ag5rIB4xC84TRh5rimoMzc_80M0MU6Klss4gz6UMBbr4BfM8Anbj79k8Z_ME7WF7nboMjAuCQg3MfuX3MZSOFXTFHpNTEKDzkktH9jTUW; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 05-Aug-2026 12:11:02 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 07-Aug-2018 12:11:02 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1470571862055832; path=/; expires=Tue, 31-Jul-46 12:11:02 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: f6d691038bc4
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D1445308247%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 07 Aug 2016 12:41:02 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2016-08-07 21:11 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1013
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A13%3A32+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AFcWxV21C7fd0v3bYYYRCpSSRl31Ax4qgB51lcxNdab70-j6HM6twFwT&payer_email=jdj9354-buyer%40naver.com&txn_id=9J972244G81208908&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=2d9f31a52f52b
+[2016-08-07 21:11 Asia/Seoul] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Sun, 07 Aug 2016 12:11:31 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=kFM8PeDvv4_yKTY6uB6NOPQTAoMugIdP2IAwTZK-nqkgkanOsnLu6DTNmNBclCl0JHOZv2ChSgRKtxcFhL1Eju-DwMJGDbqZH0vJxoKw0eH29A5-gKWkmcuIwj2LTReQK1bG4NcK0oY14x_NBF4iZ8oJqEz8vAoCGixhgQjGxPOleVTKb2KluPfp2gmj4RW0wgUJA9mbVaeB87a17Nb-VCSU3i5WB_BVxIHXeI68FrluvmyMcSnGVDGcpI3nIz55AbyB90KYJK3sJubB3qRv0gACY1ENh0HXMj_oJc34JHRoUrk9NhTsy_ShJDANxMgA3OuCexv-cmlikwrdv8JqFqKNFOR_fM_UJmglNpiRiDLZPUAmte-06ooFb40ePdMlIIc8RCwzb6L0rMNSuT-k_xeg73YnFq2wYFjhjVT1N5H4fG9fsvu5a_tmZ9i; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 05-Aug-2026 12:11:32 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 07-Aug-2018 12:11:32 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1470571891775846; path=/; expires=Tue, 31-Jul-46 12:11:31 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: 80d2e124b872b
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D1931847511%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 07 Aug 2016 12:41:32 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2016-08-07 21:12 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1013
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A19%3A03+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AoMVZEC0B8KvZMhmkjGN3K2c-fiWASgNcwCAlD46qdx4Jcp9OqZSbAtS&payer_email=jdj9354-buyer%40naver.com&txn_id=4KG65743CS267953K&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=4058a48e25693
+[2016-08-07 21:12 Asia/Seoul] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Sun, 07 Aug 2016 12:12:06 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=qqCAxnF5AX2BcO6Fh3wruml-PaPmULSprOjixxxVxeKfAwbJ4bsyqz9Ogh8-WqB2UrtS24n82_LTfyKDef75AQ29op3LRsY_DsxdtD7xK3WgNNqdrAcbSn8KlmHc2MEJhhw-T9u6lBPwypJgmSPwfyKsqEdbCEpOthwr3Aor7MPfeuWjW6T4TMwFRCUH4UFIpYOTCpr_DB9MUAM8txZvlEzG1J7k6AcCjN0cJr1KnmbK5UZEoYfqtod09mzzRDo41tw-sCPImKLGxR8XB3yTLSpITrg0192YM86aP6zkWCX5RjVqK3hYtA-PJVddVA-a7ZYOBTyeA4fmoCW60OJTklo8k39JsOamtork6GvCCyYCkbaTPnHmfuPrxMPRZbvyO29MRS78fsL7pmiodlhvOmB8RqFsOv1UQBVrnP93diQO8FlbGdMZWLWdjPG; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 05-Aug-2026 12:12:06 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 07-Aug-2018 12:12:06 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1470571926118731; path=/; expires=Tue, 31-Jul-46 12:12:06 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: dbca662818edb
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D2519050071%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 07 Aug 2016 12:42:06 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2016-08-07 21:13 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A17%3A42+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AAJkxWTa08yQdU65u22wOv3pGMn6AUTkCYbvpwDnDy-fyL5.A6u-x941&payer_email=jdj9354-buyer%40naver.com&txn_id=2KK4165074751514B&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=8a3f964149551 
+[2016-08-07 21:13 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A13%3A32+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AFcWxV21C7fd0v3bYYYRCpSSRl31Ax4qgB51lcxNdab70-j6HM6twFwT&payer_email=jdj9354-buyer%40naver.com&txn_id=9J972244G81208908&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=2d9f31a52f52b 
+[2016-08-07 21:14 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A19%3A03+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AoMVZEC0B8KvZMhmkjGN3K2c-fiWASgNcwCAlD46qdx4Jcp9OqZSbAtS&payer_email=jdj9354-buyer%40naver.com&txn_id=4KG65743CS267953K&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=4058a48e25693 
+get - [2016-08-07 21:19 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1013
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A17%3A42+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AAJkxWTa08yQdU65u22wOv3pGMn6AUTkCYbvpwDnDy-fyL5.A6u-x941&payer_email=jdj9354-buyer%40naver.com&txn_id=2KK4165074751514B&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=8a3f964149551
+[2016-08-07 21:19 Asia/Seoul] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Sun, 07 Aug 2016 12:19:35 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=sg3rs-IJt97kMnv6yTgre7Q4PImf-rl2e2PtHeFlBk6gtwyLSDpLlMpg0M7FMo3Xox_GhSG4WyFQFzOSWeobp2r218BJN5qWkkhRknimnWXJf7tqX2B7hB9wh6p-dICUdWlM59t8Zj4iEVwkVL4FVV7hqRTJPWUeSJs3ikNLl2Aq117ncZFBoIOVWbGl68HsWz9M3papfcLAM8iyRRH4UHpg6cyj6woYlAgBf1hNwl4uNxP79Zoe90ZhNLOf9UFxMgt-oV0lIEYYzE916BiKFee0c7T4Xrlv24kykGWQpdXr7NM-w-8gXhBkSOV9d1IjtJcVbfhZOWomUNvBYxXL3z2zqu5NVk5x6mF0ek7zQxw1DQKYwn0FIZW4KnSqo_Ew7AgQHQYuBxL4__oOjP_xrj981O2ANBiyFTmk2cl_64rCJRvl_xWYI8Ln0de; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 05-Aug-2026 12:19:35 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 07-Aug-2018 12:19:35 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1470572375171552; path=/; expires=Tue, 31-Jul-46 12:19:35 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: c3aeebe225eb0
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D1462216535%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 07 Aug 2016 12:49:35 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2016-08-07 21:21 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A17%3A42+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AAJkxWTa08yQdU65u22wOv3pGMn6AUTkCYbvpwDnDy-fyL5.A6u-x941&payer_email=jdj9354-buyer%40naver.com&txn_id=2KK4165074751514B&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=8a3f964149551 
+get - [2016-08-07 21:24 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1013
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A19%3A03+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AoMVZEC0B8KvZMhmkjGN3K2c-fiWASgNcwCAlD46qdx4Jcp9OqZSbAtS&payer_email=jdj9354-buyer%40naver.com&txn_id=4KG65743CS267953K&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=4058a48e25693
+[2016-08-07 21:24 Asia/Seoul] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Sun, 07 Aug 2016 12:24:52 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=9EHz_TcZK6CL9Ii4pMDxiM805j9Gf_PdVPcb6llOPc-7e44M3WbufqmZ3qCnZKqmVEDLXWj4n0kwHa_B-LOTjV0VdFB-7KSuskayeY6NzFcIvOJMh5GTax_XX5asnWCO1hQjo6omNANDlTL__hychITZW3xPJhi_MaCtjO2YufAONzHvNgGV5rLtIsLsdwafCZ1zGrEtBQgVsXlDbc11jI6PSlPD_jDSz2I-98LguioiuY5z-ME61bnkFQFTjnprBRwicpnlBB91N3HG_GMs4nh_XKDfbThCyHXFGhIK2Q-C8nehRWhDPrgzjrBfbFQn4C2rbV0__25SYKE0MOCyxE6QHnWv8QWKlNi6-DnaTpTOhkMfRcJmeXEnu23n1w_WzT1ivsLnlBtYnJeKQLn2yCiX6oMFcF6kervPgea_1j_ZHrWi69YysQvcEbC; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 05-Aug-2026 12:24:52 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 07-Aug-2018 12:24:52 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1470572692422611; path=/; expires=Tue, 31-Jul-46 12:24:52 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: 300994ae6312d
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D2485692247%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 07 Aug 2016 12:54:52 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2016-08-07 21:26 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A19%3A03+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AoMVZEC0B8KvZMhmkjGN3K2c-fiWASgNcwCAlD46qdx4Jcp9OqZSbAtS&payer_email=jdj9354-buyer%40naver.com&txn_id=4KG65743CS267953K&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=4058a48e25693 
+get - [2016-08-07 21:35 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1013
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A13%3A32+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AFcWxV21C7fd0v3bYYYRCpSSRl31Ax4qgB51lcxNdab70-j6HM6twFwT&payer_email=jdj9354-buyer%40naver.com&txn_id=9J972244G81208908&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=2d9f31a52f52b
+[2016-08-07 21:35 Asia/Seoul] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Sun, 07 Aug 2016 12:35:51 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=Sih80dzJ3mfLUbPIs9Atk3m60T2inlWrgtp_EoPAf8PWcuehda4onpzINcngYNogNgiPFhkesOc0T0KKmlBLMHywTeLVECdW8U3_4K20Awk8E2JON3T5Gptm6Wy_8KsQ4D_-GCbZ-Xe0zwqef2WOXLRBbLDrZfO8XvddRmYdACVmnErS0KsUBPbXqA6XUXI67c3QzF8NNJ-Lkudg21ExaDv-FMcxE2Le53I-0ZNehpGPkj0a8QF0pPDhkvCwnCmzXpByDGxMxnHfwNU_JjfDNV8COqHJQgWuXe95C3QdrTyrMyE26c0ttB0Zy4AmbhJWqoINeabllpegazwgrCF7fJSuuv6Yr6rMf1qmJkSDFMIr1F_Isk8UsfnrZ2cZkeAsHYSpfpUbbr4Evp0YpbKHtKmDnu7LQ2JAktdDwG; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 05-Aug-2026 12:35:52 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 07-Aug-2018 12:35:52 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1470573351960491; path=/; expires=Tue, 31-Jul-46 12:35:51 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: 5109cc6fe54ee
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D657172311%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 07 Aug 2016 13:05:52 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+get - [2016-08-07 21:37 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A13%3A32+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AFcWxV21C7fd0v3bYYYRCpSSRl31Ax4qgB51lcxNdab70-j6HM6twFwT&payer_email=jdj9354-buyer%40naver.com&txn_id=9J972244G81208908&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=2d9f31a52f52b 
+[2016-08-07 21:39 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1013
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A19%3A03+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AoMVZEC0B8KvZMhmkjGN3K2c-fiWASgNcwCAlD46qdx4Jcp9OqZSbAtS&payer_email=jdj9354-buyer%40naver.com&txn_id=4KG65743CS267953K&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=4058a48e25693
+[2016-08-07 21:39 Asia/Seoul] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Sun, 07 Aug 2016 12:39:51 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=zEF8skSgBBM3Sc9tgEgDJmpIwPWVb6NKNIXCOY52ujZIFFHqyYTegD4SPqrjZODG21Llg1DsheslB4OnNZhQq_BJJgepyeDolvBE7kcM3A0Knr6JkhiAMg03DKaoz9PseVwQkPLZrh7ydzJSwDJGT-yCz1l_M39VTo_tYM2_nGAnCDHuAvUHm5f41Crjxgs1wpp92MYOQrbmLJULawhH_2d9LjO8w3PmVeqSCu_Q2MNB8YaD1HAGTgut1X6PfcPhDW_VJ4dU3dGqijeNNTwb2Jf8K_NkaGeQl5sqNJyYNkCssZZJumqzBVn3m82CQUKj2q7CLjn9R5NBq53FAB5_KPtM-9WD6s4YnCOx9R36mgBGvi8L9nEB7U8eBGo40m84ZBfa-M1iOZj92z-B22wOYUr5PF0vB626RhRhTrJ_Evc0sOC6YUYsHjonu2i; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 05-Aug-2026 12:39:51 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 07-Aug-2018 12:39:51 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1470573591675832; path=/; expires=Tue, 31-Jul-46 12:39:51 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: 63206c79a064d
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D388802391%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 07 Aug 2016 13:09:52 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+get - [2016-08-07 21:41 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A19%3A03+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AoMVZEC0B8KvZMhmkjGN3K2c-fiWASgNcwCAlD46qdx4Jcp9OqZSbAtS&payer_email=jdj9354-buyer%40naver.com&txn_id=4KG65743CS267953K&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=4058a48e25693 
+[2016-08-07 21:43 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1013
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A17%3A42+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AAJkxWTa08yQdU65u22wOv3pGMn6AUTkCYbvpwDnDy-fyL5.A6u-x941&payer_email=jdj9354-buyer%40naver.com&txn_id=2KK4165074751514B&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=8a3f964149551
+[2016-08-07 21:43 Asia/Seoul] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Sun, 07 Aug 2016 12:43:18 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=DKvpeDemOINfSHsx_7gdltc6u9uLqYPvNDbqR5hdY7o3jwjsYs46C8w5O6UPE75b0T2h-wUA4tsBiEVqWf8TUYK74O2IvOCr9AppnLJo7XR8PFKLg_HK15d2xid7T_GSTvHZy03d_LrMIyRAEjf4uVy1qCz_o5Se0x95lxw_vChIhRd70iXbdj6XHoe_w1e7OK8ytTsU-YsTpKh-0aNoMzjOJYNYF5OYxDEFduWU7_j6HQ93qMu8_R4EVWxTJNVWekAiav8sP983dOkzJiOVSEbv86wjk3qs7IyAGjGRrbbWClDVgp7HOyC6TaNKEM4H9z3xxOX4QhqYjJOsQMPL6O_vB_VLuOH6g3AddgHoLZ0NIFf2CCoVjjjPJjHueYOWfMhRx-dhBp3_W1JTGeR5wVWoDGzdjnxhiQGTgA_3RhTRpPwGV_sSY-d5Y7S; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 05-Aug-2026 12:43:18 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 07-Aug-2018 12:43:18 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1470573798173256; path=/; expires=Tue, 31-Jul-46 12:43:18 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: eb827cf24c8c
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D3861686103%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 07 Aug 2016 13:13:18 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2016-08-07 21:45 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A17%3A42+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AAJkxWTa08yQdU65u22wOv3pGMn6AUTkCYbvpwDnDy-fyL5.A6u-x941&payer_email=jdj9354-buyer%40naver.com&txn_id=2KK4165074751514B&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=8a3f964149551 
+get - get - [2016-08-07 22:03 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1013
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A13%3A32+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AFcWxV21C7fd0v3bYYYRCpSSRl31Ax4qgB51lcxNdab70-j6HM6twFwT&payer_email=jdj9354-buyer%40naver.com&txn_id=9J972244G81208908&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=2d9f31a52f52b
+[2016-08-07 22:03 Asia/Seoul] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Sun, 07 Aug 2016 13:03:20 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=_kUVW7Gy17uDQmAPRIgdsyWoDDoexmP51julc6b1WPYFP02Hqlb3Ntj5z2nwJeAY3cqGL3BUNL7_NUg5KwEbxsJLRDaXsMezJ0e_AzRzreSQVir1vdkXl0UYl2fSA5lprVBzT9DET0WAnr0w88IHwJ3APFw18hcjsRSvnkq0l7-1cus1I4BQ6VAZD9uelNMW6HIZIM4yYgRR4LtRHtlt05qBIjKv2m984qLCbfqvtEeO-GF1NTD-yTaniO6TgQL-bwlBmmQtji2mw-CpjOK2c8gPyA9Jbzn7SSY7nrLi96Y09af--mAMsD12yMBgPxC40yh3baBpIMk6wW_ie8y7BebUKd7io9pjG8nKCpokdLmZ6fxTRaS0bYIHhlBWDhTKMqE3NG3FNv0iYXGA1ckdlnlo2g12wAyRIJTOM0yO3z9sHo_HqMT1R8hmD80; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 05-Aug-2026 13:03:20 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 07-Aug-2018 13:03:20 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1470575000032858; path=/; expires=Tue, 31-Jul-46 13:03:20 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: fa7b422f3de5
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D2553390935%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 07 Aug 2016 13:33:20 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2016-08-07 22:03 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1013
+Content-Type: application/x-www-form-urlencoded
+
+ for IPN payload: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A19%3A03+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AoMVZEC0B8KvZMhmkjGN3K2c-fiWASgNcwCAlD46qdx4Jcp9OqZSbAtS&payer_email=jdj9354-buyer%40naver.com&txn_id=4KG65743CS267953K&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=4058a48e25693
+[2016-08-07 22:03 Asia/Seoul] HTTP response of validation request: HTTP/1.1 200 OK
+Date: Sun, 07 Aug 2016 13:03:46 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=1N48DCO4dlPG6U0pIUh54OxVlSjQC5eluAhAJq4PcZsohN-bMyQVReMh6vXC3-tPRdhhpS0q4fh4Ex5kGewSzpZ8J9NOlloOCXZ26yWvUpN0zzCQLn-ngPpS4rhHiJM_eoCy9LBJJfjzzj3X3hHO_jyzAz2OTfxYi5qJFnBeNm5vfMG4GAqt7QVN1Rh34DIAZJzfaJZUjiggP5mO2FXnJkqDG4NRqnGJtMMLWWQxM0a_ZYht6FbBsjoye3R7GO5g01YnpL-Vqf7Jkhi3FOpwF5oHVuvH-15_38WFnws5fjZCl4d-UwmgBBbngffQjyhnMgxtW5Y4dumf7pRRFhPkesL-UtxNtsZM8be4UNTwmsXy60wDNDk8le5ZA9a6viMLNFTsuXN8JmHugDD4XA0RMZDKVf2ew_J21E5sek1LqH3XRPVco-xsASWHL9e; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 05-Aug-2026 13:03:46 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 07-Aug-2018 13:03:46 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1470575026649740; path=/; expires=Tue, 31-Jul-46 13:03:46 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: d7fc8a0a99637
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D2989598551%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 07 Aug 2016 13:33:47 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2016-08-07 22:05 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A13%3A32+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AFcWxV21C7fd0v3bYYYRCpSSRl31Ax4qgB51lcxNdab70-j6HM6twFwT&payer_email=jdj9354-buyer%40naver.com&txn_id=9J972244G81208908&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=2d9f31a52f52b 
+[2016-08-07 22:05 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=0.18&protection_eligibility=Ineligible&address_status=confirmed&payer_id=8HLQ36L3MEBEL&tax=0.00&address_street=1+Main+St&payment_date=04%3A19%3A03+Aug+07%2C+2016+PDT&payment_status=Pending&charset=windows-1252&address_zip=95131&first_name=test&address_country_code=US&address_name=test+buyer&notify_version=3.8&custom=&payer_status=verified&business=jdj9354%40naver.com&address_country=United+States&address_city=San+Jose&quantity=1&verify_sign=AoMVZEC0B8KvZMhmkjGN3K2c-fiWASgNcwCAlD46qdx4Jcp9OqZSbAtS&payer_email=jdj9354-buyer%40naver.com&txn_id=4KG65743CS267953K&payment_type=instant&btn_id=221&last_name=buyer&address_state=CA&receiver_email=jdj9354%40naver.com&shipping_discount=0.00&insurance_amount=0.00&pending_reason=unilateral&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=US&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=0.18&shipping=0.00&ipn_track_id=4058a48e25693 

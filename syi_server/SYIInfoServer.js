@@ -105,6 +105,7 @@ app.use(express.static(__dirname));
 app.use(express.bodyParser());
 app.use(cors(corsOptions));
 app.use('/ipnRecv', function(request,response,next){
+	var puuid = request.param('puuid');
 	var isSuccess = request.param('isSuccess');
 	var itemName = request.param('item_name');
 	var itemNumber = request.param('item_number');
@@ -115,7 +116,8 @@ app.use('/ipnRecv', function(request,response,next){
 	var receiverEmail = request.param('receiver_email');
 	var payerEmail = request.param('payer_email');
 		
-	var jsonPaymentInfo = { isSuccess : isSuccess,
+	var jsonPaymentInfo = { puuid : puuid,
+							isSuccess : isSuccess,
 							itemName : itemName,
 							itemNumber : itemNumber,
 							paymentStatus : paymentStatus,
@@ -125,8 +127,10 @@ app.use('/ipnRecv', function(request,response,next){
 							receiverEmail : receiverEmail,
 							payerEmail : payerEmail							
 							};
-							
-	DBModule.FinalizePaymentInfo(data,socket);
+								
+	console.log(jsonPaymentInfo);							
+	
+	DBModule.FinalizePaymentInfo(jsonPaymentInfo);
 	
 });
 app.use('/reqInfo',function(request, response,next) {		
