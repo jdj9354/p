@@ -109,7 +109,7 @@ app.use('/ipnRecv', function(request,response,next){
 	var isSuccess = request.param('isSuccess');
 	var itemName = request.param('item_name');
 	var itemNumber = request.param('item_number');
-	var paymentStatus = request.param('payment_status');
+	var paymentStatus = request.param('payment_status');	
 	var paymentAmount = request.param('mc_gross');
 	var paymentCurrency = request.param('mc_currency');
 	var txnId = request.param('txn_id');
@@ -126,8 +126,8 @@ app.use('/ipnRecv', function(request,response,next){
 							txnId : txnId,
 							receiverEmail : receiverEmail,
 							payerEmail : payerEmail							
-							};
-								
+							};								
+	
 	console.log(jsonPaymentInfo);							
 	
 	DBModule.FinalizePaymentInfo(jsonPaymentInfo);

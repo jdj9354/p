@@ -8,27 +8,9 @@ define("DEBUG", 1);
 // Set to 0 once you're ready to go live
 define("USE_SANDBOX", 1);
 define("LOG_FILE", "./ipn.log");
-error_log('get - ' . htmlspecialchars($_GET["test"]), 3, LOG_FILE);
 
 
-
-
-		$_POST['isSuccess'] = "true";
-
-		$ch2 = curl_init("http://118.37.178.145:53333/ipnRecv");
-		//curl_setopt ($curlsession, CURLOPT_URL, $url); 
-		curl_setopt ($ch2, CURLOPT_POST, 1); 
-		curl_setopt ($ch2, CURLOPT_POSTFIELDS, $_POST); 
-		curl_setopt ($ch2, CURLOPT_POSTFIELDSIZE, 0); 
-	//	curl_setopt ($ch2, CURLOPT_RETURNTRANSFER, 1);
-
-		$res = curl_exec($ch2);
-
-		
-		
-
-
-
+header('HTTP/1.1 200 OK');
 
 // Read POST data
 // reading posted data directly from $_POST causes serialization

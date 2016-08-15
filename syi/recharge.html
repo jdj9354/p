@@ -26,13 +26,15 @@
                             <input type="hidden" name="cmd" value="_xclick">
                             <!-- Saved buttons are identified by their button IDs -->
                             <input type="hidden" name="hosted_button_id" value="221">							
-                            <input type="hidden" name="business" value="jdj9354@naver.com">
+                            <input type="hidden" name="business" value="jdj9354-facilitator@naver.com">
                             <input type="hidden" name="item_name" value="Dice recharge">
                             <input type="hidden" name="item_number" value="123">
                             <input type="hidden" id="input_amount" name="amount">
                             <input type="hidden" name="currency_type" value="USD" size="50">
                             <input type="hidden" name="charset" value="UTF-8" size="50">
+							<input type="hidden" name="return" id="paypal_return_url" value="http://118.37.178.145/syi/paypal_return.html" size="50" />
 							<input type="hidden" name="notify_url" id="paypal_ipn_url" value="http://118.37.178.145/syi/ipn_receiver.php" size="50" />
+							<input type="hidden" name="refund" id="paypal_refund_url" value="http://118.37.178.145/syi/paypal_refund.html" size="50" />
                             <!-- Saved buttons display an appropriate button image. -->
 							<button type="button" onclick="onClickSubmit();" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only img-responsive" style="background-color:transparent;"><img src="res/DiceRecharge.png" class="img-responsive"></button>                       
                             <img alt="" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
@@ -59,7 +61,9 @@
 				socket.on('res',function(data){
 					if(data.isSuccess){
 						setPrice();
+						document.getElementById("paypal_return_url").value="http://118.37.178.145/syi/paypal_return.html?puuid="+data.puuid;
 						document.getElementById("paypal_ipn_url").value="http://118.37.178.145/syi/ipn_receiver.php?puuid="+data.puuid;
+						document.getElementById("paypal_refund_url").value="http://118.37.178.145/syi/paypal_refund.html?puuid="+data.puuid;
 						document.getElementById("main_paypal_form").submit();
 					}					
 				});
