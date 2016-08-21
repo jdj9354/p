@@ -6729,3 +6729,579 @@ Transfer-Encoding: chunked
 Content-Type: text/html; charset=UTF-8
 
 VERIFIED
+[2016-08-21 15:58 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1068
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=2.57&protection_eligibility=Eligible&address_status=unconfirmed&payer_id=7MAS78PXFT7AN&tax=0.00&address_street=Bucheon&payment_date=23%3A58%3A43+Aug+20%2C+2016+PDT&payment_status=Completed&charset=windows-1252&address_zip=422-753&first_name=DeokJo&mc_fee=0.40&address_country_code=KR&address_name=DeokJo+Jang&notify_version=3.8&custom=&payer_status=unverified&business=jdj9354-facilitator%40naver.com&address_country=South+Korea&address_city=Bucheon&quantity=1&verify_sign=ASXdDrlbTVyCpgzeV32eDNNYww9lAS.kqIMGRbIYOMJlpa-7YseqC9Ak&payer_email=jdj9354%40naver.com&txn_id=72N00890989232835&payment_type=instant&btn_id=221&last_name=Jang&address_state=Bucheon&receiver_email=jdj9354-facilitator%40naver.com&payment_fee=0.40&shipping_discount=0.00&insurance_amount=0.00&receiver_id=M555TPYSCF89Y&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=KR&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=2.57&shipping=0.00&ipn_track_id=5d8a7af49ed85
+[2016-08-21 15:58 Asia/Seoul] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Sun, 21 Aug 2016 06:58:48 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=Q4wtUdVKAUmBG9hctPDPyKhDdmO4clEFBZItc7G0Q8H4Iat3lAv6n7VS4SKJsiX24DI1U4XcVATyNTcKhSoUvdHLa6lWho4sKA4Cd1S4LXLDLn8KAbtK_UYsgAdCPbTgSyh_BOLrVkaXdbJXFabGDEQcbyPbuB4ntyXwwjHmBzV5H_F7nVOEfSwn6fnfzSWhlYsmQwJI9iRGfjM360TM-0t5paMR0Lt6P1_4YlC8lhH8MKbAchZgknLyFR40AGIUBtSGNr_1sLaID2SAH17-9g87fyJuDkeZ2U5zw-liQpbJ1HBALUyx16qCnsMyvhKRyiH1zchd2S66npuspfgpT7AUA38K_JxzQ-1Wc-4Wv8UwPyoEAAhfRgjsa1JdFRnpJ7wj5geYjNr201iJPBirpVVHOnU2XChT8s0RnW; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 19-Aug-2026 06:58:48 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 21-Aug-2018 06:58:48 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1471762728563385; path=/; expires=Tue, 14-Aug-46 06:58:48 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: c8ac3c67856d1
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D676444503%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 21 Aug 2016 07:28:48 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2016-08-21 16:00 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1068
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=2.57&protection_eligibility=Eligible&address_status=unconfirmed&payer_id=7MAS78PXFT7AN&tax=0.00&address_street=Bucheon&payment_date=23%3A58%3A43+Aug+20%2C+2016+PDT&payment_status=Completed&charset=windows-1252&address_zip=422-753&first_name=DeokJo&mc_fee=0.40&address_country_code=KR&address_name=DeokJo+Jang&notify_version=3.8&custom=&payer_status=unverified&business=jdj9354-facilitator%40naver.com&address_country=South+Korea&address_city=Bucheon&quantity=1&verify_sign=ASXdDrlbTVyCpgzeV32eDNNYww9lAS.kqIMGRbIYOMJlpa-7YseqC9Ak&payer_email=jdj9354%40naver.com&txn_id=72N00890989232835&payment_type=instant&btn_id=221&last_name=Jang&address_state=Bucheon&receiver_email=jdj9354-facilitator%40naver.com&payment_fee=0.40&shipping_discount=0.00&insurance_amount=0.00&receiver_id=M555TPYSCF89Y&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=KR&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=2.57&shipping=0.00&ipn_track_id=5d8a7af49ed85
+[2016-08-21 16:00 Asia/Seoul] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Sun, 21 Aug 2016 07:00:19 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=CbPdoLAB2yuW-4-43KChLhHEouEkMBnZl_7jbN9TgEyuH26NmJMwhZPrZcEZy7iCSFyMSDWeb_wb8dyMAPYwT4Po3gzfnhOdAT2Z5uWzo-UIpcTSK2zb0mRnbKKH63xc3mkpT5vF27kQzmR6SWuUjrO-P2w9aLpLiYkFUiam2eoWxQ1F4bABznDG_tNdhu2Rukndr0Gt9r1v8KdhO3pkHY4gRbaT-imCCas55gRCjTw8Ew9YTo5l9aaaI18kzASHPDYrYAKSxgM_qGbQ5eiVuOTZvXc_U5rSBT0szXZNT_RddP_8ZgYraYUAzufVTxaWovIfN9GGqMYZXB4Z9t4Q44FDyLnq_zaYA9OaujCvri4kXC5aC71w96d3tnIMiwb9XxodYL0d-Z-nc_skDMDCchCtliaImhUiveHrTU5C2_0vO3hzOmVHCyZCuP8; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 19-Aug-2026 07:00:19 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 21-Aug-2018 07:00:19 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1471762819655894; path=/; expires=Tue, 14-Aug-46 07:00:19 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: 6509198c9ab24
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D2203171159%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 21 Aug 2016 07:30:20 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2016-08-21 16:00 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=2.57&protection_eligibility=Eligible&address_status=unconfirmed&payer_id=7MAS78PXFT7AN&tax=0.00&address_street=Bucheon&payment_date=23%3A58%3A43+Aug+20%2C+2016+PDT&payment_status=Completed&charset=windows-1252&address_zip=422-753&first_name=DeokJo&mc_fee=0.40&address_country_code=KR&address_name=DeokJo+Jang&notify_version=3.8&custom=&payer_status=unverified&business=jdj9354-facilitator%40naver.com&address_country=South+Korea&address_city=Bucheon&quantity=1&verify_sign=ASXdDrlbTVyCpgzeV32eDNNYww9lAS.kqIMGRbIYOMJlpa-7YseqC9Ak&payer_email=jdj9354%40naver.com&txn_id=72N00890989232835&payment_type=instant&btn_id=221&last_name=Jang&address_state=Bucheon&receiver_email=jdj9354-facilitator%40naver.com&payment_fee=0.40&shipping_discount=0.00&insurance_amount=0.00&receiver_id=M555TPYSCF89Y&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=KR&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=2.57&shipping=0.00&ipn_track_id=5d8a7af49ed85 
+[2016-08-21 16:01 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1068
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=2.57&protection_eligibility=Eligible&address_status=unconfirmed&payer_id=7MAS78PXFT7AN&tax=0.00&address_street=Bucheon&payment_date=23%3A58%3A43+Aug+20%2C+2016+PDT&payment_status=Completed&charset=windows-1252&address_zip=422-753&first_name=DeokJo&mc_fee=0.40&address_country_code=KR&address_name=DeokJo+Jang&notify_version=3.8&custom=&payer_status=unverified&business=jdj9354-facilitator%40naver.com&address_country=South+Korea&address_city=Bucheon&quantity=1&verify_sign=ASXdDrlbTVyCpgzeV32eDNNYww9lAS.kqIMGRbIYOMJlpa-7YseqC9Ak&payer_email=jdj9354%40naver.com&txn_id=72N00890989232835&payment_type=instant&btn_id=221&last_name=Jang&address_state=Bucheon&receiver_email=jdj9354-facilitator%40naver.com&payment_fee=0.40&shipping_discount=0.00&insurance_amount=0.00&receiver_id=M555TPYSCF89Y&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=KR&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=2.57&shipping=0.00&ipn_track_id=5d8a7af49ed85
+[2016-08-21 16:01 Asia/Seoul] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Sun, 21 Aug 2016 07:02:00 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=77EvQxjM3t1qT53kctqlrp2gl61fhh4c4Z0-8gc6uOLjRSruDfGdEErTuOKfLeXf-mQ5ftF3PwtQAjPkI5D8UKla-z_O-beTQfeLSGR4qVd43f1_2O02D83RMol1ADpTyVTD3oRoSX0NRMDQTK-Cb0Yjsz7LR4CuN04njeeTQZdeYB4C0-kIJC0SyZFGp5WHaMJLAgwhVrXMJ5SjILCDMbROLPaA7eIhtYqH8YQa7aVWt0ct9Fiiv1QbcfqZgvIIEJhp7A_KR0tbkov-y61AaSKWVJbpE7tY9chjXtsPqlCBgYkhZ3mUEuCo0Np4s7Ojzy6sJHGzhpTBPbgzrgIs_OGz52WiZ7M1YMo2bgXacI89V_U6ukRfG168sYd67rVR_eGvcboDSJHrwWIdzWsg3-w2wSGrgPizpVsy_PXP6JbSkZL5Psyn5XhLFqu; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 19-Aug-2026 07:02:01 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 21-Aug-2018 07:02:01 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1471762920807599; path=/; expires=Tue, 14-Aug-46 07:02:00 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: 2b84a12cbfb62
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D3897669975%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 21 Aug 2016 07:32:01 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2016-08-21 16:02 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=2.57&protection_eligibility=Eligible&address_status=unconfirmed&payer_id=7MAS78PXFT7AN&tax=0.00&address_street=Bucheon&payment_date=23%3A58%3A43+Aug+20%2C+2016+PDT&payment_status=Completed&charset=windows-1252&address_zip=422-753&first_name=DeokJo&mc_fee=0.40&address_country_code=KR&address_name=DeokJo+Jang&notify_version=3.8&custom=&payer_status=unverified&business=jdj9354-facilitator%40naver.com&address_country=South+Korea&address_city=Bucheon&quantity=1&verify_sign=ASXdDrlbTVyCpgzeV32eDNNYww9lAS.kqIMGRbIYOMJlpa-7YseqC9Ak&payer_email=jdj9354%40naver.com&txn_id=72N00890989232835&payment_type=instant&btn_id=221&last_name=Jang&address_state=Bucheon&receiver_email=jdj9354-facilitator%40naver.com&payment_fee=0.40&shipping_discount=0.00&insurance_amount=0.00&receiver_id=M555TPYSCF89Y&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=KR&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=2.57&shipping=0.00&ipn_track_id=5d8a7af49ed85 
+[2016-08-21 16:03 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=2.57&protection_eligibility=Eligible&address_status=unconfirmed&payer_id=7MAS78PXFT7AN&tax=0.00&address_street=Bucheon&payment_date=23%3A58%3A43+Aug+20%2C+2016+PDT&payment_status=Completed&charset=windows-1252&address_zip=422-753&first_name=DeokJo&mc_fee=0.40&address_country_code=KR&address_name=DeokJo+Jang&notify_version=3.8&custom=&payer_status=unverified&business=jdj9354-facilitator%40naver.com&address_country=South+Korea&address_city=Bucheon&quantity=1&verify_sign=ASXdDrlbTVyCpgzeV32eDNNYww9lAS.kqIMGRbIYOMJlpa-7YseqC9Ak&payer_email=jdj9354%40naver.com&txn_id=72N00890989232835&payment_type=instant&btn_id=221&last_name=Jang&address_state=Bucheon&receiver_email=jdj9354-facilitator%40naver.com&payment_fee=0.40&shipping_discount=0.00&insurance_amount=0.00&receiver_id=M555TPYSCF89Y&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=KR&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=2.57&shipping=0.00&ipn_track_id=5d8a7af49ed85 
+[2016-08-21 16:04 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1068
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=2.57&protection_eligibility=Eligible&address_status=unconfirmed&payer_id=7MAS78PXFT7AN&tax=0.00&address_street=Bucheon&payment_date=23%3A58%3A43+Aug+20%2C+2016+PDT&payment_status=Completed&charset=windows-1252&address_zip=422-753&first_name=DeokJo&mc_fee=0.40&address_country_code=KR&address_name=DeokJo+Jang&notify_version=3.8&custom=&payer_status=unverified&business=jdj9354-facilitator%40naver.com&address_country=South+Korea&address_city=Bucheon&quantity=1&verify_sign=ASXdDrlbTVyCpgzeV32eDNNYww9lAS.kqIMGRbIYOMJlpa-7YseqC9Ak&payer_email=jdj9354%40naver.com&txn_id=72N00890989232835&payment_type=instant&btn_id=221&last_name=Jang&address_state=Bucheon&receiver_email=jdj9354-facilitator%40naver.com&payment_fee=0.40&shipping_discount=0.00&insurance_amount=0.00&receiver_id=M555TPYSCF89Y&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=KR&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=2.57&shipping=0.00&ipn_track_id=5d8a7af49ed85
+[2016-08-21 16:04 Asia/Seoul] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Sun, 21 Aug 2016 07:04:00 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=SYy5pIFN6xyLHmFsAIyVIx3821sH9LmqVtZbAXHsTlhjwplpjZqikhX4OOXpyhVvzfYkEyZqKU1Iv_eh6JcLOjHDUGhm-SP-IuzBBVwfxAVQeqRN3fhhO91hQGFVMiQHkib3EQyNuZmX3iZqDwxxk8SsNXzQpGO9-BVy5Cguujczi7q6zt9Vd1G7sOO9zBa3U0Gj101-ai4C4jFrDBLFsLR2Hf9hsc8vRly1UdoqCanszUrflVPFqhnAVL0DxTNyTagZHsBFslIkvHF0yurqK5I-C4u4DGhP9WEMXDHgzjvOB6qxKxkDmtcyYVEo_NgmP730vKK2jYPvWlwf347QKICb2E_sahkIojYNURa5DbC4ggciVMCydOkJAK2HfVLdIuxD_PBzMRm0h8kkdArH1P9N3daZPVF1_w24mrnENld3HsBpDhMnZB2cDPe; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 19-Aug-2026 07:04:01 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 21-Aug-2018 07:04:01 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1471763041062252; path=/; expires=Tue, 14-Aug-46 07:04:01 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: 8516a4ffa4d4
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D1632811351%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 21 Aug 2016 07:34:01 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2016-08-21 16:06 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=2.57&protection_eligibility=Eligible&address_status=unconfirmed&payer_id=7MAS78PXFT7AN&tax=0.00&address_street=Bucheon&payment_date=23%3A58%3A43+Aug+20%2C+2016+PDT&payment_status=Completed&charset=windows-1252&address_zip=422-753&first_name=DeokJo&mc_fee=0.40&address_country_code=KR&address_name=DeokJo+Jang&notify_version=3.8&custom=&payer_status=unverified&business=jdj9354-facilitator%40naver.com&address_country=South+Korea&address_city=Bucheon&quantity=1&verify_sign=ASXdDrlbTVyCpgzeV32eDNNYww9lAS.kqIMGRbIYOMJlpa-7YseqC9Ak&payer_email=jdj9354%40naver.com&txn_id=72N00890989232835&payment_type=instant&btn_id=221&last_name=Jang&address_state=Bucheon&receiver_email=jdj9354-facilitator%40naver.com&payment_fee=0.40&shipping_discount=0.00&insurance_amount=0.00&receiver_id=M555TPYSCF89Y&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=KR&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=2.57&shipping=0.00&ipn_track_id=5d8a7af49ed85 
+[2016-08-21 16:06 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1068
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=2.57&protection_eligibility=Eligible&address_status=unconfirmed&payer_id=7MAS78PXFT7AN&tax=0.00&address_street=Bucheon&payment_date=23%3A58%3A43+Aug+20%2C+2016+PDT&payment_status=Completed&charset=windows-1252&address_zip=422-753&first_name=DeokJo&mc_fee=0.40&address_country_code=KR&address_name=DeokJo+Jang&notify_version=3.8&custom=&payer_status=unverified&business=jdj9354-facilitator%40naver.com&address_country=South+Korea&address_city=Bucheon&quantity=1&verify_sign=ASXdDrlbTVyCpgzeV32eDNNYww9lAS.kqIMGRbIYOMJlpa-7YseqC9Ak&payer_email=jdj9354%40naver.com&txn_id=72N00890989232835&payment_type=instant&btn_id=221&last_name=Jang&address_state=Bucheon&receiver_email=jdj9354-facilitator%40naver.com&payment_fee=0.40&shipping_discount=0.00&insurance_amount=0.00&receiver_id=M555TPYSCF89Y&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=KR&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=2.57&shipping=0.00&ipn_track_id=5d8a7af49ed85
+[2016-08-21 16:06 Asia/Seoul] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Sun, 21 Aug 2016 07:06:47 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=ZqL_twREdfWlKGEvJWeiA3hkezqHQKeUrVex9cIeQbNDjp2CRQeWdMK2YDWYt0ite_wcvmwJ2sgokhmHiCYpyZLwBDkrI-UqygehRGG-ptOPLpPvXXREEP19W0va7qzZCfu1IfQZy7Sh-XqCiO8SNU-iXM5IelVYDaIEimYzl9XD-vhAnVbRcfaQ2eAV_UGVcVk2K9QpnJ86e1Tk7GG6j0FVQJV2NDczBl1AtlthoAN0uI6aKIAxMXR2aDfevTaUZDXcwhSlc_T6ANrFo15671eVgwIxZTFFrCo9i0oF3oHAG6Vr9wxw6zFUyhSP7CQarD00z88eSkJMFvipRPDipjggtJ0Ti3CXR2auzQAWYL9cbw_tFx9VEX4giZPNdONy8rTI9y1QLs6X8xWtFRnMagE_jv6eg-1dKpL6q8xuQheNmX4KG3Y94Df9REu; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 19-Aug-2026 07:06:47 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 21-Aug-2018 07:06:47 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1471763207305179; path=/; expires=Tue, 14-Aug-46 07:06:47 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: 49985e09459c2
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D122927447%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 21 Aug 2016 07:36:47 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2016-08-21 16:08 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=2.57&protection_eligibility=Eligible&address_status=unconfirmed&payer_id=7MAS78PXFT7AN&tax=0.00&address_street=Bucheon&payment_date=23%3A58%3A43+Aug+20%2C+2016+PDT&payment_status=Completed&charset=windows-1252&address_zip=422-753&first_name=DeokJo&mc_fee=0.40&address_country_code=KR&address_name=DeokJo+Jang&notify_version=3.8&custom=&payer_status=unverified&business=jdj9354-facilitator%40naver.com&address_country=South+Korea&address_city=Bucheon&quantity=1&verify_sign=ASXdDrlbTVyCpgzeV32eDNNYww9lAS.kqIMGRbIYOMJlpa-7YseqC9Ak&payer_email=jdj9354%40naver.com&txn_id=72N00890989232835&payment_type=instant&btn_id=221&last_name=Jang&address_state=Bucheon&receiver_email=jdj9354-facilitator%40naver.com&payment_fee=0.40&shipping_discount=0.00&insurance_amount=0.00&receiver_id=M555TPYSCF89Y&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=KR&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=2.57&shipping=0.00&ipn_track_id=5d8a7af49ed85 
+[2016-08-21 16:10 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1068
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=2.57&protection_eligibility=Eligible&address_status=unconfirmed&payer_id=7MAS78PXFT7AN&tax=0.00&address_street=Bucheon&payment_date=23%3A58%3A43+Aug+20%2C+2016+PDT&payment_status=Completed&charset=windows-1252&address_zip=422-753&first_name=DeokJo&mc_fee=0.40&address_country_code=KR&address_name=DeokJo+Jang&notify_version=3.8&custom=&payer_status=unverified&business=jdj9354-facilitator%40naver.com&address_country=South+Korea&address_city=Bucheon&quantity=1&verify_sign=ASXdDrlbTVyCpgzeV32eDNNYww9lAS.kqIMGRbIYOMJlpa-7YseqC9Ak&payer_email=jdj9354%40naver.com&txn_id=72N00890989232835&payment_type=instant&btn_id=221&last_name=Jang&address_state=Bucheon&receiver_email=jdj9354-facilitator%40naver.com&payment_fee=0.40&shipping_discount=0.00&insurance_amount=0.00&receiver_id=M555TPYSCF89Y&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=KR&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=2.57&shipping=0.00&ipn_track_id=5d8a7af49ed85
+[2016-08-21 16:10 Asia/Seoul] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Sun, 21 Aug 2016 07:10:54 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=A4r5uhRU7Hri3nUOqc__wRy6nZKD1Gp9nICcFwVtFa0m2Oe75Lc2XJFUb5HZ_QhOA59LvAmcaVTw8QO5J0x0WGA6nig8KTylvecPzH2H6r2dCdgyqA5l6VRuuhZOh06CsAPoNC5r1f3fBbnV6bVAeYeO_-h4qv4F-q-SiUCH_SZwzQ13iSLEv0smkmQuBAYRiqklJ4efjLgX_GImdrMWTWQMQUU7dfmmSa8_r3vMjiZzorBYDBTCz4RsdoTf0dsj4Y2Xapp2sjbHg7x9VwHIzWB41H2eWWhyXt0pRWHubJ5S7PwI2t4k1HHXeKIqYJ8UIKfjE9YKC3_lM7G_UuL-WAAh51MGkAzYSJUjav_BTCEg0b-g-vgXsNd6TrR4hXgAG4bMcwIs5_low44pUEOV7WljOZaD5hAXabxeAt92QoMtqWAH3yT9I0o2nBm; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 19-Aug-2026 07:10:55 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 21-Aug-2018 07:10:55 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1471763454769574; path=/; expires=Tue, 14-Aug-46 07:10:54 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: a5cbba1ab7ebe
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D4266899799%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 21 Aug 2016 07:40:55 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2016-08-21 16:12 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=2.57&protection_eligibility=Eligible&address_status=unconfirmed&payer_id=7MAS78PXFT7AN&tax=0.00&address_street=Bucheon&payment_date=23%3A58%3A43+Aug+20%2C+2016+PDT&payment_status=Completed&charset=windows-1252&address_zip=422-753&first_name=DeokJo&mc_fee=0.40&address_country_code=KR&address_name=DeokJo+Jang&notify_version=3.8&custom=&payer_status=unverified&business=jdj9354-facilitator%40naver.com&address_country=South+Korea&address_city=Bucheon&quantity=1&verify_sign=ASXdDrlbTVyCpgzeV32eDNNYww9lAS.kqIMGRbIYOMJlpa-7YseqC9Ak&payer_email=jdj9354%40naver.com&txn_id=72N00890989232835&payment_type=instant&btn_id=221&last_name=Jang&address_state=Bucheon&receiver_email=jdj9354-facilitator%40naver.com&payment_fee=0.40&shipping_discount=0.00&insurance_amount=0.00&receiver_id=M555TPYSCF89Y&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=KR&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=2.57&shipping=0.00&ipn_track_id=5d8a7af49ed85 
+[2016-08-21 16:17 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1068
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=2.57&protection_eligibility=Eligible&address_status=unconfirmed&payer_id=7MAS78PXFT7AN&tax=0.00&address_street=Bucheon&payment_date=23%3A58%3A43+Aug+20%2C+2016+PDT&payment_status=Completed&charset=windows-1252&address_zip=422-753&first_name=DeokJo&mc_fee=0.40&address_country_code=KR&address_name=DeokJo+Jang&notify_version=3.8&custom=&payer_status=unverified&business=jdj9354-facilitator%40naver.com&address_country=South+Korea&address_city=Bucheon&quantity=1&verify_sign=ASXdDrlbTVyCpgzeV32eDNNYww9lAS.kqIMGRbIYOMJlpa-7YseqC9Ak&payer_email=jdj9354%40naver.com&txn_id=72N00890989232835&payment_type=instant&btn_id=221&last_name=Jang&address_state=Bucheon&receiver_email=jdj9354-facilitator%40naver.com&payment_fee=0.40&shipping_discount=0.00&insurance_amount=0.00&receiver_id=M555TPYSCF89Y&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=KR&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=2.57&shipping=0.00&ipn_track_id=5d8a7af49ed85
+[2016-08-21 16:17 Asia/Seoul] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Sun, 21 Aug 2016 07:17:41 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=dz8Ptp6U7nS78ffOHPkagRnOEYHyeKlWzKGpWUANc_fJBvWIqjQsOKDiWVVkRvc5iomTWj-WozdJHQ20sqM-aTaWHvi-o-j0WB5e3KyhoMfcrgnRtqMMwciVkCK5FRX0_8w5jcvgbXrpQ4sAqgyhVUhTmwyIZn7jHFU4sD9en_dhdFDkYGqo3vc9h2o5XWtc355cjdjh1xadNFwSSFd_fBYVu8OyKv2oU1D5F66_V6hk7ODmhuc2BeW96bdDwJhgA_oPw2vtH1crMoe0PW0HGfu8i6PfPZFqCpsfgpuDdXDmFMXZJSCjy0KCpOc1RD-KVgk5nSMETS-9Wd0M8alJ8tHGPwhLv7lWkU05GasqFL4YjzWf6zQb42f4xcGRiiexCAKv06WH9LcdJ5HfaxlJLz-AgfjpLdygZwjbUkFz1f_DAj8WkeCUzv2JnX8; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 19-Aug-2026 07:17:41 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 21-Aug-2018 07:17:41 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1471763861424801; path=/; expires=Tue, 14-Aug-46 07:17:41 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: fd329f9f6229d
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D2505423191%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 21 Aug 2016 07:47:41 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2016-08-21 16:19 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=2.57&protection_eligibility=Eligible&address_status=unconfirmed&payer_id=7MAS78PXFT7AN&tax=0.00&address_street=Bucheon&payment_date=23%3A58%3A43+Aug+20%2C+2016+PDT&payment_status=Completed&charset=windows-1252&address_zip=422-753&first_name=DeokJo&mc_fee=0.40&address_country_code=KR&address_name=DeokJo+Jang&notify_version=3.8&custom=&payer_status=unverified&business=jdj9354-facilitator%40naver.com&address_country=South+Korea&address_city=Bucheon&quantity=1&verify_sign=ASXdDrlbTVyCpgzeV32eDNNYww9lAS.kqIMGRbIYOMJlpa-7YseqC9Ak&payer_email=jdj9354%40naver.com&txn_id=72N00890989232835&payment_type=instant&btn_id=221&last_name=Jang&address_state=Bucheon&receiver_email=jdj9354-facilitator%40naver.com&payment_fee=0.40&shipping_discount=0.00&insurance_amount=0.00&receiver_id=M555TPYSCF89Y&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=KR&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=2.57&shipping=0.00&ipn_track_id=5d8a7af49ed85 
+[2016-08-21 16:29 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1068
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=2.57&protection_eligibility=Eligible&address_status=unconfirmed&payer_id=7MAS78PXFT7AN&tax=0.00&address_street=Bucheon&payment_date=23%3A58%3A43+Aug+20%2C+2016+PDT&payment_status=Completed&charset=windows-1252&address_zip=422-753&first_name=DeokJo&mc_fee=0.40&address_country_code=KR&address_name=DeokJo+Jang&notify_version=3.8&custom=&payer_status=unverified&business=jdj9354-facilitator%40naver.com&address_country=South+Korea&address_city=Bucheon&quantity=1&verify_sign=ASXdDrlbTVyCpgzeV32eDNNYww9lAS.kqIMGRbIYOMJlpa-7YseqC9Ak&payer_email=jdj9354%40naver.com&txn_id=72N00890989232835&payment_type=instant&btn_id=221&last_name=Jang&address_state=Bucheon&receiver_email=jdj9354-facilitator%40naver.com&payment_fee=0.40&shipping_discount=0.00&insurance_amount=0.00&receiver_id=M555TPYSCF89Y&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=KR&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=2.57&shipping=0.00&ipn_track_id=5d8a7af49ed85
+[2016-08-21 16:29 Asia/Seoul] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Sun, 21 Aug 2016 07:29:41 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=OpX44t4uL456E0hgWsSKB9_a1KBpUUJcjvu4KQdmZ79ZW2nbd2OEel83PZnwnHSskuAG9gWGdetF1PXwjZfX2RL2ys8ojLBFlLAuAZfmtXmMVEmaIdfOh74YK-usUMqS0Mu9xJ_5-Y0QGkAGe7drclIHY61DS_pBZrQrqOtoV8Vx5j7NMAmb4yO6LY0VdO_N-a-IkN2Mu8VtVL-4qBLyZY4BCDFdwJH4gUczSMX0pCDJgsqqR-3p_2McuB5WisRfffs9aV8P9tXCt0J213GP_uQ29DVlyTVRRTdxdwRDCEatYZSwUf-Id2gshWyxOSfvh_pLaxBAhYZqCAK_51-ImOLfEjESy6rye88vku-jdm8uW78873wP-Wpx9QO4BBC51GIZHzGdXQQEatALzLrjqkKA_9ITuYrhnswPN0; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 19-Aug-2026 07:29:42 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 21-Aug-2018 07:29:42 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1471764581760877; path=/; expires=Tue, 14-Aug-46 07:29:41 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: 6487dc75b44d7
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D1700313431%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 21 Aug 2016 07:59:42 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2016-08-21 16:31 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=2.57&protection_eligibility=Eligible&address_status=unconfirmed&payer_id=7MAS78PXFT7AN&tax=0.00&address_street=Bucheon&payment_date=23%3A58%3A43+Aug+20%2C+2016+PDT&payment_status=Completed&charset=windows-1252&address_zip=422-753&first_name=DeokJo&mc_fee=0.40&address_country_code=KR&address_name=DeokJo+Jang&notify_version=3.8&custom=&payer_status=unverified&business=jdj9354-facilitator%40naver.com&address_country=South+Korea&address_city=Bucheon&quantity=1&verify_sign=ASXdDrlbTVyCpgzeV32eDNNYww9lAS.kqIMGRbIYOMJlpa-7YseqC9Ak&payer_email=jdj9354%40naver.com&txn_id=72N00890989232835&payment_type=instant&btn_id=221&last_name=Jang&address_state=Bucheon&receiver_email=jdj9354-facilitator%40naver.com&payment_fee=0.40&shipping_discount=0.00&insurance_amount=0.00&receiver_id=M555TPYSCF89Y&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=KR&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=2.57&shipping=0.00&ipn_track_id=5d8a7af49ed85 
+[2016-08-21 16:47 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1031
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=-2.57&protection_eligibility=Eligible&payer_id=7MAS78PXFT7AN&address_street=Bucheon&payment_date=00%3A47%3A20+Aug+21%2C+2016+PDT&payment_status=Refunded&charset=windows-1252&address_zip=422-753&first_name=DeokJo&mc_fee=-0.10&address_country_code=KR&address_name=DeokJo+Jang&notify_version=3.8&reason_code=refund&custom=&business=jdj9354-facilitator%40naver.com&address_country=South+Korea&address_city=Bucheon&verify_sign=AoZq0t1D0ICn0.xz3d9tcF5.NSKUAETDQ3wygy-eAQf8bqh9eC66ZWiA&payer_email=jdj9354%40naver.com&parent_txn_id=72N00890989232835&txn_id=2T951642CN348061V&payment_type=instant&btn_id=221&last_name=Jang&address_state=Bucheon&receiver_email=jdj9354-facilitator%40naver.com&payment_fee=-0.10&shipping_discount=0.00&receiver_id=M555TPYSCF89Y&insurance_amount=0.00&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=KR&test_ipn=1&handling_amount=0.00&shipping_method=Default&transaction_subject=&payment_gross=-2.57&shipping=0.00&ipn_track_id=e6c29e1cf2bde
+[2016-08-21 16:47 Asia/Seoul] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Sun, 21 Aug 2016 07:47:33 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=bGT7QGJuOnYf9iYKKs2gFL1JNt4xK4pebFED-7Y-mIGs1cKJob-XEiBBT437km4ulGL1kZ9ajrpBwRopBBeaWupAUex_Y3j-yYWZkmC6dZTajyD9IGR6TNQLV59a4VGx2PqnuB3WgshPyXcXL_FueDA8pHGfyflpOedygG_pwDG_fBysEsP39dUO0R2y4hG8fPSUzKVSzijzJ4VPKV_16Vgvom9w7_fsSik13JLmwRRjA4Vr6S-TBviKmSwBew0bMlUaLebsnfrRXM2mQ884tqR5zcL41M07eZJKJZRyUaZP59ykxdK4RFbeZfggmX_OKGVCgvTa7KnqcTmJUE1xoC1rYxu5IaJqpeIsBjxyTJstLL7m8B_u2xHXquTtzcY05LbCKX7-8R2Hg9fGjdThxmLbRip1IzDvJXxycuVLic65LNq9q6_gN4utY5q; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 19-Aug-2026 07:47:34 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 21-Aug-2018 07:47:34 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1471765654103883; path=/; expires=Tue, 14-Aug-46 07:47:34 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: 979fb29114917
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D2522659159%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 21 Aug 2016 08:17:34 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2016-08-21 16:49 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1031
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=-2.57&protection_eligibility=Eligible&payer_id=7MAS78PXFT7AN&address_street=Bucheon&payment_date=00%3A47%3A20+Aug+21%2C+2016+PDT&payment_status=Refunded&charset=windows-1252&address_zip=422-753&first_name=DeokJo&mc_fee=-0.10&address_country_code=KR&address_name=DeokJo+Jang&notify_version=3.8&reason_code=refund&custom=&business=jdj9354-facilitator%40naver.com&address_country=South+Korea&address_city=Bucheon&verify_sign=AoZq0t1D0ICn0.xz3d9tcF5.NSKUAETDQ3wygy-eAQf8bqh9eC66ZWiA&payer_email=jdj9354%40naver.com&parent_txn_id=72N00890989232835&txn_id=2T951642CN348061V&payment_type=instant&btn_id=221&last_name=Jang&address_state=Bucheon&receiver_email=jdj9354-facilitator%40naver.com&payment_fee=-0.10&shipping_discount=0.00&receiver_id=M555TPYSCF89Y&insurance_amount=0.00&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=KR&test_ipn=1&handling_amount=0.00&shipping_method=Default&transaction_subject=&payment_gross=-2.57&shipping=0.00&ipn_track_id=e6c29e1cf2bde
+[2016-08-21 16:49 Asia/Seoul] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Sun, 21 Aug 2016 07:49:11 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=zJGF_09mJvZ7zbSZUH7XXuRiWrtQbrEQpA8i130Y8Km7vghwk0wiJCJ9mdz5DWBC4nKXOlgQEDpOZlzg4hvVuoo6Oebr06bP1nEF7r9LLOf1CMiV8dfWAGLCdYaZfQj7tSDdKX55gMQsEkSxbT4c9kxmcaYzGy_j6kgnfuJIcXD4RoflsGUqHM9L-0josXfzMDxfLApBbbkmr1pO1d10w1YgFZg3Jp-6XeLJpv-LSi4UIWP9M1D1vZYo7RYoJTbaaJgluNtdj-Jv8GoDkffkr8oYpSYX1TyFhCy60PqRLzndVdus7NlW9zVKT7k0zOtMkHlw_LRQfOvBiXAO1KKrvaPfU-cqX735EIuQs3buF_FfXJFzxj_hE1FQiUKgZZO79h7bsyF53nfXhDgDJ7KVcrLuiaGkH1AxSNidkpqVK-xdWrKa9towZtDkUvG; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 19-Aug-2026 07:49:11 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 21-Aug-2018 07:49:11 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1471765751232563; path=/; expires=Tue, 14-Aug-46 07:49:11 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: 9151e86034bde
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D4150049111%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 21 Aug 2016 08:19:11 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2016-08-21 16:49 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=-2.57&protection_eligibility=Eligible&payer_id=7MAS78PXFT7AN&address_street=Bucheon&payment_date=00%3A47%3A20+Aug+21%2C+2016+PDT&payment_status=Refunded&charset=windows-1252&address_zip=422-753&first_name=DeokJo&mc_fee=-0.10&address_country_code=KR&address_name=DeokJo+Jang&notify_version=3.8&reason_code=refund&custom=&business=jdj9354-facilitator%40naver.com&address_country=South+Korea&address_city=Bucheon&verify_sign=AoZq0t1D0ICn0.xz3d9tcF5.NSKUAETDQ3wygy-eAQf8bqh9eC66ZWiA&payer_email=jdj9354%40naver.com&parent_txn_id=72N00890989232835&txn_id=2T951642CN348061V&payment_type=instant&btn_id=221&last_name=Jang&address_state=Bucheon&receiver_email=jdj9354-facilitator%40naver.com&payment_fee=-0.10&shipping_discount=0.00&receiver_id=M555TPYSCF89Y&insurance_amount=0.00&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=KR&test_ipn=1&handling_amount=0.00&shipping_method=Default&transaction_subject=&payment_gross=-2.57&shipping=0.00&ipn_track_id=e6c29e1cf2bde 
+[2016-08-21 16:50 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1031
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=-2.57&protection_eligibility=Eligible&payer_id=7MAS78PXFT7AN&address_street=Bucheon&payment_date=00%3A47%3A20+Aug+21%2C+2016+PDT&payment_status=Refunded&charset=windows-1252&address_zip=422-753&first_name=DeokJo&mc_fee=-0.10&address_country_code=KR&address_name=DeokJo+Jang&notify_version=3.8&reason_code=refund&custom=&business=jdj9354-facilitator%40naver.com&address_country=South+Korea&address_city=Bucheon&verify_sign=AoZq0t1D0ICn0.xz3d9tcF5.NSKUAETDQ3wygy-eAQf8bqh9eC66ZWiA&payer_email=jdj9354%40naver.com&parent_txn_id=72N00890989232835&txn_id=2T951642CN348061V&payment_type=instant&btn_id=221&last_name=Jang&address_state=Bucheon&receiver_email=jdj9354-facilitator%40naver.com&payment_fee=-0.10&shipping_discount=0.00&receiver_id=M555TPYSCF89Y&insurance_amount=0.00&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=KR&test_ipn=1&handling_amount=0.00&shipping_method=Default&transaction_subject=&payment_gross=-2.57&shipping=0.00&ipn_track_id=e6c29e1cf2bde
+[2016-08-21 16:50 Asia/Seoul] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Sun, 21 Aug 2016 07:50:56 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=xqeRy6Sq1zRu8rwbVdYGqqD-SgSpXqECEeET4c8XXhSctY3jIxx4iPQ_9EDbYeObE2vc7yZNw19Fqul8H3wObwGvnGkyUcg6dAK7w-8_M_HYHBcggd6UvKOHmhMhqEJC_Gu9sSMqycqepBEs7o6fTcbSY8sM12q3RcSTp5RJcDaXgkud-hvYBaqjBk-wzdiRHoNskUAXgcSjT-J4wswKXfppDwvoMbqOg79QsJebjjdlKGhDZd1f48ijJoa46s34WRVrVLQMRNBXXzitlOmf6K6pgrbkk8FLZntSRPQA1HKBNP4ARYG3T5yBV2MC0Him64sC9nqw27KXFH3j3aYx78Ey8GD0FHmaFHzspbehERj1sgzOcVMWkHoAcOaKJxXMwU9JJTdIES8_vF9Oo6x2VGM2JwyS3KQnjdkY6W; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 19-Aug-2026 07:50:56 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 21-Aug-2018 07:50:56 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1471765856424124; path=/; expires=Tue, 14-Aug-46 07:50:56 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: f4003e5f62daf
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D1616755031%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 21 Aug 2016 08:20:56 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2016-08-21 16:51 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=-2.57&protection_eligibility=Eligible&payer_id=7MAS78PXFT7AN&address_street=Bucheon&payment_date=00%3A47%3A20+Aug+21%2C+2016+PDT&payment_status=Refunded&charset=windows-1252&address_zip=422-753&first_name=DeokJo&mc_fee=-0.10&address_country_code=KR&address_name=DeokJo+Jang&notify_version=3.8&reason_code=refund&custom=&business=jdj9354-facilitator%40naver.com&address_country=South+Korea&address_city=Bucheon&verify_sign=AoZq0t1D0ICn0.xz3d9tcF5.NSKUAETDQ3wygy-eAQf8bqh9eC66ZWiA&payer_email=jdj9354%40naver.com&parent_txn_id=72N00890989232835&txn_id=2T951642CN348061V&payment_type=instant&btn_id=221&last_name=Jang&address_state=Bucheon&receiver_email=jdj9354-facilitator%40naver.com&payment_fee=-0.10&shipping_discount=0.00&receiver_id=M555TPYSCF89Y&insurance_amount=0.00&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=KR&test_ipn=1&handling_amount=0.00&shipping_method=Default&transaction_subject=&payment_gross=-2.57&shipping=0.00&ipn_track_id=e6c29e1cf2bde 
+[2016-08-21 16:52 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1068
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=2.57&protection_eligibility=Eligible&address_status=unconfirmed&payer_id=7MAS78PXFT7AN&tax=0.00&address_street=Bucheon&payment_date=23%3A58%3A43+Aug+20%2C+2016+PDT&payment_status=Completed&charset=windows-1252&address_zip=422-753&first_name=DeokJo&mc_fee=0.40&address_country_code=KR&address_name=DeokJo+Jang&notify_version=3.8&custom=&payer_status=unverified&business=jdj9354-facilitator%40naver.com&address_country=South+Korea&address_city=Bucheon&quantity=1&verify_sign=ASXdDrlbTVyCpgzeV32eDNNYww9lAS.kqIMGRbIYOMJlpa-7YseqC9Ak&payer_email=jdj9354%40naver.com&txn_id=72N00890989232835&payment_type=instant&btn_id=221&last_name=Jang&address_state=Bucheon&receiver_email=jdj9354-facilitator%40naver.com&payment_fee=0.40&shipping_discount=0.00&insurance_amount=0.00&receiver_id=M555TPYSCF89Y&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=KR&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=2.57&shipping=0.00&ipn_track_id=5d8a7af49ed85
+[2016-08-21 16:52 Asia/Seoul] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Sun, 21 Aug 2016 07:52:25 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=Oit5uYfObY4viTOd1DN37ARzbAwi_5S3JFcMVqxUrPZgnMxnxhB5ajHJqftvcAAxfEquXzY24bs0wa3QD1p1jyhakmPpaa4pGUDEjX4vR_dv0zvMTauCB8Kv5liph7wCHC99Bt7JPl2dVzDd8EaSVy2aZyRweyMHVmuKG7maIdEUWngM2_d6cCZrZeKA83LDi9PuiTsZs1X_pfcmD6jseFgLK_xnTRnMBhh5Xv81O6KOHu8VcmBJFLCqIYX0ZWmOahKL-Flf5dljyfIcwoJHgWFXgI_KvtMZl9FMzNPT3gIscXUifkkNgMnaRlnZs_gTCazgklgDT3Zriwb9q0vUQbTNZWUE1ok5NzlOGppkg9Qgucr7gj9GsvlMUaLWd6xZ9CQTpQg4Es5tBGT4c09HulivSHlM8004eaNIB_4hHuXqhFvPTnopN0GmpVi; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 19-Aug-2026 07:52:25 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 21-Aug-2018 07:52:25 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1471765945529521; path=/; expires=Tue, 14-Aug-46 07:52:25 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: d3a5a5837c030
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D3109927255%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 21 Aug 2016 08:22:25 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2016-08-21 16:52 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=-2.57&protection_eligibility=Eligible&payer_id=7MAS78PXFT7AN&address_street=Bucheon&payment_date=00%3A47%3A20+Aug+21%2C+2016+PDT&payment_status=Refunded&charset=windows-1252&address_zip=422-753&first_name=DeokJo&mc_fee=-0.10&address_country_code=KR&address_name=DeokJo+Jang&notify_version=3.8&reason_code=refund&custom=&business=jdj9354-facilitator%40naver.com&address_country=South+Korea&address_city=Bucheon&verify_sign=AoZq0t1D0ICn0.xz3d9tcF5.NSKUAETDQ3wygy-eAQf8bqh9eC66ZWiA&payer_email=jdj9354%40naver.com&parent_txn_id=72N00890989232835&txn_id=2T951642CN348061V&payment_type=instant&btn_id=221&last_name=Jang&address_state=Bucheon&receiver_email=jdj9354-facilitator%40naver.com&payment_fee=-0.10&shipping_discount=0.00&receiver_id=M555TPYSCF89Y&insurance_amount=0.00&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=KR&test_ipn=1&handling_amount=0.00&shipping_method=Default&transaction_subject=&payment_gross=-2.57&shipping=0.00&ipn_track_id=e6c29e1cf2bde 
+[2016-08-21 16:53 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1031
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=-2.57&protection_eligibility=Eligible&payer_id=7MAS78PXFT7AN&address_street=Bucheon&payment_date=00%3A47%3A20+Aug+21%2C+2016+PDT&payment_status=Refunded&charset=windows-1252&address_zip=422-753&first_name=DeokJo&mc_fee=-0.10&address_country_code=KR&address_name=DeokJo+Jang&notify_version=3.8&reason_code=refund&custom=&business=jdj9354-facilitator%40naver.com&address_country=South+Korea&address_city=Bucheon&verify_sign=AoZq0t1D0ICn0.xz3d9tcF5.NSKUAETDQ3wygy-eAQf8bqh9eC66ZWiA&payer_email=jdj9354%40naver.com&parent_txn_id=72N00890989232835&txn_id=2T951642CN348061V&payment_type=instant&btn_id=221&last_name=Jang&address_state=Bucheon&receiver_email=jdj9354-facilitator%40naver.com&payment_fee=-0.10&shipping_discount=0.00&receiver_id=M555TPYSCF89Y&insurance_amount=0.00&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=KR&test_ipn=1&handling_amount=0.00&shipping_method=Default&transaction_subject=&payment_gross=-2.57&shipping=0.00&ipn_track_id=e6c29e1cf2bde
+[2016-08-21 16:53 Asia/Seoul] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Sun, 21 Aug 2016 07:53:53 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=D1H6OoMRW040JnH7I5uoitlxoGLStVVzfk-DWt-APp9wHlyqdhSY2yVqxMrNLNOoISGdiOBtBBi1CcTjYfu_UJBv50g838WwRSSeTga0Vygnr3AnpLsEDiRJFjKS1OvUpjsPGzriqjHY_XJXJ0kkexx9pECuIITmJPq8V4Qzc09TqlFnLFH6I06zRfRvn7OZ4qRmJOzVvU8y6JrKKsevkeVNr_g6LQ0D92SCHB_d-nc1QSpQaIeWVeDvXpydanqPkDkqCxexKVoyg3NNdKRgjt4Ns2Oiu3tU6_jGYc8HUD0bxY43DRmG4nhfyyW6S0A0KCmALmCKH0sDYMgSuRYNnYeBMeFXNBGPoyuke77PJhKVAMaNIFsFzqc_ihsPoIAfts92CmdsxpupGGRHDC75JapgkkwAEq4kepsqwmRtOxg6n95Zml_Wozxk1US; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 19-Aug-2026 07:53:54 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 21-Aug-2018 07:53:54 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1471766034261791; path=/; expires=Tue, 14-Aug-46 07:53:54 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: d195df4d3b3a4
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D308197719%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 21 Aug 2016 08:23:54 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2016-08-21 16:54 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=2.57&protection_eligibility=Eligible&address_status=unconfirmed&payer_id=7MAS78PXFT7AN&tax=0.00&address_street=Bucheon&payment_date=23%3A58%3A43+Aug+20%2C+2016+PDT&payment_status=Completed&charset=windows-1252&address_zip=422-753&first_name=DeokJo&mc_fee=0.40&address_country_code=KR&address_name=DeokJo+Jang&notify_version=3.8&custom=&payer_status=unverified&business=jdj9354-facilitator%40naver.com&address_country=South+Korea&address_city=Bucheon&quantity=1&verify_sign=ASXdDrlbTVyCpgzeV32eDNNYww9lAS.kqIMGRbIYOMJlpa-7YseqC9Ak&payer_email=jdj9354%40naver.com&txn_id=72N00890989232835&payment_type=instant&btn_id=221&last_name=Jang&address_state=Bucheon&receiver_email=jdj9354-facilitator%40naver.com&payment_fee=0.40&shipping_discount=0.00&insurance_amount=0.00&receiver_id=M555TPYSCF89Y&txn_type=web_accept&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=KR&test_ipn=1&shipping_method=Default&handling_amount=0.00&transaction_subject=&payment_gross=2.57&shipping=0.00&ipn_track_id=5d8a7af49ed85 
+[2016-08-21 16:55 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=-2.57&protection_eligibility=Eligible&payer_id=7MAS78PXFT7AN&address_street=Bucheon&payment_date=00%3A47%3A20+Aug+21%2C+2016+PDT&payment_status=Refunded&charset=windows-1252&address_zip=422-753&first_name=DeokJo&mc_fee=-0.10&address_country_code=KR&address_name=DeokJo+Jang&notify_version=3.8&reason_code=refund&custom=&business=jdj9354-facilitator%40naver.com&address_country=South+Korea&address_city=Bucheon&verify_sign=AoZq0t1D0ICn0.xz3d9tcF5.NSKUAETDQ3wygy-eAQf8bqh9eC66ZWiA&payer_email=jdj9354%40naver.com&parent_txn_id=72N00890989232835&txn_id=2T951642CN348061V&payment_type=instant&btn_id=221&last_name=Jang&address_state=Bucheon&receiver_email=jdj9354-facilitator%40naver.com&payment_fee=-0.10&shipping_discount=0.00&receiver_id=M555TPYSCF89Y&insurance_amount=0.00&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=KR&test_ipn=1&handling_amount=0.00&shipping_method=Default&transaction_subject=&payment_gross=-2.57&shipping=0.00&ipn_track_id=e6c29e1cf2bde 
+[2016-08-21 16:56 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1031
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=-2.57&protection_eligibility=Eligible&payer_id=7MAS78PXFT7AN&address_street=Bucheon&payment_date=00%3A47%3A20+Aug+21%2C+2016+PDT&payment_status=Refunded&charset=windows-1252&address_zip=422-753&first_name=DeokJo&mc_fee=-0.10&address_country_code=KR&address_name=DeokJo+Jang&notify_version=3.8&reason_code=refund&custom=&business=jdj9354-facilitator%40naver.com&address_country=South+Korea&address_city=Bucheon&verify_sign=AoZq0t1D0ICn0.xz3d9tcF5.NSKUAETDQ3wygy-eAQf8bqh9eC66ZWiA&payer_email=jdj9354%40naver.com&parent_txn_id=72N00890989232835&txn_id=2T951642CN348061V&payment_type=instant&btn_id=221&last_name=Jang&address_state=Bucheon&receiver_email=jdj9354-facilitator%40naver.com&payment_fee=-0.10&shipping_discount=0.00&receiver_id=M555TPYSCF89Y&insurance_amount=0.00&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=KR&test_ipn=1&handling_amount=0.00&shipping_method=Default&transaction_subject=&payment_gross=-2.57&shipping=0.00&ipn_track_id=e6c29e1cf2bde
+[2016-08-21 16:56 Asia/Seoul] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Sun, 21 Aug 2016 07:56:35 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=zov7vmWPJYGkNAZLg3fvttT2hn1Pt9mN-I_zkvlkrE_W10gSdHSKTHHrnklCi6XXL4_UvvhL_JZFGE76lukMqI2JT0iW-KSfrbJhNrgJ6qh1HkSrhf1uijaQSbaMrjtwBZKw4ScVutOY4xoHWKH7uN3e_dEh8ygoDns_s1UkxpZ0-UJfx66pbs6prfoOw4uitXOWJL7r29FmZdqPdpVP-6yPusL6YLn8Ue24wxBxXmUeFhDmPHrGwadF8GGHkyY2oFwpXYa2UfxWE33yM1XC5uv6TZcXh4z7oAmFumm8UC5jwPhjJwdvBiULQYL4rJ6V2YOmXF_c1xT7SaIdUJ0R-bmzOu4vOrSoaMvF6uehm6YtLuI20mQ-sVvjgp8bnqVw9cbAw3yWtFpTHe8-Y5ltunzLOOdP82At2aYO22TnAaWXqYg2PBajmuDA-te; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 19-Aug-2026 07:56:36 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 21-Aug-2018 07:56:36 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1471766195997953; path=/; expires=Tue, 14-Aug-46 07:56:35 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: 9460774beea48
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D3009329495%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 21 Aug 2016 08:26:36 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2016-08-21 16:58 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=-2.57&protection_eligibility=Eligible&payer_id=7MAS78PXFT7AN&address_street=Bucheon&payment_date=00%3A47%3A20+Aug+21%2C+2016+PDT&payment_status=Refunded&charset=windows-1252&address_zip=422-753&first_name=DeokJo&mc_fee=-0.10&address_country_code=KR&address_name=DeokJo+Jang&notify_version=3.8&reason_code=refund&custom=&business=jdj9354-facilitator%40naver.com&address_country=South+Korea&address_city=Bucheon&verify_sign=AoZq0t1D0ICn0.xz3d9tcF5.NSKUAETDQ3wygy-eAQf8bqh9eC66ZWiA&payer_email=jdj9354%40naver.com&parent_txn_id=72N00890989232835&txn_id=2T951642CN348061V&payment_type=instant&btn_id=221&last_name=Jang&address_state=Bucheon&receiver_email=jdj9354-facilitator%40naver.com&payment_fee=-0.10&shipping_discount=0.00&receiver_id=M555TPYSCF89Y&insurance_amount=0.00&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=KR&test_ipn=1&handling_amount=0.00&shipping_method=Default&transaction_subject=&payment_gross=-2.57&shipping=0.00&ipn_track_id=e6c29e1cf2bde 
+[2016-08-21 17:00 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1031
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=-2.57&protection_eligibility=Eligible&payer_id=7MAS78PXFT7AN&address_street=Bucheon&payment_date=00%3A47%3A20+Aug+21%2C+2016+PDT&payment_status=Refunded&charset=windows-1252&address_zip=422-753&first_name=DeokJo&mc_fee=-0.10&address_country_code=KR&address_name=DeokJo+Jang&notify_version=3.8&reason_code=refund&custom=&business=jdj9354-facilitator%40naver.com&address_country=South+Korea&address_city=Bucheon&verify_sign=AoZq0t1D0ICn0.xz3d9tcF5.NSKUAETDQ3wygy-eAQf8bqh9eC66ZWiA&payer_email=jdj9354%40naver.com&parent_txn_id=72N00890989232835&txn_id=2T951642CN348061V&payment_type=instant&btn_id=221&last_name=Jang&address_state=Bucheon&receiver_email=jdj9354-facilitator%40naver.com&payment_fee=-0.10&shipping_discount=0.00&receiver_id=M555TPYSCF89Y&insurance_amount=0.00&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=KR&test_ipn=1&handling_amount=0.00&shipping_method=Default&transaction_subject=&payment_gross=-2.57&shipping=0.00&ipn_track_id=e6c29e1cf2bde
+[2016-08-21 17:00 Asia/Seoul] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Sun, 21 Aug 2016 08:00:37 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=_Vtii15Mmbtwa9z2cyX61zdA0kuB-a_SlWOQACgMv3lJ0V8N-uvNdBMbXdZMQsi8tPyJRHolA_qufKBNP8B_fb8pfRp3Ov6jUcFNkGEDZ0fBdbCXmWb94EySgS1n4zSIx28G5OXmJRaWCpHz9VSw9UvHKkARIKMGBiLrLq4Rx_UPRQ65qLML7SI0YeOiVXYf08vVjxCFOJDEME3Utyr04wQXfWasZrGDCbrgRhEJuQ_f28pkDIXSVyeC2wvLyg-62vLJliUK574B1J70a7WvNlsuoVnVs9B9Rgz_MGE_-LuE67FxZtXoZGJ3DKioqP6O2SSFHfrQI1k4XP_hkZAVJunpn3miDPa3-SyTeYQsVbvshAaYybZdH_RYatrWsMNXbZuq3DIljeMcVUgKC71doyPSahunqU5zWbv8pT0yRhZ9a0fFNjO1ZuH5DVe; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 19-Aug-2026 08:00:37 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 21-Aug-2018 08:00:37 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1471766437390172; path=/; expires=Tue, 14-Aug-46 08:00:37 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: edb899d75a035
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D2774514007%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 21 Aug 2016 08:30:37 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2016-08-21 17:02 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=-2.57&protection_eligibility=Eligible&payer_id=7MAS78PXFT7AN&address_street=Bucheon&payment_date=00%3A47%3A20+Aug+21%2C+2016+PDT&payment_status=Refunded&charset=windows-1252&address_zip=422-753&first_name=DeokJo&mc_fee=-0.10&address_country_code=KR&address_name=DeokJo+Jang&notify_version=3.8&reason_code=refund&custom=&business=jdj9354-facilitator%40naver.com&address_country=South+Korea&address_city=Bucheon&verify_sign=AoZq0t1D0ICn0.xz3d9tcF5.NSKUAETDQ3wygy-eAQf8bqh9eC66ZWiA&payer_email=jdj9354%40naver.com&parent_txn_id=72N00890989232835&txn_id=2T951642CN348061V&payment_type=instant&btn_id=221&last_name=Jang&address_state=Bucheon&receiver_email=jdj9354-facilitator%40naver.com&payment_fee=-0.10&shipping_discount=0.00&receiver_id=M555TPYSCF89Y&insurance_amount=0.00&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=KR&test_ipn=1&handling_amount=0.00&shipping_method=Default&transaction_subject=&payment_gross=-2.57&shipping=0.00&ipn_track_id=e6c29e1cf2bde 
+[2016-08-21 17:07 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1031
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=-2.57&protection_eligibility=Eligible&payer_id=7MAS78PXFT7AN&address_street=Bucheon&payment_date=00%3A47%3A20+Aug+21%2C+2016+PDT&payment_status=Refunded&charset=windows-1252&address_zip=422-753&first_name=DeokJo&mc_fee=-0.10&address_country_code=KR&address_name=DeokJo+Jang&notify_version=3.8&reason_code=refund&custom=&business=jdj9354-facilitator%40naver.com&address_country=South+Korea&address_city=Bucheon&verify_sign=AoZq0t1D0ICn0.xz3d9tcF5.NSKUAETDQ3wygy-eAQf8bqh9eC66ZWiA&payer_email=jdj9354%40naver.com&parent_txn_id=72N00890989232835&txn_id=2T951642CN348061V&payment_type=instant&btn_id=221&last_name=Jang&address_state=Bucheon&receiver_email=jdj9354-facilitator%40naver.com&payment_fee=-0.10&shipping_discount=0.00&receiver_id=M555TPYSCF89Y&insurance_amount=0.00&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=KR&test_ipn=1&handling_amount=0.00&shipping_method=Default&transaction_subject=&payment_gross=-2.57&shipping=0.00&ipn_track_id=e6c29e1cf2bde
+[2016-08-21 17:07 Asia/Seoul] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Sun, 21 Aug 2016 08:07:17 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=_QR7mj79wl_wcbLXA4VZaLkyDLOv1UNwdHv776y_X96rWNnSQUuYUKl7KCgFehASgBoR0afkU5ghS4IcHdOhBJSeUb_GpbhzlEuVw9r5RqgE2iLiYxl6m1c__EOwllxtQUYo0ZbbDGu613z1TKEeCPSP8NMm5d5xgLqGrwdGze_vQ6lyKODaYGZy65QFiHkqgb175rwp6y_xyg0_DKGZFdcQz8UVvF8p0lh8Qxhp0GjCvcme_vJd_Zr0-hJ8NIxwmMl2dqihMG1NeW8c0x_6iykqWb0uJ0ARa-HPJugCOSqebfFKvo7gBUa7GkxwEQ30jth3KprSqEQjnyaIssElpEn-_HaCZqyl3T970FCA1-KiXl5ud4iffaZ3uKcmd9R2BXBuSbZFe1VnlylHZEnpQrFWPmTbd9BJTzD0EnmVUy22BAWjM_lpQ0aozbC; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 19-Aug-2026 08:07:18 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 21-Aug-2018 08:07:18 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1471766838060806; path=/; expires=Tue, 14-Aug-46 08:07:18 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: 52799e829fe2
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D912374103%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 21 Aug 2016 08:37:18 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2016-08-21 17:09 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=-2.57&protection_eligibility=Eligible&payer_id=7MAS78PXFT7AN&address_street=Bucheon&payment_date=00%3A47%3A20+Aug+21%2C+2016+PDT&payment_status=Refunded&charset=windows-1252&address_zip=422-753&first_name=DeokJo&mc_fee=-0.10&address_country_code=KR&address_name=DeokJo+Jang&notify_version=3.8&reason_code=refund&custom=&business=jdj9354-facilitator%40naver.com&address_country=South+Korea&address_city=Bucheon&verify_sign=AoZq0t1D0ICn0.xz3d9tcF5.NSKUAETDQ3wygy-eAQf8bqh9eC66ZWiA&payer_email=jdj9354%40naver.com&parent_txn_id=72N00890989232835&txn_id=2T951642CN348061V&payment_type=instant&btn_id=221&last_name=Jang&address_state=Bucheon&receiver_email=jdj9354-facilitator%40naver.com&payment_fee=-0.10&shipping_discount=0.00&receiver_id=M555TPYSCF89Y&insurance_amount=0.00&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=KR&test_ipn=1&handling_amount=0.00&shipping_method=Default&transaction_subject=&payment_gross=-2.57&shipping=0.00&ipn_track_id=e6c29e1cf2bde 
+[2016-08-21 17:19 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1031
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=-2.57&protection_eligibility=Eligible&payer_id=7MAS78PXFT7AN&address_street=Bucheon&payment_date=00%3A47%3A20+Aug+21%2C+2016+PDT&payment_status=Refunded&charset=windows-1252&address_zip=422-753&first_name=DeokJo&mc_fee=-0.10&address_country_code=KR&address_name=DeokJo+Jang&notify_version=3.8&reason_code=refund&custom=&business=jdj9354-facilitator%40naver.com&address_country=South+Korea&address_city=Bucheon&verify_sign=AoZq0t1D0ICn0.xz3d9tcF5.NSKUAETDQ3wygy-eAQf8bqh9eC66ZWiA&payer_email=jdj9354%40naver.com&parent_txn_id=72N00890989232835&txn_id=2T951642CN348061V&payment_type=instant&btn_id=221&last_name=Jang&address_state=Bucheon&receiver_email=jdj9354-facilitator%40naver.com&payment_fee=-0.10&shipping_discount=0.00&receiver_id=M555TPYSCF89Y&insurance_amount=0.00&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=KR&test_ipn=1&handling_amount=0.00&shipping_method=Default&transaction_subject=&payment_gross=-2.57&shipping=0.00&ipn_track_id=e6c29e1cf2bde
+[2016-08-21 17:19 Asia/Seoul] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Sun, 21 Aug 2016 08:19:24 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=SakP_woyjDxpyY0mP_FZ6OqO2uFbSBUeMZHIvXTDubsT4jCv2461_H97baddh2vL5s4JnSpO1A04B3bQwpf_zo6gGmj_-5_hw4F_WojY9z38JQGg169nvtt14Jc2Qeb-Fd73xNnjQcWwhR3QmszHMbBPKBf2wuWzgWEvtLZgr1ANlrCC0-upTv4qht2X6bBh1z8uB91XUkRyB5UeSEcTOsVJV2FdYbijMx_J4KErnnZEb3moHsvrytrjzkYaQMMTFeQyBk-U2ZXxBSLNZioYZlhZaJndD1-_r_evwGaeLlRbkjxnZLljcAsgTiP-gDnElY-KY2EKJ8iYXeZjL6pgQ-cVoSYzgHe4zgzhsTehpBu739r1SFiRW_egnwgaJ3k2udSG-iw8o0uCO-wDoZWR3KPCQjlDkWv3x0435YA1kL-o5uk7oJQSZbRY8LC; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 19-Aug-2026 08:19:24 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 21-Aug-2018 08:19:24 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1471767564367417; path=/; expires=Tue, 14-Aug-46 08:19:24 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: 3dcb27365550a
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D207927639%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 21 Aug 2016 08:49:24 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2016-08-21 17:21 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=-2.57&protection_eligibility=Eligible&payer_id=7MAS78PXFT7AN&address_street=Bucheon&payment_date=00%3A47%3A20+Aug+21%2C+2016+PDT&payment_status=Refunded&charset=windows-1252&address_zip=422-753&first_name=DeokJo&mc_fee=-0.10&address_country_code=KR&address_name=DeokJo+Jang&notify_version=3.8&reason_code=refund&custom=&business=jdj9354-facilitator%40naver.com&address_country=South+Korea&address_city=Bucheon&verify_sign=AoZq0t1D0ICn0.xz3d9tcF5.NSKUAETDQ3wygy-eAQf8bqh9eC66ZWiA&payer_email=jdj9354%40naver.com&parent_txn_id=72N00890989232835&txn_id=2T951642CN348061V&payment_type=instant&btn_id=221&last_name=Jang&address_state=Bucheon&receiver_email=jdj9354-facilitator%40naver.com&payment_fee=-0.10&shipping_discount=0.00&receiver_id=M555TPYSCF89Y&insurance_amount=0.00&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=KR&test_ipn=1&handling_amount=0.00&shipping_method=Default&transaction_subject=&payment_gross=-2.57&shipping=0.00&ipn_track_id=e6c29e1cf2bde 
+[2016-08-21 17:42 Asia/Seoul] HTTP request of validation request:POST /cgi-bin/webscr HTTP/1.1
+Host: www.sandbox.paypal.com
+Accept: */*
+Connection: Close
+Content-Length: 1031
+Content-Type: application/x-www-form-urlencoded
+Expect: 100-continue
+
+ for IPN payload: cmd=_notify-validate&mc_gross=-2.57&protection_eligibility=Eligible&payer_id=7MAS78PXFT7AN&address_street=Bucheon&payment_date=00%3A47%3A20+Aug+21%2C+2016+PDT&payment_status=Refunded&charset=windows-1252&address_zip=422-753&first_name=DeokJo&mc_fee=-0.10&address_country_code=KR&address_name=DeokJo+Jang&notify_version=3.8&reason_code=refund&custom=&business=jdj9354-facilitator%40naver.com&address_country=South+Korea&address_city=Bucheon&verify_sign=AoZq0t1D0ICn0.xz3d9tcF5.NSKUAETDQ3wygy-eAQf8bqh9eC66ZWiA&payer_email=jdj9354%40naver.com&parent_txn_id=72N00890989232835&txn_id=2T951642CN348061V&payment_type=instant&btn_id=221&last_name=Jang&address_state=Bucheon&receiver_email=jdj9354-facilitator%40naver.com&payment_fee=-0.10&shipping_discount=0.00&receiver_id=M555TPYSCF89Y&insurance_amount=0.00&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=KR&test_ipn=1&handling_amount=0.00&shipping_method=Default&transaction_subject=&payment_gross=-2.57&shipping=0.00&ipn_track_id=e6c29e1cf2bde
+[2016-08-21 17:42 Asia/Seoul] HTTP response of validation request: HTTP/1.1 100 Continue
+
+HTTP/1.1 200 OK
+Date: Sun, 21 Aug 2016 08:42:18 GMT
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: c9MWDuvPtT9GIMyPc3jwol1VSlO=fGCIoNiAwaZ78qlLzxrN3QQ_4MH1a_NVRHxzlBDit5pCDfcjZir83h1CJS5ewC5v1C_kKoJq7fLYNFLfSJnUmBy1rBap86ollHfrUqKc6kzdXuqYA26TiqgXM7N6HFIncTNMvRhUPkbin6hybloeJTfEr3fXbmfiiMnWmUqjqMtCcio3VgGVhLgSj8qgm9zY7KJua2HuB2myLdAZcuDDLyivzP1c9n3BdomcOrobklzM3cqn7IBxISzB-W6udWnywe48C1C-CdHqexjgQDQ1NDLJ6Fh8SUYv89GWytrJmKshCHjdkPxXz8AjMa04LWpmoEOG0G7Ug8uDwPCVZRd77ZuTQk2Iz0bQLzfR1sTBjY8I2PCQTtx7wPBYTM_cb1W9Dyn24ipskyNohcSBYoFu4G8KWDacKbHHqPKTMLy7JcQhdDa4CJTl_oFpArS; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Wed, 19-Aug-2026 08:42:18 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Tue, 21-Aug-2018 08:42:18 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: Apache=10.72.108.11.1471768938617625; path=/; expires=Tue, 14-Aug-46 08:42:18 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+HTTP_X_PP_AZ_LOCATOR: sandbox.slc
+Paypal-Debug-Id: 7f8109fe92913
+Set-Cookie: X-PP-SILOVER=name%3DSANDBOX3.WEB.1%26silo_version%3D1880%26app%3Dappdispatcher%26TIME%3D1785313623%26HTTP_X_PP_AZ_LOCATOR%3Dsandbox.slc; Expires=Sun, 21 Aug 2016 09:12:18 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Strict-Transport-Security: max-age=14400
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+VERIFIED
+[2016-08-21 17:44 Asia/Seoul] Verified IPN: cmd=_notify-validate&mc_gross=-2.57&protection_eligibility=Eligible&payer_id=7MAS78PXFT7AN&address_street=Bucheon&payment_date=00%3A47%3A20+Aug+21%2C+2016+PDT&payment_status=Refunded&charset=windows-1252&address_zip=422-753&first_name=DeokJo&mc_fee=-0.10&address_country_code=KR&address_name=DeokJo+Jang&notify_version=3.8&reason_code=refund&custom=&business=jdj9354-facilitator%40naver.com&address_country=South+Korea&address_city=Bucheon&verify_sign=AoZq0t1D0ICn0.xz3d9tcF5.NSKUAETDQ3wygy-eAQf8bqh9eC66ZWiA&payer_email=jdj9354%40naver.com&parent_txn_id=72N00890989232835&txn_id=2T951642CN348061V&payment_type=instant&btn_id=221&last_name=Jang&address_state=Bucheon&receiver_email=jdj9354-facilitator%40naver.com&payment_fee=-0.10&shipping_discount=0.00&receiver_id=M555TPYSCF89Y&insurance_amount=0.00&item_name=Dice+recharge&discount=0.00&mc_currency=USD&item_number=123&residence_country=KR&test_ipn=1&handling_amount=0.00&shipping_method=Default&transaction_subject=&payment_gross=-2.57&shipping=0.00&ipn_track_id=e6c29e1cf2bde 

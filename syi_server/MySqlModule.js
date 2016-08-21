@@ -59,7 +59,7 @@ exports.AddUserAsync = function (jsonProfileInfo,jsonLoginInfo,socket){
 		});
         
     });	
-}
+};
 
 exports.ChangeUserInfoAsync = function (jsonProfileInfo,jsonLoginInfo,socket){
 	var query = connection.query('select uuid from logininfo where snstype="'+jsonLoginInfo.snstype+'" and snsid="'+jsonLoginInfo.snsid+'"',function(err,rows){
@@ -82,7 +82,7 @@ exports.ChangeUserInfoAsync = function (jsonProfileInfo,jsonLoginInfo,socket){
 		});	 
     });  
     
-}
+};
 
 exports.GetUserInfo = function (SnsType,SnsId,socket){
 	var ret={};
@@ -101,14 +101,14 @@ exports.GetUserInfo = function (SnsType,SnsId,socket){
 			});  			
 		});     
     });   
-}
+};
 
 exports.GetUserInfoByUUID = function (uuid,socket){
 	var query = connection.query('select * from profile where uuid="'+uuid+'"' ,function(err,rows){			
 		socket.emit('res',rows[0]);
 	});     
 
-}
+};
 
 exports.RenewLoginInfo = function(uuid,timestamp,socket){
 	var query = connection.query('select * from logininfo where uuid="'+uuid+'"' ,function(err,rows){			
@@ -143,7 +143,7 @@ exports.RenewLoginInfo = function(uuid,timestamp,socket){
 				socket.emit('renewLoginResult',result);
 		});					
 	});  	
-}
+};
 
 exports.searchRandomUser = function(SnsType,SnsId,socket){
 	var query = connection.query('select uuid from logininfo where snstype="'+SnsType+'" and snsid="'+SnsId+'"',function(err,rows){
@@ -184,7 +184,7 @@ exports.searchRandomUser = function(SnsType,SnsId,socket){
 			var thirdQuery = connection.query('select * from profile where id='+randomId+'' , thirdQueryCallBack); 
 		});     
     });   
-}
+};
 
 exports.AddMatchingInfoAsync = function (matchingInfo,socket){
 
@@ -199,7 +199,7 @@ exports.AddMatchingInfoAsync = function (matchingInfo,socket){
 		matchingInfo.success = true;			
 		socket.emit('res',matchingInfo);        
     });	
-}
+};
 
 exports.ToggleMatchingInfoAsync = function (matchingInfo,socket){	
     var query = connection.query('update matchinginfo set pending = 0 where suuid = "'+ matchingInfo.suuid + '" and ruuid = "' + matchingInfo.ruuid+'";',	function(err,result){
@@ -213,7 +213,7 @@ exports.ToggleMatchingInfoAsync = function (matchingInfo,socket){
 		matchingInfo.success = true;			
 		socket.emit('res',matchingInfo);        
     });	
-}
+};
 
 exports.GetAllMatchingInfoAsync = function(ruuid,socket){
 	
@@ -265,7 +265,7 @@ exports.GetAllMatchingInfoAsync = function(ruuid,socket){
 		};
 		loopFunction(count,result,resultInfo);
     });	
-}
+};
 
 exports.GetAllMatchedInfoAsync = function(uuid,socket){
 	
@@ -316,7 +316,7 @@ exports.GetAllMatchedInfoAsync = function(uuid,socket){
 		};
 		loopFunction(count,result,resultInfo);
     });	
-}
+};
 
 exports.InitPaymentInfo = function(data,socket){
 
@@ -357,7 +357,7 @@ exports.InitPaymentInfo = function(data,socket){
 			return;
 		});
 	});
-}
+};
 
 
 exports.FinalizePaymentInfo = function(data){
@@ -377,6 +377,29 @@ exports.FinalizePaymentInfo = function(data){
 			return;
 		}		
 		return;
-	});		
-	
-}
+	});			
+};
+
+
+exports.ResponsePaymentInfo = function(data,socket){
+	var resultInfo = {	isSuccess : true,
+					data : []};	
+	var query = connection.query('select * from payment where payer_uuid="'+data.payer_uuid+'"',function(err,rows){
+		if (err) {				
+			resultInfo.isSuccess = false;
+			console.error(err);	
+			socket.emit('res',resultInfo);
+			throw err;
+			return;
+		}
+		for(var i=0; i<rows.length; i++){
+			resultInfo.data.push({puuid : rows[i].puuid,
+									payer_uuid : rows[i].payer_uuid,
+									cost : rows[i].payment_amount,
+									currency : rows[i].payment_currency,
+									});			
+		}
+		socket.emit('res',resultInfo);		
+		return;
+	});			
+};

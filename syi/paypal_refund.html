@@ -7,19 +7,61 @@
         <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
         <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link href="css/style_index.css" rel="stylesheet" type="text/css">
-    </head><body>       
+    </head><body>
         <div class="section">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="page-header text-center">
-                            <h1>Are you sure?</h1>
+                            <h1>Your Payment History</h1>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>     
-        
+        </div>
+        <div class="section">
+			<div class="container" id="history_container">
+				<div class="row">
+					<div class="col-md-12">
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<script>
+            function ReqPaymentList(callback){
+            			var socket = io.connect(SOCKET_IO_ADDR);
+            			socket.on('res', function (data) {
+            				var param;
+            				if(data.isSuccess){
+            					param = data.data;
+            				}
+            				else {
+            					param = null;
+            				}
+            				
+            				if(typeof callback === 'function') {
+            					callback(param);
+            				}
+            			});
+            			var sendData ={payer_uuid : sessionStorage.currentUserId};
+            			socket.emit('request_payment_list',sendData);
+            		}
+            		
+            		function PaymentResultHandler(param){
+            			console.log(param);
+						
+						if(param != null){
+							var items = param;
+							for(var i=0; i<items.length; i++){
+							}
+						}
+						
+            		}
+            		
+            		ReqPaymentList(PaymentResultHandler);
+        </script>
     
 
 </body></html>

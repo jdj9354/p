@@ -97,6 +97,10 @@ io.on('connection', function (socket) {
 	socket.on('ipn_result', function (data) {	
 		console.log(data);
 	});	
+	
+	socket.on('request_payment_list', function (data) {	
+		DBModule.ResponsePaymentInfo(data,socket);
+	});	
 });
 
 

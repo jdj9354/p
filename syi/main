@@ -9,46 +9,46 @@
         <link href="css/style.css" rel="stylesheet" type="text/css">
     </head><body>
         <script>
-			window.stats="/front/";
-            window.fbAsyncInit = function() {
-            		FB.init({
-            		  appId      : '509306929247910',
-            		  xfbml      : true,
-            		  version    : 'v2.5'
-            		});		
-            		FB.getLoginStatus(function(response) {
-            			statusChangeCallback(response);
-            		});
-            		function statusChangeCallback(response){
-            			var sta = response.status;
-            			if(sta == "connected"){
-            				FB.api("/me?fields=id,picture,name,email,permissions", function(response)
-            				{
-            
-            					document.getElementById("profileImage").src = response.picture.data.url;
-								document.getElementById("welcomeMessage").innerHTML = "Welcome! " + response.name;
-								
-								sessionStorage.logintype = "facebook";
-								sessionStorage.loginid = response.id;
-									
-								initUserInfo();
-            				});
-            			}
-            			else{
-            				FB.login(function(response) {
-            				// handle the response
-            				}, {scope: 'public_profile,email'});
-            			}
-            		}
-            	  };
-            
-            	  (function(d, s, id){
-            		 var js, fjs = d.getElementsByTagName(s)[0];
-            		 if (d.getElementById(id)) {return;}
-            		 js = d.createElement(s); js.id = id;
-            		 js.src = "//connect.facebook.net/en_US/sdk.js";
-            		 fjs.parentNode.insertBefore(js, fjs);
-            	   }(document, 'script', 'facebook-jssdk'));
+            window.stats="/front/";
+                        window.fbAsyncInit = function() {
+                        		FB.init({
+                        		  appId      : '509306929247910',
+                        		  xfbml      : true,
+                        		  version    : 'v2.5'
+                        		});		
+                        		FB.getLoginStatus(function(response) {
+                        			statusChangeCallback(response);
+                        		});
+                        		function statusChangeCallback(response){
+                        			var sta = response.status;
+                        			if(sta == "connected"){
+                        				FB.api("/me?fields=id,picture,name,email,permissions", function(response)
+                        				{
+                        
+                        					document.getElementById("profileImage").src = response.picture.data.url;
+            								document.getElementById("welcomeMessage").innerHTML = "Welcome! " + response.name;
+            								
+            								sessionStorage.logintype = "facebook";
+            								sessionStorage.loginid = response.id;
+            									
+            								initUserInfo();
+                        				});
+                        			}
+                        			else{
+                        				FB.login(function(response) {
+                        				// handle the response
+                        				}, {scope: 'public_profile,email'});
+                        			}
+                        		}
+                        	  };
+                        
+                        	  (function(d, s, id){
+                        		 var js, fjs = d.getElementsByTagName(s)[0];
+                        		 if (d.getElementById(id)) {return;}
+                        		 js = d.createElement(s); js.id = id;
+                        		 js.src = "//connect.facebook.net/en_US/sdk.js";
+                        		 fjs.parentNode.insertBefore(js, fjs);
+                        	   }(document, 'script', 'facebook-jssdk'));
         </script>
         <div class="section">
             <div style="position:absolute; right:0">
@@ -59,12 +59,8 @@
                 <br>
                 <div class="fb-like" data-href="{YOUR URL}" data-send="false" data-layout="button_count" data-show-faces="false"></div>
             </div>
-            </div>
         </div>
-		
-            
         
-
         <div class="section">
             <div class="container">
                 <div class="row">
@@ -85,22 +81,19 @@
                                 <img id="search_img_mainphoto" style="cursor: pointer;" onclick="getDetails()" src="res/user_placeholder.png" class="img-circle img-responsive">
                             </div>
                             <div class="row">
-                                <div class="col-md-7"style="display:flex;">
+                                <div class="col-md-7" style="display:flex;">
                                     <a class="btn btn-lg btn-warning" onclick="searchNext();">Search Next (10 H Cost)</a>
-									<a class="btn btn-lg btn-warning" onclick="sendOK();">Send OK (No H Cost)</a>	
+                                    <a class="btn btn-lg btn-warning" onclick="sendOK();">Send OK (No H Cost)</a>
                                 </div>
+                                <div class="col-md-7"></div>
+                            </div>
+                            <div class="row">
                                 <div class="col-md-7">
-                                    								
-                                </div>								
-                            </div>
-							<div class="row">
-								<div class="col-md-7" >                                    
-									<p id="txt_remaing_cost">Remaing Cost :</p>
-									<a class="btn btn-lg btn-warning" onclick="navigateRecharge();">Cost Recharge</a>
+                                    <p id="txt_remaing_cost">Remaing Cost :</p>
+                                    <a class="btn btn-lg btn-warning" onclick="navigateRecharge();">Cost Recharge</a>
+									<a class="btn btn-lg btn-warning" onclick="navigateRefund();">Cost Refund</a>
                                 </div>
                             </div>
-                            
-                            
                         </div>
                     </div>
                     <div class="col-md-5">
@@ -114,7 +107,15 @@
                     </div>
                 </div>
             </div>
-        </div><div class="section"><div class="container"><div class="row"><div class="col-md-6"></div><div class="col-md-6"></div></div></div></div>
+        </div>
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6"></div>
+                    <div class="col-md-6"></div>
+                </div>
+            </div>
+        </div>
         <div class="section">
             <div class="container">
                 <div class="row">
@@ -167,7 +168,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6 text-right"></div>        
+        <div class="col-md-6 text-right"></div>
         <script>
             var currentSearchedUUID;
             			var currentUserUUID;
@@ -311,6 +312,10 @@
             			}
 						function navigateRecharge(){
             				window.open("recharge.html");
+            			}
+						
+						function navigateRefund(){
+            				window.open("paypal_refund.html");
             			}
             			
             			function setImgSrcAndAdjust(imgObj,srcURL,maxWidth,maxHeight){
