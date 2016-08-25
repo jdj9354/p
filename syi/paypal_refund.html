@@ -7,7 +7,62 @@
         <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
         <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link href="css/style_index.css" rel="stylesheet" type="text/css">
+		<style>
+			.modal {
+				display: none; /* Hidden by default */
+				position: fixed; /* Stay in place */
+				z-index: 1; /* Sit on top */
+				left: 0;
+				top: 0;
+				width: 100%; /* Full width */
+				height: 100%; /* Full height */
+				overflow: auto; /* Enable scroll if needed */
+				background-color: rgb(0,0,0); /* Fallback color */
+				background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+			}
+
+			/* Modal Content/Box */
+.modal-content {
+    position: relative;
+    background-color: #FF851B;
+    margin: auto;
+    padding: 0;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+			/* The Close Button */
+			.close {
+				color: #white;
+				 margin-right: 1px;
+		
+				font-weight: bold;
+			}
+
+			.close:hover,
+			.close:focus {
+				color: black;
+				text-decoration: none;
+				cursor: pointer;
+			}
+			
+			/* Add Animation */
+			@-webkit-keyframes animatetop {
+				from {top: -300px; opacity: 0} 
+				to {top: 0; opacity: 1}
+			}
+
+			@keyframes animatetop {
+				from {top: -300px; opacity: 0}
+				to {top: 0; opacity: 1}
+			}
+		</style>
     </head><body>
+	<button id="myBtn">Open Modal</button>
         <div class="section">
             <div class="container">
                 <div class="row">
@@ -20,48 +75,140 @@
             </div>
         </div>
         <div class="section">
-			<div class="container" id="history_container">
-				<div class="row">
-					<div class="col-md-12">
-					</div>
+            <div class="container" id="p_info_list">   
+				<div class="row" style="border:2px solid rgba(241, 176, 97, .5);">
+                    <div class="col-md-4 text-center">Cost</div>
+                    <div class="col-md-4 text-center">Currency</div>
+					<div class="col-md-4 text-center"> </div>
+                </div>
+            </div>
+        </div>
+		<!-- The Modal -->
+		<div id="myModal" class="modal">
+			<!-- Modal content -->
+			<div class="modal-content">
+				<span class="close">x</span>
+				<p style="color:white;" id="refund_modal_message"></p>
+				<div style="display:flex">
+					<img src='res/refund.png' class='img-responsive' style='cursor: hand;' id="refund_modal_ok_btn">
+					<img src='res/refund.png' class='img-responsive' style='cursor: hand;' id="refund_modal_cancel_btn">
 				</div>
 			</div>
 		</div>
-		
-		
-		<script>
+        <script>
             function ReqPaymentList(callback){
-            			var socket = io.connect(SOCKET_IO_ADDR);
-            			socket.on('res', function (data) {
-            				var param;
-            				if(data.isSuccess){
-            					param = data.data;
-            				}
-            				else {
-            					param = null;
-            				}
-            				
-            				if(typeof callback === 'function') {
-            					callback(param);
-            				}
-            			});
-            			var sendData ={payer_uuid : sessionStorage.currentUserId};
-            			socket.emit('request_payment_list',sendData);
-            		}
-            		
-            		function PaymentResultHandler(param){
-            			console.log(param);
+				var socket = io.connect(SOCKET_IO_ADDR);
+				socket.on('res', function (data) {
+					var param;
+					if(data.isSuccess){
+						param = data.data;
+					}
+					else {
+						param = null;
+					}
+					
+					if(typeof callback === 'function') {
+						callback(param);
+					}
+				});
+				var sendData ={payer_uuid : sessionStorage.currentUserId};
+				socket.emit('request_payment_list',sendData);
+			}
+			
+			function PaymentResultHandler(param){
+				console.log(param);
+				
+				if(param != null){
+					var items = param;
+					for(var i=0; i<items.length; i++){
+						var newRow = document.createElement('div');
+						newRow.className = "row";
+						newRow.style.border = "2px solid rgba(241, 176, 97, .5)";
+						newRow.innerHTML = "<div class='col-md-4 text-center'>"+items[i].cost+"</div>"+
+											"<div class='col-md-4 text-center'>"+items[i].currency+"</div>"+
+											"<div class='col-md-4'><div align='center'><img id='refund_btn_"+items[i].puuid+"' src='res/refund.png' class='img-responsive' style='cursor: hand;'></div></div>";						
+
 						
-						if(param != null){
-							var items = param;
-							for(var i=0; i<items.length; i++){
+						var listElem = document.getElementById('p_info_list');								
+						listElem.appendChild(newRow);
+						
+						document.getElementById("refund_btn_"+items[i].puuid).onclick
+						=
+						function(event){
+							var id = event.target.id;
+							var parsedString = id.substring(11);
+							var cost = event.target.parentElement.parentElement.previousSibling.previousSibling.innerText;
+							var currency = event.target.parentElement.parentElement.previousSibling.innerText;
+							document.getElementById('refund_modal_message').innerText = "Do you want to get refund "+cost+" "+currency;
+							document.getElementById('myModal').style.display = "block";
+							document.getElementById('refund_modal_ok_btn').onclick 
+							= 
+							function(event){
+								var socket = io.connect(SOCKET_IO_ADDR);
+								socket.on('res', function (data) {
+									var param;
+									if(data.isSuccess){
+										param = data.data;
+									}
+									else {
+										param = null;
+									}
+									
+									if(typeof callback === 'function') {
+										callback(param);
+									}
+								});
+								var sendData ={payer_uuid : sessionStorage.currentUserId};
+								socket.emit('request_payment_list',sendData);
+							};
+																					
+							document.getElementById('refund_modal_cancel_btn').onclick 
+							= 
+							function(event){															
+							};
+							/*if(result){
+								
 							}
+							else{
+							}*/
 						}
 						
-            		}
-            		
-            		ReqPaymentList(PaymentResultHandler);
+					}
+				}
+				
+			}
+			
+
+			
+			ReqPaymentList(PaymentResultHandler);
         </script>
-    
+		<script>
+		// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+		</script>
 
 </body></html>
