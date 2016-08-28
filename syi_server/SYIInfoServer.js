@@ -101,6 +101,9 @@ io.on('connection', function (socket) {
 	socket.on('request_payment_list', function (data) {	
 		DBModule.ResponsePaymentInfo(data,socket);
 	});	
+	socket.on('request_payment_refund', function (data) {	
+		DBModule.RefundRequestHandle(data,socket);
+	});	
 });
 
 
@@ -119,6 +122,7 @@ app.use('/ipnRecv', function(request,response,next){
 	var txnId = request.param('txn_id');
 	var receiverEmail = request.param('receiver_email');
 	var payerEmail = request.param('payer_email');
+	var numberOfDice = request.param('nd');
 		
 	var jsonPaymentInfo = { puuid : puuid,
 							isSuccess : isSuccess,
@@ -129,7 +133,8 @@ app.use('/ipnRecv', function(request,response,next){
 							paymentCurrency : paymentCurrency,
 							txnId : txnId,
 							receiverEmail : receiverEmail,
-							payerEmail : payerEmail							
+							payerEmail : payerEmail,	
+							numberOfDice : numberOfDice							
 							};								
 	
 	console.log(jsonPaymentInfo);							

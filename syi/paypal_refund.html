@@ -77,9 +77,10 @@
         <div class="section">
             <div class="container" id="p_info_list">   
 				<div class="row" style="border:2px solid rgba(241, 176, 97, .5);">
-                    <div class="col-md-4 text-center">Cost</div>
-                    <div class="col-md-4 text-center">Currency</div>
-					<div class="col-md-4 text-center"> </div>
+                    <div class="col-md-3 text-center">Cost</div>
+                    <div class="col-md-3 text-center">Currency</div>
+					<div class="col-md-3 text-center">Dices</div>
+					<div class="col-md-3 text-center"> </div>
                 </div>
             </div>
         </div>
@@ -124,9 +125,10 @@
 						var newRow = document.createElement('div');
 						newRow.className = "row";
 						newRow.style.border = "2px solid rgba(241, 176, 97, .5)";
-						newRow.innerHTML = "<div class='col-md-4 text-center'>"+items[i].cost+"</div>"+
-											"<div class='col-md-4 text-center'>"+items[i].currency+"</div>"+
-											"<div class='col-md-4'><div align='center'><img id='refund_btn_"+items[i].puuid+"' src='res/refund.png' class='img-responsive' style='cursor: hand;'></div></div>";						
+						newRow.innerHTML = "<div class='col-md-3 text-center'>"+items[i].cost+"</div>"+
+											"<div class='col-md-3 text-center'>"+items[i].currency+"</div>"+
+											"<div class='col-md-3 text-center'>"+items[i].nd+"</div>"+
+											"<div class='col-md-3'><div align='center'><img id='refund_btn_"+items[i].puuid+"' src='res/refund.png' class='img-responsive' style='cursor: hand;' onmouseover='toggleRefundBtnImage(this);' onmouseleave='toggleRefundBtnImage(this);'></div></div>";						
 
 						
 						var listElem = document.getElementById('p_info_list');								
@@ -136,9 +138,10 @@
 						=
 						function(event){
 							var id = event.target.id;
-							var parsedString = id.substring(11);
-							var cost = event.target.parentElement.parentElement.previousSibling.previousSibling.innerText;
-							var currency = event.target.parentElement.parentElement.previousSibling.innerText;
+							var parsed_puuid = id.substring(11);
+							var cost = event.target.parentElement.parentElement.previousSibling.previousSibling.previousSibling.innerText;
+							var currency = event.target.parentElement.parentElement.previousSibling.previousSibling.innerText;
+							var nd = event.target.parentElement.parentElement.previousSibling.innerText;
 							document.getElementById('refund_modal_message').innerText = "Do you want to get refund "+cost+" "+currency;
 							document.getElementById('myModal').style.display = "block";
 							document.getElementById('refund_modal_ok_btn').onclick 
@@ -158,8 +161,11 @@
 										callback(param);
 									}
 								});
-								var sendData ={payer_uuid : sessionStorage.currentUserId};
-								socket.emit('request_payment_list',sendData);
+								var sendData ={uuid : sessionStorage.currentUserId,
+												puuid : parsed_puuid,
+												nd : nd
+												};
+								socket.emit('request_payment_refund',sendData);
 							};
 																					
 							document.getElementById('refund_modal_cancel_btn').onclick 
@@ -176,6 +182,13 @@
 					}
 				}
 				
+			}
+			
+			function toggleRefundBtnImage(target){
+				if(target.src.includes('res/refund.png'))
+					target.src = 'res/refund_toggle.png';
+				else
+					target.src = 'res/refund.png';
 			}
 			
 

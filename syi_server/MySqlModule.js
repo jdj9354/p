@@ -1,4 +1,5 @@
 var mysql = require('mysql');
+var request = require('request');
 
 var totalCount = 0;
 
@@ -370,6 +371,7 @@ exports.FinalizePaymentInfo = function(data){
 													+', txn_id =' + '"'+data.txnId +'"'
 													+', receiver_email =' + '"'+data.receiverEmail +'"'
 													+', payer_email =' + '"'+data.payerEmail +'"'
+													+', number_dice =' + data.numberOfDice
 													+ ' where puuid="'+data.puuid+'"',function(err,rows){
 		if (err) {				
 			console.error(err);	
@@ -397,9 +399,67 @@ exports.ResponsePaymentInfo = function(data,socket){
 									payer_uuid : rows[i].payer_uuid,
 									cost : rows[i].payment_amount,
 									currency : rows[i].payment_currency,
+									nd : rows[i].number_dice,
+									tnxid : rows[i].txn_id
 									});			
 		}
 		socket.emit('res',resultInfo);		
 		return;
 	});			
 };
+
+
+exports.RefundRequestHandle = function(data,socket){
+	var resultInfo = {	isSuccess : true,
+				data : []};	
+	var query = connection.query('update payment set'+' payment_status =' + '"PendingRefund"'													
+													+ ' where puuid="'+data.puuid+'"',function(err,rows){
+		if (err) {		
+			resultInfo.isSuccess = false;
+			resultInfo.data.push("pr");
+			console.error(err);	
+			socket.emit('res',resultInfo);
+			throw err;
+			return;
+		}		
+		
+		var secondQuery = connection.query('update cost set'+' value =' + ' value - ' + data.nd;													
+												+ ' where puuid="'+data.puuid+'"',function(err,rows){
+			if (err) {			
+				resultInfo.isSuccess = false;
+				resultInfo.data.push("cm");			
+				console.error(err);	
+				socket.emit('res',resultInfo);
+				throw err;
+				return;
+			}	
+			
+			
+			var options = {
+				method: 'GET',
+				body: {}, // Javascript object
+				json: true, // Use,If you are sending JSON data
+				url: "https://api.sandbox.paypal.com/v1/payments/refund/"+,
+				headers: { Content-Type:"application/json",
+							Authorization: "Bearer A101.pTWSXUfiVttLeCer6Z8YF-5GdzgYwYTF6bH4pPLDFCqUzzePb78q3-375BiwtQ9U.i1bDerD8Q953EYxCkA1szpUTy-G"
+				// Specify headers, If any
+				}
+			}
+
+			request(options, function (err, res, body) {
+			  if (err) {
+				console.log('Error :', err)
+				return
+			  }
+			  console.log(' Body :', body)
+
+			});
+			
+			
+			return;
+		});	
+				
+		
+		return;
+	});	
+}

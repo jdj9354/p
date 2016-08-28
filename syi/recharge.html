@@ -61,9 +61,9 @@
 				socket.on('res',function(data){
 					if(data.isSuccess){
 						setPrice();
-						document.getElementById("paypal_return_url").value="http://118.37.178.145/syi/paypal_return.html?puuid="+data.puuid;
-						document.getElementById("paypal_ipn_url").value="http://118.37.178.145/syi/ipn_receiver.php?puuid="+data.puuid;
-						document.getElementById("paypal_refund_url").value="http://118.37.178.145/syi/paypal_refund.html?puuid="+data.puuid;
+						document.getElementById("paypal_return_url").value="http://118.37.178.145/syi/paypal_return.html?puuid="+data.puuid+"&nd="+Number(document.getElementById("et_amount").innerHTML);
+						document.getElementById("paypal_ipn_url").value="http://118.37.178.145/syi/ipn_receiver.php?puuid="+data.puuid+"&nd="+Number(document.getElementById("et_amount").innerHTML);
+						document.getElementById("paypal_refund_url").value="http://118.37.178.145/syi/paypal_refund.html?puuid="+data.puuid+"&nd="+Number(document.getElementById("et_amount").innerHTML);
 						document.getElementById("main_paypal_form").submit();
 					}					
 				});

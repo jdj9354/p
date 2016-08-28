@@ -109,6 +109,7 @@ if (strcmp ($res, "VERIFIED") == 0) {
 	
 		$_POST['isSuccess'] = "true";
 		$_POST['puuid'] = htmlspecialchars($_GET["puuid"]);
+		$_POST['nd'] = htmlspecialchars($_GET["nd"]);
 
 		$ch2 = curl_init("http://118.37.178.145:53333/ipnRecv");
 		//curl_setopt ($curlsession, CURLOPT_URL, $url); 
