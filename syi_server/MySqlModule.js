@@ -423,7 +423,7 @@ exports.RefundRequestHandle = function(data,socket){
 			return;
 		}		
 		
-		var secondQuery = connection.query('update cost set'+' value =' + ' value - ' + data.nd;													
+		var secondQuery = connection.query('update cost set'+' value =' + ' value - ' + data.nd												
 												+ ' where puuid="'+data.puuid+'"',function(err,rows){
 			if (err) {			
 				resultInfo.isSuccess = false;
@@ -439,9 +439,9 @@ exports.RefundRequestHandle = function(data,socket){
 				method: 'GET',
 				body: {}, // Javascript object
 				json: true, // Use,If you are sending JSON data
-				url: "https://api.sandbox.paypal.com/v1/payments/refund/"+,
-				headers: { Content-Type:"application/json",
-							Authorization: "Bearer A101.pTWSXUfiVttLeCer6Z8YF-5GdzgYwYTF6bH4pPLDFCqUzzePb78q3-375BiwtQ9U.i1bDerD8Q953EYxCkA1szpUTy-G"
+				url: "https://api.sandbox.paypal.com/v1/payments/refund/"+data.tnxid,
+				headers: { "Content-Type":"application/json",
+							"Authorization": "Bearer A101.pTWSXUfiVttLeCer6Z8YF-5GdzgYwYTF6bH4pPLDFCqUzzePb78q3-375BiwtQ9U.i1bDerD8Q953EYxCkA1szpUTy-G"
 				// Specify headers, If any
 				}
 			}

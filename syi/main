@@ -120,12 +120,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <p class="text-center">Arrived Reply</p>
+                        <p class="text-center" style="font-size:2.0em">Arrived Reply</p>
                     </div>
                 </div>
                 <div class="row">
                     <div id="recentReply1" class="col-md-4">
-                        <img id="reply_maingProfile" src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="center-block img-circle img-responsive" style="cursor: pointer;">
+                        <img id="reply_maingProfile" src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="center-block  img-responsive" style="cursor: pointer;">
                         <h3 id="reply_nickname" class="text-center"></h3>
                         <p id="reply_name" class="text-center"></p>
                     </div>
@@ -140,13 +140,18 @@
                         <p id="reply_name" class="text-center"></p>
                     </div>
                 </div>
+				<div class="row">
+                    <div class="col-md-12">
+                        <p class="text-right">More...</p>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="section">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <p class="text-center">Arrived Ok</p>
+                        <p class="text-center" style="font-size:2.0em">Arrived Ok</p>
                     </div>
                 </div>
                 <div class="row">
@@ -164,6 +169,11 @@
                         <img id="ok_maingProfile" src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="center-block img-circle img-responsive" style="cursor: pointer;">
                         <h3 id="ok_nickname" class="text-center"></h3>
                         <p id="ok_name" class="text-center"></p>
+                    </div>
+                </div>
+				<div class="row">
+                    <div class="col-md-12">
+                        <p class="text-right">More...</p>
                     </div>
                 </div>
             </div>
@@ -208,7 +218,7 @@
             									var okNameObj = $('#recentArrived'+(i+1)+' > #ok_name')[0];
             									//groupDiv.getElementById('ok_maingProfile');
             									
-            									setImgSrcAndAdjust(okMainProfileObj,PROFILE_IMAGE_ADDR+okMainProfileObj.uuid+"/1",parseInt(okMainProfileObj.style.maxWidth,10),parseInt(okMainProfileObj.style.maxHeight,10));
+            									setImgSrcAndAdjust(okMainProfileObj,PROFILE_IMAGE_ADDR+okMainProfileObj.uuid+"/1",parseInt(okMainProfileObj.width,10),parseInt(okMainProfileObj.height,10));
             									okNickNameObj.innerHTML = recvOKArray[i].sprofile.name;
             									okNameObj.innerHTML = recvOKArray[i].sprofile.nickname;
             									okMainProfileObj.onclick = function(ev){
@@ -240,7 +250,7 @@
             									var okNameObj = $('#recentReply'+(i+1)+' > #reply_name')[0];
             									//groupDiv.getElementById('ok_maingProfile');
             									
-            									setImgSrcAndAdjust(okMainProfileObj,PROFILE_IMAGE_ADDR+okMainProfileObj.uuid+"/1",parseInt(okMainProfileObj.style.maxWidth,10),parseInt(okMainProfileObj.style.maxHeight,10));
+            									setImgSrcAndAdjust(okMainProfileObj,PROFILE_IMAGE_ADDR+okMainProfileObj.uuid+"/1",parseInt(okMainProfileObj.width,10),parseInt(okMainProfileObj.height,10));
             									okNickNameObj.innerHTML = recvOKArray[i].sprofile.name;
             									okNameObj.innerHTML = recvOKArray[i].sprofile.nickname;
             									okMainProfileObj.onclick = function(ev){
