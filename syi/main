@@ -142,7 +142,7 @@
                 </div>
 				<div class="row">
                     <div class="col-md-12">
-                        <p class="text-right">More...</p>
+                        <p class="text-right" onclick="NavigateToAllConnectionList();">More...</p>
                     </div>
                 </div>
             </div>
@@ -173,7 +173,7 @@
                 </div>
 				<div class="row">
                     <div class="col-md-12">
-                        <p class="text-right">More...</p>
+                        <p class="text-right" onclick="NavigateToAllConnectionList()">More...</p>
                     </div>
                 </div>
             </div>
@@ -348,6 +348,11 @@
             					imgObj.parentElement.style.height = (resultHeight+10)+'px';											
             				}
             			}
+						
+			function NavigateToAllConnectionList(){
+				window.open("all_connections.html");
+			}
+			
         </script>
     
 
