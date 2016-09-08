@@ -125,7 +125,7 @@
                 </div>
                 <div class="row">
                     <div id="recentReply1" class="col-md-4">
-                        <img id="reply_maingProfile" src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="center-block  img-responsive" style="cursor: pointer;">
+                        <div style="overflow:hidden; height:300px;" ><img id="reply_maingProfile" src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="center-block  " style="cursor: pointer;"></div>
                         <h3 id="reply_nickname" class="text-center"></h3>
                         <p id="reply_name" class="text-center"></p>
                     </div>
@@ -142,7 +142,7 @@
                 </div>
 				<div class="row">
                     <div class="col-md-12">
-                        <p class="text-right" onclick="NavigateToAllConnectionList();">More...</p>
+                        <p class="text-right" onclick="NavigateToAllConnectionList();" style="cursor: pointer;">More...</p>
                     </div>
                 </div>
             </div>
@@ -173,7 +173,7 @@
                 </div>
 				<div class="row">
                     <div class="col-md-12">
-                        <p class="text-right" onclick="NavigateToAllConnectionList()">More...</p>
+                        <p class="text-right" onclick="NavigateToAllConnectionList()" style="cursor: pointer;">More...</p>
                     </div>
                 </div>
             </div>
@@ -244,14 +244,15 @@
             										break;
             									var divid = "recentReply" + (i+1);
             									var groupDiv = document.getElementById(divid);									
-            									var okMainProfileObj = $('#recentReply'+(i+1)+' > #reply_maingProfile')[0];
+            									var okMainProfileObj = $('#recentReply'+(i+1)+' > div > #reply_maingProfile')[0];
             									okMainProfileObj.uuid = recvOKArray[i].sprofile.uuid;
             									var okNickNameObj = $('#recentReply'+(i+1)+' > #reply_nickname')[0];
             									var okNameObj = $('#recentReply'+(i+1)+' > #reply_name')[0];
             									//groupDiv.getElementById('ok_maingProfile');
             									
-            									setImgSrcAndAdjust(okMainProfileObj,PROFILE_IMAGE_ADDR+okMainProfileObj.uuid+"/1",parseInt(okMainProfileObj.width,10),parseInt(okMainProfileObj.height,10));
-            									okNickNameObj.innerHTML = recvOKArray[i].sprofile.name;
+												//setImgSrcAndAdjust(okMainProfileObj,PROFILE_IMAGE_ADDR+okMainProfileObj.uuid+"/1",parseInt(okMainProfileObj.width,10),parseInt(okMainProfileObj.height,10));
+            									okMainProfileObj.src = PROFILE_IMAGE_ADDR+okMainProfileObj.uuid+"/1";
+												okNickNameObj.innerHTML = recvOKArray[i].sprofile.name;
             									okNameObj.innerHTML = recvOKArray[i].sprofile.nickname;
             									okMainProfileObj.onclick = function(ev){
             										sessionStorage.reqDetailUUID = ev.target.uuid;
