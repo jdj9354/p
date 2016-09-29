@@ -92,7 +92,7 @@
 				<p style="color:white;" id="refund_modal_message"></p>
 				<div style="display:flex">
 					<img src='res/refund.png' class='img-responsive' style='cursor: hand;' id="refund_modal_ok_btn" onmouseover='toggleRefundBtnImage(this);' onmouseleave='toggleRefundBtnImage(this);'>
-					<img src='res/refund.png' class='img-responsive' style='cursor: hand;' id="refund_modal_cancel_btn">
+					<img src='res/cancel.png' class='img-responsive' style='cursor: hand;' id="refund_modal_cancel_btn" onmouseover='toggleCancelBtnImage(this);' onmouseleave='toggleCancelBtnImage(this);'>
 				</div>
 			</div>
 		</div>
@@ -193,6 +193,13 @@
 					target.src = 'res/refund_toggle.png';
 				else
 					target.src = 'res/refund.png';
+			}
+			
+			function toggleCancelBtnImage(target){
+				if(target.src.includes('res/cancel.png'))
+					target.src = 'res/cancel_toggle.png';
+				else
+					target.src = 'res/cancel.png';
 			}
 			
 

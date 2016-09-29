@@ -319,6 +319,57 @@ exports.GetAllMatchedInfoAsync = function(uuid,socket){
     });	
 };
 
+exports.GetAllSentInfoAsync = function(suuid,socket){
+	var resultInfo = {	isSuccess : true,
+				data : []};	
+	
+	var query = connection.query('select * from matchinginfo where suuid = "' + suuid + '";',function(err,result){
+		
+        if (err) {
+            console.error(err);		
+			resultInfo.isSuccess = false;
+			socket.emit('matchingSendInfoData',resultInfo);
+            throw err;
+			return;
+        }
+		
+		if(result.length == 0){
+			socket.emit('matchingSendInfoData',resultInfo);  
+			return;
+		}
+		
+		var count = 0;
+
+		var loopFunction = function(loopCount,iterateArray,resultInfo){
+			
+			var innerQuery = connection.query('select * from profile where uuid = "'+iterateArray[loopCount].suuid+'"', function(err,result){
+				if(err){
+					console.error(err);			
+					resultInfo.isSuccess = false;
+					resultInfo.data = [];
+					socket.emit('matchingSendInfoData',resultInfo);
+					throw err;
+					return;					
+				}
+				
+				resultInfo.data.push({matchingInfo : iterateArray[loopCount],
+										sprofile : result[loopCount]});
+										console.log(resultInfo.data);
+										
+				loopCount++;
+				if(loopCount == iterateArray.length){
+					socket.emit('matchingSendInfoData',resultInfo);   
+					return;
+				}
+				else{
+					loopFunction(loopCount,iterateArray,resultInfo);
+				}
+			});			
+		};
+		loopFunction(count,result,resultInfo);
+	});
+};
+
 exports.InitPaymentInfo = function(data,socket){
 
 	var resultInfo = {};			

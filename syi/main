@@ -198,176 +198,176 @@
         <div class="col-md-6 text-right"></div>
         <script>
             var currentSearchedUUID;
-            			var currentUserUUID;
-            			var currentCostVal;
-            		
-            			function initUserInfo(){
-            				var socket = io.connect(SOCKET_IO_ADDR);								
-            				var sendData={ snstype : sessionStorage.logintype,
-            								snsid : sessionStorage.loginid
-            							 };
-            				socket.on('res', function (data) {
-            					if(data.isEmpty){
-            						location.assign("index.html");   
-            					}
-            					else{	
-            						currentUserUUID = data.profile.uuid;	
-            						currentCostVal = data.costVal
-            						document.getElementById('txt_remaing_cost').innerHTML = "Remaing Cost : " + currentCostVal;
-            						
-            						var matchingInfoData = { ruuid : currentUserUUID
-            										};
-            												
-            						socket.on('matchingInfoData', function (data) {
-            							if(!data.isSuccess){
-            								location.assign("index.html");   
-            							}
-            							else{	
-            								var recvOKArray = data.data;
-            								for(var i=0; i<recvOKArray.length; i++){
-            									if(i == 3)
-            										break;
-            									var divid = "recentArrived" + (i+1);
-            									var groupDiv = document.getElementById(divid);									
-            									var okMainProfileObj = $('#recentArrivedImage'+(i+1)+' > #ok_maingProfile')[0];
-            									okMainProfileObj.uuid = recvOKArray[i].sprofile.uuid;
-            									var okNickNameObj = $('#recentArrived'+(i+1)+' > #ok_nickname')[0];
-            									var okNameObj = $('#recentArrived'+(i+1)+' > #ok_name')[0];
-            									//groupDiv.getElementById('ok_maingProfile');
-            									
-            									setImgSrcAndAdjust(okMainProfileObj,PROFILE_IMAGE_ADDR+okMainProfileObj.uuid+"/1",parseInt(okMainProfileObj.width,10),parseInt(okMainProfileObj.height,10));
-            									okNickNameObj.innerHTML = recvOKArray[i].sprofile.name;
-            									okNameObj.innerHTML = recvOKArray[i].sprofile.nickname;
-            									okMainProfileObj.onclick = function(ev){
-            										sessionStorage.reqDetailUUID = ev.target.uuid;
-            										window.location = "detail.html?uuid="+ev.target.uuid+"&from=ao";
-            									};
-            								}
-            							}
-            						});								
-            						socket.emit('getMatchingAll', matchingInfoData);				
-            						
-            						var matchingInfoData = { uuid : currentUserUUID
-            										};
-            						
-            						socket.on('matchedInfoData', function (data) {
-            							if(!data.isSuccess){
-            								location.assign("index.html");   
-            							}
-            							else{	
-            								var recvOKArray = data.data;
-            								for(var i=0; i<recvOKArray.length; i++){
-            									if(i == 3)
-            										break;
-            									var divid = "recentReply" + (i+1);
-            									var groupDiv = document.getElementById(divid);									
-												var okMainProfileObj = $('#recentReplyImage'+(i+1)+' > #reply_maingProfile')[0];
-            									//var okMainProfileObj = $('#recentReply'+(i+1)+' > div > #reply_maingProfile')[0];
-            									okMainProfileObj.uuid = recvOKArray[i].sprofile.uuid;
-            									var okNickNameObj = $('#recentReply'+(i+1)+' > #reply_nickname')[0];
-            									var okNameObj = $('#recentReply'+(i+1)+' > #reply_name')[0];
-            									//groupDiv.getElementById('ok_maingProfile');
-												
-												
-												setImgSrcAndAdjust(okMainProfileObj,PROFILE_IMAGE_ADDR+okMainProfileObj.uuid+"/1",parseInt(okMainProfileObj.width,10),parseInt(okMainProfileObj.height,10));
-            									okMainProfileObj.src = PROFILE_IMAGE_ADDR+okMainProfileObj.uuid+"/1";
-												okNickNameObj.innerHTML = recvOKArray[i].sprofile.name;
-            									okNameObj.innerHTML = recvOKArray[i].sprofile.nickname;
-            									okMainProfileObj.onclick = function(ev){
-            										sessionStorage.reqDetailUUID = ev.target.uuid;
-            										window.location = "detail.html?uuid="+ev.target.uuid+"&from=ao";
-            									};
-            								}
-            							}
-            						});								
-            						socket.emit('getMatchedAll', matchingInfoData);			
-            					}
-            				});								
-            				socket.emit('reqInfo', sendData);										
-            			}
-            		
-            			
-                        function getDetails(){
-            				sessionStorage.reqDetailUUID = currentSearchedUUID;
-            				window.location = "detail.html?uuid="+currentSearchedUUID+"&from=s";
-            			}
-            			function navToProfilePage(){				
-            				window.location = "myprofile.html";
-            			}
-            			function searchNext(){
-            				var socket = io.connect(SOCKET_IO_ADDR);
-            				socket.on('res', function (data) {
-            					if(data.isEmpty){
-            						switch(data.reason){
-            						case "c0" :
-            							alert("cost가 부족합니다");
-            							break;
-            						}						
-            						return;
-            					}					
-            					currentSearchedUUID = data.uuid;
-            				
-            					document.getElementById('search_et_name').innerHTML = data.name;
-            					document.getElementById('search_et_nickname').innerHTML = data.nickname;
-            					document.getElementById('search_et_age').innerHTML = data.age;
-            					document.getElementById('search_et_height').innerHTML = data.height;
-            					document.getElementById('search_et_region').innerHTML = data.region;
-            					document.getElementById('search_et_religion').innerHTML = data.religion;
-            					document.getElementById('search_et_bloodgroups').innerHTML = data.bloodgroups;
-            					
-            					var mainprofileImage = document.getElementById('search_img_mainphoto');
-            					mainprofileImage.style.maxWidth = "585px";
-            					mainprofileImage.style.maxHeight = "300px";
-            					
-            					setImgSrcAndAdjust(mainprofileImage,PROFILE_IMAGE_ADDR+data.uuid+"/1",parseInt(mainprofileImage.style.maxWidth,10),parseInt(mainprofileImage.style.maxHeight,10));	
-            					currentCostVal--;
-            					document.getElementById('txt_remaing_cost').innerHTML = "Remaing Cost : " + currentCostVal;
-            				});	
-            				var sendData={ 
-            					snstype : sessionStorage.logintype,
-            					snsid : sessionStorage.loginid
-            				};				
-            				socket.emit('search', sendData);	
-            			}
-            			function sendOK(){
-            				var socket = io.connect(SOCKET_IO_ADDR);
-            				socket.on('res', function (data) {
-            				});
-            				var sendData ={suuid : currentUserUUID,
-            								ruuid : currentSearchedUUID,
-            								inittime : (new Date()).getTime(),
-            								pending : 1
-            				};
-            				socket.emit('sendok',sendData);
-            			}
-						function navigateRecharge(){
-            				window.open("recharge.html");
-            			}
+			var currentUserUUID;
+			var currentCostVal;
+		
+			function initUserInfo(){
+				var socket = io.connect(SOCKET_IO_ADDR);								
+				var sendData={ snstype : sessionStorage.logintype,
+								snsid : sessionStorage.loginid
+							 };
+				socket.on('res', function (data) {
+					if(data.isEmpty){
+						location.assign("index.html");   
+					}
+					else{	
+						currentUserUUID = data.profile.uuid;	
+						currentCostVal = data.costVal
+						document.getElementById('txt_remaing_cost').innerHTML = "Remaing Cost : " + currentCostVal;
 						
-						function navigateRefund(){
-            				window.open("paypal_refund.html");
-            			}
-            			
-            			function setImgSrcAndAdjust(imgObj,srcURL,maxWidth,maxHeight){
-            				imgObj.src = srcURL;
-            				
-            				imgObj.onload = function(){
-            					var nh = imgObj.naturalHeight;
-            					var nw = imgObj.naturalWidth;
-            					
-            					var resultWidth = (maxHeight*nw/nh);
-            					var resultHeight = maxHeight;
-            					
-            					if(resultWidth > maxWidth){
-            						resultWidth = maxWidth;
-            						resultHeight = (maxWidth*nh/nw);
-            					}
-            				
-            					imgObj.style.width = resultWidth+"px";
-            					imgObj.style.height = resultHeight+'px';
-            					imgObj.parentElement.style.height = (resultHeight+10)+'px';											
-            				}
-            			}
+						var matchingInfoData = { ruuid : currentUserUUID
+										};
+												
+						socket.on('matchingInfoData', function (data) {
+							if(!data.isSuccess){
+								location.assign("index.html");   
+							}
+							else{	
+								var recvOKArray = data.data;
+								for(var i=0; i<recvOKArray.length; i++){
+									if(i == 3)
+										break;
+									var divid = "recentArrived" + (i+1);
+									var groupDiv = document.getElementById(divid);									
+									var okMainProfileObj = $('#recentArrivedImage'+(i+1)+' > #ok_maingProfile')[0];
+									okMainProfileObj.uuid = recvOKArray[i].sprofile.uuid;
+									var okNickNameObj = $('#recentArrived'+(i+1)+' > #ok_nickname')[0];
+									var okNameObj = $('#recentArrived'+(i+1)+' > #ok_name')[0];
+									//groupDiv.getElementById('ok_maingProfile');
+									
+									setImgSrcAndAdjust(okMainProfileObj,PROFILE_IMAGE_ADDR+okMainProfileObj.uuid+"/1",parseInt(okMainProfileObj.width,10),parseInt(okMainProfileObj.height,10));
+									okNickNameObj.innerHTML = recvOKArray[i].sprofile.name;
+									okNameObj.innerHTML = recvOKArray[i].sprofile.nickname;
+									okMainProfileObj.onclick = function(ev){
+										sessionStorage.reqDetailUUID = ev.target.uuid;
+										window.location = "detail.html?uuid="+ev.target.uuid+"&from=ao";
+									};
+								}
+							}
+						});								
+						socket.emit('getMatchingAll', matchingInfoData);				
+						
+						var matchingInfoData = { uuid : currentUserUUID
+										};
+						
+						socket.on('matchedInfoData', function (data) {
+							if(!data.isSuccess){
+								location.assign("index.html");   
+							}
+							else{	
+								var recvOKArray = data.data;
+								for(var i=0; i<recvOKArray.length; i++){
+									if(i == 3)
+										break;
+									var divid = "recentReply" + (i+1);
+									var groupDiv = document.getElementById(divid);									
+									var okMainProfileObj = $('#recentReplyImage'+(i+1)+' > #reply_maingProfile')[0];
+									//var okMainProfileObj = $('#recentReply'+(i+1)+' > div > #reply_maingProfile')[0];
+									okMainProfileObj.uuid = recvOKArray[i].sprofile.uuid;
+									var okNickNameObj = $('#recentReply'+(i+1)+' > #reply_nickname')[0];
+									var okNameObj = $('#recentReply'+(i+1)+' > #reply_name')[0];
+									//groupDiv.getElementById('ok_maingProfile');
+									
+									
+									setImgSrcAndAdjust(okMainProfileObj,PROFILE_IMAGE_ADDR+okMainProfileObj.uuid+"/1",parseInt(okMainProfileObj.width,10),parseInt(okMainProfileObj.height,10));
+									okMainProfileObj.src = PROFILE_IMAGE_ADDR+okMainProfileObj.uuid+"/1";
+									okNickNameObj.innerHTML = recvOKArray[i].sprofile.name;
+									okNameObj.innerHTML = recvOKArray[i].sprofile.nickname;
+									okMainProfileObj.onclick = function(ev){
+										sessionStorage.reqDetailUUID = ev.target.uuid;
+										window.location = "detail.html?uuid="+ev.target.uuid+"&from=ao";
+									};
+								}
+							}
+						});								
+						socket.emit('getMatchedAll', matchingInfoData);			
+					}
+				});								
+				socket.emit('reqInfo', sendData);										
+			}
+		
+			
+			function getDetails(){
+				sessionStorage.reqDetailUUID = currentSearchedUUID;
+				window.location = "detail.html?uuid="+currentSearchedUUID+"&from=s";
+			}
+			function navToProfilePage(){				
+				window.location = "myprofile.html";
+			}
+			function searchNext(){
+				var socket = io.connect(SOCKET_IO_ADDR);
+				socket.on('res', function (data) {
+					if(data.isEmpty){
+						switch(data.reason){
+						case "c0" :
+							alert("cost가 부족합니다");
+							break;
+						}						
+						return;
+					}					
+					currentSearchedUUID = data.uuid;
+				
+					document.getElementById('search_et_name').innerHTML = data.name;
+					document.getElementById('search_et_nickname').innerHTML = data.nickname;
+					document.getElementById('search_et_age').innerHTML = data.age;
+					document.getElementById('search_et_height').innerHTML = data.height;
+					document.getElementById('search_et_region').innerHTML = data.region;
+					document.getElementById('search_et_religion').innerHTML = data.religion;
+					document.getElementById('search_et_bloodgroups').innerHTML = data.bloodgroups;
+					
+					var mainprofileImage = document.getElementById('search_img_mainphoto');
+					mainprofileImage.style.maxWidth = "585px";
+					mainprofileImage.style.maxHeight = "300px";
+					
+					setImgSrcAndAdjust(mainprofileImage,PROFILE_IMAGE_ADDR+data.uuid+"/1",parseInt(mainprofileImage.style.maxWidth,10),parseInt(mainprofileImage.style.maxHeight,10));	
+					currentCostVal--;
+					document.getElementById('txt_remaing_cost').innerHTML = "Remaing Cost : " + currentCostVal;
+				});	
+				var sendData={ 
+					snstype : sessionStorage.logintype,
+					snsid : sessionStorage.loginid
+				};				
+				socket.emit('search', sendData);	
+			}
+			function sendOK(){
+				var socket = io.connect(SOCKET_IO_ADDR);
+				socket.on('res', function (data) {
+				});
+				var sendData ={suuid : currentUserUUID,
+								ruuid : currentSearchedUUID,
+								inittime : (new Date()).getTime(),
+								pending : 1
+				};
+				socket.emit('sendok',sendData);
+			}
+			function navigateRecharge(){
+				window.open("recharge.html");
+			}
+			
+			function navigateRefund(){
+				window.open("paypal_refund.html");
+			}
+			
+			function setImgSrcAndAdjust(imgObj,srcURL,maxWidth,maxHeight){
+				imgObj.src = srcURL;
+				
+				imgObj.onload = function(){
+					var nh = imgObj.naturalHeight;
+					var nw = imgObj.naturalWidth;
+					
+					var resultWidth = (maxHeight*nw/nh);
+					var resultHeight = maxHeight;
+					
+					if(resultWidth > maxWidth){
+						resultWidth = maxWidth;
+						resultHeight = (maxWidth*nh/nw);
+					}
+				
+					imgObj.style.width = resultWidth+"px";
+					imgObj.style.height = resultHeight+'px';
+					imgObj.parentElement.style.height = (resultHeight+10)+'px';											
+				}
+			}
 						
 			function NavigateToAllConnectionList(){
 				window.open("all_connections.html");

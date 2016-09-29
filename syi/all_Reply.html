@@ -34,5 +34,24 @@
 				</div>
 			</div>
 		</div>
+		 <script>
+			var parameters = location.search.substring(1).split("&");
+
+			var temp = parameters[0].split("=");
+			var uuid = unescape(temp[1]);
+		 
+            var currentSearchedUUID;
+			var currentUserUUID;
+			var currentCostVal;
+		
+			function initUserInfo(){
+				var socket = io.connect(SOCKET_IO_ADDR);								
+				var sendData={ suuid : uuid
+							 };
+				socket.on('matchingSendInfoData', function (data) {
+				});
+				socket.emit('getSendAll', sendData);	
+			}
+		</script>
 	</body>
 </html>
