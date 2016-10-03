@@ -49,13 +49,19 @@
 				var sendData={ suuid : uuid
 							 };
 				socket.on('matchingSendInfoData', function (data) {
+					var innerHtmlStr = "";
 					for(var i=0; i< data.data.length; i++){
 						if(i%3 == 0){
-							// add row
+							innerHtmlStr += "<div class='row'>";
 						}
-						// add col
+						innerHtmlStr += 
+							"<div class='col-md-4'>"
+								+"<a><img src='"+ PROFILE_IMAGE_ADDR+data.data[i].sprofile.uuid+"' class='img-responsive'></a>"
+								+"<h3>A title</h3>"
+								+"<p>Lorem ipsum dolor sit amet, consectetur adipisici elit,&nbsp;</p>"
+							+"</div>"
 						if(i%3 == 0){
-							// end row
+							innerHtmlStr += "</div>";
 						}
 					}
 				});
