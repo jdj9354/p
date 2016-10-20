@@ -91,7 +91,7 @@ io.on('connection', function (socket) {
 	});
 	socket.on('getSendAll',function(data) {
 		var suuid = data.suuid; 		
-		DBModule.GetAllSentInfoAsync(uuid,socket);	
+		DBModule.GetAllSentInfoAsync(suuid,socket);	
 	});
 	
 	socket.on('send_payment_info', function(data){	

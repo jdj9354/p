@@ -151,7 +151,7 @@
 				</div>
 				<div class="row">
                     <div class="col-md-12">
-                        <p class="text-right" onclick="NavigateToAllConnectionList();" style="cursor: pointer;">More...</p>
+                        <p class="text-right" onclick="NavigateToAllOk();" style="cursor: pointer;">More...</p>
                     </div>
                 </div>
             </div>
@@ -367,6 +367,10 @@
 					imgObj.style.height = resultHeight+'px';
 					imgObj.parentElement.style.height = (resultHeight+10)+'px';											
 				}
+			}
+			
+			function NavigateToAllOk(){
+				window.open("all_OK.html?uuid="+currentUserUUID);
 			}
 						
 			function NavigateToAllConnectionList(){
