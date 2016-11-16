@@ -374,7 +374,7 @@
 			}
 						
 			function NavigateToAllConnectionList(){
-				window.open("all_connections.html");
+				window.open("all_Reply.html");
 			}
 			
         </script>

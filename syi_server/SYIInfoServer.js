@@ -94,6 +94,11 @@ io.on('connection', function (socket) {
 		DBModule.GetAllSentInfoAsync(suuid,socket);	
 	});
 	
+	socket.on('getArrivedOkAll',function(data) {
+		var ruuid = data.ruuid; 		
+		DBModule.GetAllArrivedOkInfoAsync(ruuid,socket);	
+	});
+	
 	socket.on('send_payment_info', function(data){	
 		DBModule.InitPaymentInfo(data,socket);
 	});

@@ -11,27 +11,12 @@
     </head>
 	<body>
 		<div class="section"> 
-			<div class="container"> 
+			<div id="okListDiv" class="container"> 
 				<div class="row"> 
 					<div class="col-md-12"> 
 						<h1 class="text-center">Previous Connections</h1> 
 					</div>
-				</div>
-				<div class="row"> 			
-					<div class="col-md-4"> 
-						<a><img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" class="img-responsive"></a> 
-						<h3>A title</h3> 
-						<p>Lorem ipsum dolor sit amet, consectetur adipisici elit,&nbsp;</p>
-					</div>
-					<div class="col-md-4"> 
-						<a><img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" class="img-responsive"></a> 
-						<h2>A title</h2> <p>Lorem ipsum dolor sit amet, consectetur adipisici elit,&nbsp;</p>
-					</div>
-					<div class="col-md-4"> 
-						<a><img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" class="img-responsive"></a> 
-						<h2>A ttile</h2> <p>Lorem ipsum dolor sit amet, consectetur adipisici elit,&nbsp;</p>
-					</div>
-				</div>
+				</div>				
 			</div>
 		</div>
 		 <script>
@@ -44,14 +29,39 @@
 			var currentUserUUID;
 			var currentCostVal;
 		
-			function initUserInfo(){
+			function initUserInfo(aUUID){
 				var socket = io.connect(SOCKET_IO_ADDR);								
-				var sendData={ suuid : uuid
+				var sendData={ suuid : aUUID
 							 };
-				socket.on('matchingSendInfoData', function (data) {
+				socket.on('arrivedOkInfoData', function (data) {
+					var innerHtmlStr = "";
+					for(var i=0; i< data.data.length; i++){
+						if(i%3 == 0){
+							innerHtmlStr += "<div class='row'>";
+						}
+						innerHtmlStr += 
+							"<div class=\'col-md-4\' onclick=\'getDetails(\""+aUUID+"\");\'>"
+								+"<a><img src='"+ PROFILE_IMAGE_ADDR+data.data[i].sprofile.uuid+"/1' class='img-responsive'></a>"
+								+"<h3>"+data.data[i].sprofile.name+"</h3>"
+								+"<p>"+data.data[i].sprofile.nickname+"</p>"
+							+"</div>"
+						if(i%3 == 0){
+							innerHtmlStr += "</div>";
+						}
+					}
+					var a = document.getElementById("okListDiv");
+					document.getElementById("okListDiv").innerHTML += innerHtmlStr;
 				});
-				socket.emit('getSendAll', sendData);	
+				socket.emit('getArrivedOkAll', sendData);	
+			};
+			
+			function getDetails(aUUID){
+				sessionStorage.reqDetailUUID = currentSearchedUUID;
+				window.location = "detail.html?uuid="+aUUID+"&from=ao";
 			}
+			
+			initUserInfo(uuid);
+			
 		</script>
 	</body>
 </html>
