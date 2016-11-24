@@ -152,7 +152,7 @@ exports.searchRandomUser = function(SnsType,SnsId,socket){
 			socket.emit('res',{isEmpty : true});
 			return;
 		}
-		var uuid = rows[0].uuid;
+		var uuid = rows[0].uuid;		
 		var secondQuery = connection.query('select id,sex from profile where uuid="'+uuid+'"' ,function(err,rows){			
 			var randomId = Math.floor((Math.random() * totalCount) + 1);
 			var curUserId = rows[0].id;
