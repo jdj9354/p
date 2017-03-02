@@ -275,7 +275,7 @@
 									okNameObj.innerHTML = recvOKArray[i].sprofile.nickname;
 									okMainProfileObj.onclick = function(ev){
 										sessionStorage.reqDetailUUID = ev.target.uuid;
-										window.location = "detail.html?uuid="+ev.target.uuid+"&from=ao";
+										window.location = "detail.html?uuid="+ev.target.uuid+"&from=sto";
 									};
 								}
 							}

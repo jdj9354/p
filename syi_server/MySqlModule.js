@@ -147,6 +147,7 @@ exports.RenewLoginInfo = function(uuid,timestamp,socket){
 };
 
 exports.searchRandomUser = function(SnsType,SnsId,socket){
+	// Need to avoid previously matched User
 	var query = connection.query('select uuid from logininfo where snstype="'+SnsType+'" and snsid="'+SnsId+'"',function(err,rows){
 		if(rows.length == 0){
 			socket.emit('res',{isEmpty : true});
