@@ -93,6 +93,8 @@
 				buttonObj.onclick = function (){
 					var socket = io.connect(SOCKET_IO_ADDR);
 					socket.on('res', function (data) {
+						alert("Replied");
+						window.open("main");
 					});
 					var sendData ={suuid : uuid,
 									ruuid : sessionStorage.currentUserId

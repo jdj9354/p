@@ -343,7 +343,7 @@ exports.GetAllArrivedOkInfoAsync = function(ruuid,socket){
 
 		var loopFunction = function(loopCount,iterateArray,resultInfo){
 			
-			var innerQuery = connection.query('select * from profile where uuid = "'+iterateArray[loopCount].ruuid+'"', function(err,result){
+			var innerQuery = connection.query('select * from profile where uuid = "'+iterateArray[loopCount].suuid+'"', function(err,result){
 				if(err){
 					console.error(err);			
 					resultInfo.isSuccess = false;
@@ -394,7 +394,7 @@ exports.GetAllSentInfoAsync = function(suuid,socket){
 
 		var loopFunction = function(loopCount,iterateArray,resultInfo){
 			
-			var innerQuery = connection.query('select * from profile where uuid = "'+iterateArray[loopCount].suuid+'"', function(err,result){
+			var innerQuery = connection.query('select * from profile where uuid = "'+iterateArray[loopCount].ruuid+'"', function(err,result){
 				if(err){
 					console.error(err);			
 					resultInfo.isSuccess = false;
@@ -405,7 +405,7 @@ exports.GetAllSentInfoAsync = function(suuid,socket){
 				}
 				
 				resultInfo.data.push({matchingInfo : iterateArray[loopCount],
-										sprofile : result[loopCount]});
+										sprofile : result[0]});
 										console.log(resultInfo.data);
 										
 				loopCount++;

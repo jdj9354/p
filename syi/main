@@ -176,16 +176,16 @@
                 </div>				
 				<div class="row">
 					<div id="recentArrived1" class="col-md-4">
-						<h3 id="reply_nickname" class="text-center"></h3>
-                        <p id="reply_name" class="text-center"></p>
+						<h3 id="ok_nickname" class="text-center"></h3>
+                        <p id="ok_name" class="text-center"></p>
 					</div>
 					<div id="recentArrived2" class="col-md-4">
-						<h3 id="reply_nickname" class="text-center"></h3>
-                        <p id="reply_name" class="text-center"></p>
+						<h3 id="ok_nickname" class="text-center"></h3>
+                        <p id="ok_name" class="text-center"></p>
 					</div>
 					<div id="recentArrived3" class="col-md-4">
-						<h3 id="reply_nickname" class="text-center"></h3>
-                        <p id="reply_name" class="text-center"></p>
+						<h3 id="ok_nickname" class="text-center"></h3>
+                        <p id="ok_name" class="text-center"></p>
 					</div>
 				</div>
 				<div class="row">
@@ -275,7 +275,7 @@
 									okNameObj.innerHTML = recvOKArray[i].sprofile.nickname;
 									okMainProfileObj.onclick = function(ev){
 										sessionStorage.reqDetailUUID = ev.target.uuid;
-										window.location = "detail.html?uuid="+ev.target.uuid+"&from=sto";
+										window.location = "detail.html?uuid="+ev.target.uuid+"&from=sta";
 									};
 								}
 							}
@@ -374,7 +374,7 @@
 			}
 						
 			function NavigateToAllConnectionList(){
-				window.open("all_Reply.html");
+				window.open("all_Reply.html?uuid="+currentUserUUID);
 			}
 			
         </script>

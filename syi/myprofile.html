@@ -290,14 +290,14 @@
 						location.assign("index.html");   
 					}
 					else{						
-						document.getElementById('et_name').innerHTML = data.name;
-						document.getElementById('et_nickname').innerHTML = data.nickname;
-						document.getElementById('et_age').innerHTML = data.age;
-						document.getElementById('et_height').innerHTML = data.height;
-						document.getElementById('et_region').innerHTML = data.region;
-						document.getElementById('et_religion').innerHTML = data.religion;
-						document.getElementById('et_bloodgroups').innerHTML = data.bloodgroups;
-						userIdVal = data.uuid;
+						document.getElementById('et_name').innerHTML = data.profile.name;
+						document.getElementById('et_nickname').innerHTML = data.profile.nickname;
+						document.getElementById('et_age').innerHTML = data.profile.age;
+						document.getElementById('et_height').innerHTML = data.profile.height;
+						document.getElementById('et_region').innerHTML = data.profile.region;
+						document.getElementById('et_religion').innerHTML = data.profile.religion;
+						document.getElementById('et_bloodgroups').innerHTML = data.profile.bloodgroups;
+						userIdVal = data.profile.uuid;
 						
 						/*if(data.keyword1 != ""){
 							keywordMapInfo[data.keyword1] = true;
