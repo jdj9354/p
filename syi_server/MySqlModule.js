@@ -291,8 +291,8 @@ exports.GetAllMatchedInfoAsync = function(uuid,socket){
 		var count = 0;
 
 		var loopFunction = function(loopCount,iterateArray,resultInfo){
-			//var searchingUUID = iterateArray[loopCount].suuid == uuid ? iterateArray[loopCount].suuid : iterateArray[loopCount].ruuid;
-			var searchingUUID =iterateArray[loopCount].ruuid;
+			var searchingUUID = iterateArray[loopCount].suuid == uuid ? iterateArray[loopCount].ruuid : iterateArray[loopCount].suuid;
+			//var searchingUUID =iterateArray[loopCount].ruuid;
 			var innerQuery = connection.query('select * from profile where uuid = "'+searchingUUID+'"', function(err,result){
 				if(err){
 					console.error(err);			
