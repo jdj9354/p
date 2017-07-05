@@ -60,7 +60,6 @@
                 <div class="fb-like" data-href="{YOUR URL}" data-send="false" data-layout="button_count" data-show-faces="false"></div>
             </div>
         </div>
-        
         <div class="section">
             <div class="container">
                 <div class="row">
@@ -91,7 +90,7 @@
                                 <div class="col-md-7">
                                     <p id="txt_remaing_cost">Remaing Cost :</p>
                                     <a class="btn btn-lg btn-warning" onclick="navigateRecharge();">Cost Recharge</a>
-									<a class="btn btn-lg btn-warning" onclick="navigateRefund();">Cost Refund</a>
+                                    <a class="btn btn-lg btn-warning" onclick="navigateRefund();">Cost Refund</a>
                                 </div>
                             </div>
                         </div>
@@ -116,7 +115,6 @@
                 </div>
             </div>
         </div>
-        
         <div class="section">
             <div class="container">
                 <div class="row">
@@ -126,38 +124,51 @@
                 </div>
                 <div class="row">
                     <div id="recentArrivedImage1" class="col-md-4">
-						<img id="arrived_mainProfile" src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="center-block img-responsive" style="cursor: pointer; width:262.5;height:262.5;max-width:262.5;max-height:262.5;">                        
+                        <img id="arrived_mainProfile" src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="center-block img-responsive" style="cursor: pointer; width:262.5;height:262.5;max-width:262.5;max-height:262.5;">
                     </div>
                     <div id="recentArrivedImage2" class="col-md-4">
-						<img id="arrived_mainProfile" src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="center-block img-responsive" style="cursor: pointer; width:262.5;height:262.5;max-width:262.5;max-height:262.5;">                                                
+                        <img id="arrived_mainProfile" src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="center-block img-responsive" style="cursor: pointer; width:262.5;height:262.5;max-width:262.5;max-height:262.5;">
                     </div>
                     <div id="recentArrivedImage3" class="col-md-4">
-                        <img id="arrived_mainProfile" src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="center-block img-responsive" style="cursor: pointer; width:262.5;height:262.5;max-width:262.5;max-height:262.5;">                        
+                        <img id="arrived_mainProfile" src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="center-block img-responsive" style="cursor: pointer; width:262.5;height:262.5;max-width:262.5;max-height:262.5;">
                     </div>
-                </div>				
-				<div class="row">
-					<div id="recentArrived1" class="col-md-4">
-						<h3 id="arrived_nickname" class="text-center"></h3>
+                </div>
+                <div class="row">
+                    <div id="recentArrived1" class="col-md-4">
+                        <h3 id="arrived_nickname" class="text-center"></h3>
                         <p id="arrived_name" class="text-center"></p>
-					</div>
-					<div id="recentArrived2" class="col-md-4">
-						<h3 id="arrived_nickname" class="text-center"></h3>
+                    </div>
+                    <div id="recentArrived2" class="col-md-4">
+                        <h3 id="arrived_nickname" class="text-center"></h3>
                         <p id="arrived_name" class="text-center"></p>
-					</div>
-					<div id="recentArrived3" class="col-md-4">
-						<h3 id="arrived_nickname" class="text-center"></h3>
+                    </div>
+                    <div id="recentArrived3" class="col-md-4">
+                        <h3 id="arrived_nickname" class="text-center"></h3>
                         <p id="arrived_name" class="text-center"></p>
-					</div>
-				</div>
-				<div class="row">
+                    </div>
+                </div>
+                <div class="row">
                     <div class="col-md-12">
                         <p class="text-right" onclick="NavigateToAllConnectionList()" style="cursor: pointer;">More...</p>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-md-12 text-right">
+                        <a style="text-align: right;" class="btn btn-lg btn-warning" onclick="NavigateToAllRecv();">Arrived OK</a>
+                        <a style="text-align: right;" class="btn btn-lg btn-warning" onclick="NavigateToAllOk();">Sent OK</a>
+                        <a style="text-align: right;" class="btn btn-lg btn-warning" onclick="NavigateToAllMatched();">Matched</a>
+                    </div>
+                </div>
             </div>
         </div>
-		
-		
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div align="right"></div>
+                    <div align="right"></div>
+                </div>
+            </div>
+        </div>
         <div class="col-md-6 text-right"></div>
         <script>
             var currentSearchedUUID;
@@ -301,11 +312,18 @@
 			function NavigateToAllOk(){
 				window.open("all_OK.html?uuid="+currentUserUUID);
 			}
+			
+			function NavigateToAllMatched(){
+				window.open("all_Matched.html?uuid="+currentUserUUID);
+			}
+			
+			function NavigateToAllRecv(){
+				window.open("all_Recv.html?uuid="+currentUserUUID);
+			}
 						
 			function NavigateToAllConnectionList(){
 				window.open("all_Reply.html?uuid="+currentUserUUID);
 			}
-			
         </script>
     
 

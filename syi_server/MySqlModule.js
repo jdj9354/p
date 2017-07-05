@@ -304,7 +304,7 @@ exports.GetAllMatchedInfoAsync = function(uuid,socket){
 				}
 				
 				resultInfo.data.push({matchingInfo : iterateArray[loopCount],
-										sprofile : result[loopCount]});
+										sprofile : result[0]});
 										console.log(resultInfo.data);
 										
 				loopCount++;
@@ -325,7 +325,7 @@ exports.GetAllArrivedOkInfoAsync = function(ruuid,socket){
 	var resultInfo = {	isSuccess : true,
 				data : []};	
 	
-	var query = connection.query('select * from matchinginfo where ruuid = "' + ruuid + '";',function(err,result){
+	var query = connection.query('select * from matchinginfo where ruuid = "' + ruuid + '" and pending = 1;',function(err,result){
 		
         if (err) {
             console.error(err);		
@@ -429,7 +429,7 @@ exports.GetAllSentInfoAsync = function(suuid,socket){
 	var resultInfo = {	isSuccess : true,
 				data : []};	
 	
-	var query = connection.query('select * from matchinginfo where suuid = "' + suuid + '";',function(err,result){
+	var query = connection.query('select * from matchinginfo where suuid = "' + suuid + '" and pending = 1;',function(err,result){
 		
         if (err) {
             console.error(err);		
